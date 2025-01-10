@@ -1,6 +1,7 @@
 import { lgGkb } from "../../../landing/assets";
 import { Content } from "../../components";
 import { Button } from "../../components/atoms";
+import { CreateModal } from "./component";
 
 const BusinessPage = () => {
     return (
@@ -8,12 +9,7 @@ const BusinessPage = () => {
             <div className="shadow-all bg-white-light rounded-md px-7 py-5 grow">
                 <div className="flex justify-between">
                     <span className="font-bold text-xl">Business</span>
-                    <div className="flex gap-2 justify-center items-center border rounded-full border-dark-muted pl-4 pr-2 py-1 cursor-pointer">
-                        <span className="border-dark-muted text-sm">Add New Business</span>
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="text-primary-dark" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4.929 4.929a10 10 0 1 1 14.141 14.141a10 10 0 0 1 -14.14 -14.14zm8.071 4.071a1 1 0 1 0 -2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 1 0 2 0v-2h2a1 1 0 1 0 0 -2h-2v-2z" /></svg>
-                        </span>
-                    </div>
+                    <CreateModal />
                 </div>
                 <div className="mt-5">
                     <table className="w-full border-collapse">
