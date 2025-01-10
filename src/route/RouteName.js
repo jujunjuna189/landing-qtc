@@ -23,4 +23,9 @@ export const RouteName = {
     career: '/career',
     careerExplore: '/career-explore',
     careerList: '/career-list',
+    // Admin
+    adminDashboard: '/dashboard',
+    adminBusiness: '/business',
+    adminProduct: '/product',
+    adminNews: '/news',
 };

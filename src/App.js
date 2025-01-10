@@ -1,5 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import {
+  DashboardPage as AdminDashboardPage,
+  BusinessPage as AdminBusinessPage,
+  ProductPage as AdminProductPage,
+  NewsPage as AdminNewsPage,
+} from "./board/pages";
+
+import {
   MainPage as LandingMainPage,
   AboutPage as LandingAboutPage,
   OurImpactPage as LandingOurImpactPage,
@@ -101,6 +108,19 @@ function App() {
       } />
       <Route path={RouteName.careerList} element={
         <LandingCareerListPage />
+      } />
+      {/* Admin */}
+      <Route path={RouteName.adminDashboard} element={
+        <AdminDashboardPage />
+      } />
+      <Route path={RouteName.adminBusiness} element={
+        <AdminBusinessPage />
+      } />
+      <Route path={RouteName.adminProduct} element={
+        <AdminProductPage />
+      } />
+      <Route path={RouteName.adminNews} element={
+        <AdminNewsPage />
       } />
     </Routes>
   );
