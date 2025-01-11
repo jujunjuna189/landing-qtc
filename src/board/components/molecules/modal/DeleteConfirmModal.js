@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { Button } from "../../../../components/atoms";
+import { Button } from "../../atoms";
 
-const CreateModal = () => {
+const DeleteConfirmModal = ({ children }) => {
     const ref = useRef();
     const [isVisible, setIsVisible] = useState(false);
 
@@ -30,22 +30,7 @@ const CreateModal = () => {
         <div className="inline-block" ref={ref}>
             {/* Button to toggle modal */}
             <div className="cursor-pointer" onClick={toggleModal}>
-                <div className="flex gap-2 justify-center items-center border rounded-full border-dark-muted pl-4 pr-2 py-1">
-                    <span className="border-dark-muted text-sm">Add New Business</span>
-                    <span>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="text-primary-dark"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                        >
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M4.929 4.929a10 10 0 1 1 14.141 14.141a10 10 0 0 1 -14.14 -14.14zm8.071 4.071a1 1 0 1 0 -2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 1 0 2 0v-2h2a1 1 0 1 0 0 -2h-2v-2z" />
-                        </svg>
-                    </span>
-                </div>
+                {children}
             </div>
 
             {/* Modal */}
@@ -61,23 +46,27 @@ const CreateModal = () => {
 
                 {/* Modal Content */}
                 <div
-                    className={`relative p-5 mt-10 border border-white-muted rounded-lg bg-white-light w-[652px] z-20 shadow-all transform transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-10"
+                    className={`relative p-5 mt-10 border border-white-muted rounded-lg bg-white-light w-[452px] z-20 shadow-all transform transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-10"
                         }`}
                 >
                     <div className="leading-3">
-                        <span className="text-base font-medium">Add New Business</span>
+                        <span className="text-base font-medium">Confirm delete data</span>
                         <br />
-                        <small>Please fill in the business data form</small>
+                        <small>Are you sure you want to delete this data?</small>
                     </div>
-                    <div className="min-h-[25vh] flex flex-col gap-1 my-2">
-                        <span>Oke</span>
-                        <div className="flex-grow" />
-                        <div className="flex justify-end mt-3">
+                    <div className="flex justify-end mt-5">
+                        <div className="flex gap-2">
+                            <Button
+                                className="bg-slate-700 border border-dark-muted bg-transparent rounded-md"
+                                onClick={toggleModal}
+                            >
+                                No
+                            </Button>
                             <Button
                                 className="bg-slate-700 text-white-light rounded-md"
                                 onClick={onSave}
                             >
-                                Simpan
+                                Yes
                             </Button>
                         </div>
                     </div>
@@ -87,4 +76,4 @@ const CreateModal = () => {
     );
 };
 
-export default CreateModal;
+export default DeleteConfirmModal;

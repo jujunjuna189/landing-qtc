@@ -3,12 +3,15 @@ import { Content, DeleteConfirmModal } from "../../components";
 import { Button } from "../../components/atoms";
 import { CreateModal, UpdateModal } from "./component";
 
-const ProductPage = () => {
+const QuestionPage = () => {
     return (
         <Content>
             <div className="shadow-all bg-white-light rounded-md px-7 py-5 grow">
                 <div className="flex justify-between">
-                    <span className="font-bold text-xl">Product</span>
+                    <div className="flex flex-col">
+                        <span className="font-bold text-xl">Question</span>
+                        <smal>General Question</smal>
+                    </div>
                     <CreateModal />
                 </div>
                 <div className="mt-5">
@@ -50,4 +53,4 @@ const ProductPage = () => {
     );
 }
 
-export default ProductPage;
+export default QuestionPage;

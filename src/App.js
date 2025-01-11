@@ -4,6 +4,7 @@ import {
   BusinessPage as AdminBusinessPage,
   ProductPage as AdminProductPage,
   NewsPage as AdminNewsPage,
+  QuestionPage as AdminQuestionPage,
 } from "./board/pages";
 
 import {
@@ -121,6 +122,9 @@ function App() {
       } />
       <Route path={RouteName.adminNews} element={
         <AdminNewsPage />
+      } />
+      <Route path={RouteName.adminQuestion} element={
+        <AdminQuestionPage />
       } />
     </Routes>
   );

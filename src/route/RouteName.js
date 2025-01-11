@@ -28,4 +28,5 @@ export const RouteName = {
     adminBusiness: '/business',
     adminProduct: '/product',
     adminNews: '/news',
+    adminQuestion: '/question',
 };

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "../../../../components/atoms";
 
-const CreateModal = () => {
+const UpdateModal = () => {
     const ref = useRef();
     const [isVisible, setIsVisible] = useState(false);
 
@@ -30,22 +30,10 @@ const CreateModal = () => {
         <div className="inline-block" ref={ref}>
             {/* Button to toggle modal */}
             <div className="cursor-pointer" onClick={toggleModal}>
-                <div className="flex gap-2 justify-center items-center border rounded-full border-dark-muted pl-4 pr-2 py-1">
-                    <span className="border-dark-muted text-sm">Add New Business</span>
-                    <span>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="text-primary-dark"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                        >
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M4.929 4.929a10 10 0 1 1 14.141 14.141a10 10 0 0 1 -14.14 -14.14zm8.071 4.071a1 1 0 1 0 -2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 1 0 2 0v-2h2a1 1 0 1 0 0 -2h-2v-2z" />
-                        </svg>
-                    </span>
-                </div>
+                <Button className="rounded-md text-sm border border-dark-muted bg-transparent py-[6px] pl-[10px] pr-[6px] font-normal">
+                    <span>Update</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17.828 2a3 3 0 0 1 1.977 .743l.145 .136l1.171 1.17a3 3 0 0 1 .136 4.1l-.136 .144l-1.706 1.707l2.292 2.293a1 1 0 0 1 .083 1.32l-.083 .094l-4 4a1 1 0 0 1 -1.497 -1.32l.083 -.094l3.292 -3.293l-1.586 -1.585l-7.464 7.464a3.828 3.828 0 0 1 -2.474 1.114l-.233 .008c-.674 0 -1.33 -.178 -1.905 -.508l-1.216 1.214a1 1 0 0 1 -1.497 -1.32l.083 -.094l1.214 -1.216a3.828 3.828 0 0 1 .454 -4.442l.16 -.17l10.586 -10.586a3 3 0 0 1 1.923 -.873l.198 -.006zm0 2a1 1 0 0 0 -.608 .206l-.099 .087l-1.707 1.707l2.586 2.585l1.707 -1.706a1 1 0 0 0 .284 -.576l.01 -.131a1 1 0 0 0 -.207 -.609l-.087 -.099l-1.171 -1.171a1 1 0 0 0 -.708 -.293z" /></svg>
+                </Button>
             </div>
 
             {/* Modal */}
@@ -65,9 +53,9 @@ const CreateModal = () => {
                         }`}
                 >
                     <div className="leading-3">
-                        <span className="text-base font-medium">Add New Business</span>
+                        <span className="text-base font-medium">Update Product</span>
                         <br />
-                        <small>Please fill in the business data form</small>
+                        <small>Please fill in the product data form</small>
                     </div>
                     <div className="min-h-[25vh] flex flex-col gap-1 my-2">
                         <span>Oke</span>
@@ -87,4 +75,4 @@ const CreateModal = () => {
     );
 };
 
-export default CreateModal;
+export default UpdateModal;

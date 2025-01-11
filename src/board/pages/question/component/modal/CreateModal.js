@@ -31,7 +31,7 @@ const CreateModal = () => {
             {/* Button to toggle modal */}
             <div className="cursor-pointer" onClick={toggleModal}>
                 <div className="flex gap-2 justify-center items-center border rounded-full border-dark-muted pl-4 pr-2 py-1">
-                    <span className="border-dark-muted text-sm">Add New Business</span>
+                    <span className="border-dark-muted text-sm">Add New Product</span>
                     <span>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -65,9 +65,9 @@ const CreateModal = () => {
                         }`}
                 >
                     <div className="leading-3">
-                        <span className="text-base font-medium">Add New Business</span>
+                        <span className="text-base font-medium">Add New Product</span>
                         <br />
-                        <small>Please fill in the business data form</small>
+                        <small>Please fill in the product data form</small>
                     </div>
                     <div className="min-h-[25vh] flex flex-col gap-1 my-2">
                         <span>Oke</span>
