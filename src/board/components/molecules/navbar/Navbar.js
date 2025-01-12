@@ -8,7 +8,7 @@ const Navbar = ({ navbar }) => {
         <nav className="bg-white py-2 px-7 shadow-md z-10 flex justify-between items-center">
             <div className="cursor-pointer flex items-center gap-2" onClick={() => { }}>
                 <div className="min-w-28 w-28 max-w-28">
-                    <img src={lgLogo} alt="LogoPussenarmed" className="w-full" />
+                    <img src={lgLogo} alt="LogoQTC" className="w-full" />
                 </div>
             </div>
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => { }} onMouseOver={() => { }} onMouseLeave={() => { }}>

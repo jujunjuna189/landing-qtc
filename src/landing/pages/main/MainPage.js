@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { img12, img13, img5 } from "../../assets";
+import { img12, img13, img5, ptCircle } from "../../assets";
 import { Content } from "../../components";
 
 const preloadImage = (src) => {
@@ -23,7 +23,7 @@ const MainPage = () => {
         <Content>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={images[0]} alt="Image5" className="object-cover object-top w-full h-[80vh]" loading="lazy" />
+                <img src={images[0]} alt="Image5" className="object-cover object-top w-full h-[80vh] animate-fade animate-duration-400" loading="lazy" />
                 <div className="absolute top-0 bottom-0 flex items-center px-24 pt-28">
                     <div className="flex flex-col gap-3">
                         <span className="text-2xl text-white-light" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>Quantum Trans Capital</span>
@@ -35,7 +35,8 @@ const MainPage = () => {
                 </div>
             </div>
             {/* Who We Are */}
-            <div className="relative py-20">
+            <div className="relative py-20 overflow-hidden">
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[30rem] z-20 w-[70%] opacity-10 "/>
                 <div className="px-32">
                     <span className="text-2xl text-primary-dark font-medium">Who We Are</span>
                     <div className="w-12 h-1 bg-secondary-dark" />
@@ -48,7 +49,7 @@ const MainPage = () => {
                     <div className="w-[19vw] max-w-[19vw] min-w-[19vw] absolute bottom-0 top-0 bg-white-light" />
                     <div className="flex gap-16 px-12 items-center relative">
                         <div>
-                            <img src={images[1]} alt="Image5" className="aspect-square object-cover object-top w-[32vw] max-w-[32vw] min-w-[32vw]" loading="lazy" />
+                            <img src={images[1]} alt="Image5" className="aspect-square object-cover object-top w-[32vw] max-w-[32vw] min-w-[32vw] animate-fade animate-duration-400" loading="lazy" />
                         </div>
                         <div className="flex flex-col gap-1 pr-20">
                             <span className="text-4xl text-white-light font-semibold">A Resilient and Secure</span>
@@ -90,7 +91,7 @@ const MainPage = () => {
             {/* Bussiness Highlights */}
             <div className="relative">
                 <div className="absolute top-0 bottom-0 left-0 right-0">
-                    <img src={images[2]} alt="Image5" className="object-cover object-bottom h-full w-full" loading="lazy" />
+                    <img src={images[2]} alt="Image5" className="object-cover object-bottom h-full w-full animate-fade animate-duration-400" loading="lazy" />
                 </div>
                 <div className="py-28 relative">
                     <div className="px-32">
@@ -116,7 +117,8 @@ const MainPage = () => {
                 </div>
             </div>
             {/* Sustainability */}
-            <div className="py-20 relative flex flex-row">
+            <div className="py-20 relative flex flex-row overflow-hidden">
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -bottom-[10rem] -left-[30rem] w-[70%] opacity-10 "/>
                 <div className="flex-1 h-full py-24">
                     <div className="px-32">
                         <span className="text-2xl text-primary-dark font-medium">Sustainability</span>

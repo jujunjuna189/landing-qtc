@@ -38,7 +38,24 @@ module.exports = {
         light: "#FFFFFF",
       },
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        slideLeft1: {
+          "0%": { transform: "translateX(150%)", opacity: "1" },
+          "90%": { transform: "translateX(-100%)", opacity: "1" },
+          "100%": { transform: "translateX(-100%)", opacity: "0" },
+        },
+        slideLeft2: {
+          "0%": { transform: "translateX(150%)", opacity: "1" },
+          "100%": { transform: "translateX(-200%)", opacity: "1" },
+        },
+      },
+      animation: {
+        'spin-slow': 'spin 90s linear infinite', // Durasi 2 detik, tanpa henti
+        "slide-1": "slideLeft1 2s ease-in-out",
+        "slide-2": "slideLeft2 1.7s ease-in-out 0.1s",
+      },
+    },
   },
   plugins: [
     require('tailwindcss-animated'),

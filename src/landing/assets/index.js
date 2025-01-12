@@ -13,6 +13,8 @@ import img12 from "./image/img12.webp";
 import img13 from "./image/img13.webp";
 import lgLogo from "./logo/logo.png";
 import lgGkb from "./logo/logoGkb.png";
+// Pattern
+import ptCircle from "./pattern/circlePattern.png";
 
 export {
     img1,
@@ -30,4 +32,5 @@ export {
     img13,
     lgLogo,
     lgGkb,
+    ptCircle,
 }

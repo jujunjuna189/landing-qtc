@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { RouteName } from "../../../route";
-import { img9 } from "../../assets";
+import { img9, ptCircle } from "../../assets";
 import { Content } from "../../components";
 
 const preloadImage = (src) => {
@@ -24,7 +24,7 @@ const MediaPage = () => {
         <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={images[0]} alt="Image5" className="object-cover object-center w-full h-[40vh]" loading="lazy" />
+                <img src={images[0]} alt="Image5" className="object-cover object-center w-full h-[40vh] animate-fade animate-duration-400" loading="lazy" />
                 <div className="absolute top-0 bottom-0 left-0 right-0 flex justify-start items-center px-24">
                     <div className="flex flex-col gap-3 text-start">
                         <span className="text-5xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #000" }}>Quantum Trans Capital:</span>
@@ -33,6 +33,7 @@ const MediaPage = () => {
                 </div>
             </div>
             <div className="py-20 relative">
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[20rem] w-[70%] opacity-10 "/>
                 <div className="px-32">
                     <span className="text-2xl text-primary-dark font-semibold">Press Release</span>
                     <div className="w-12 h-1 bg-secondary-dark" />

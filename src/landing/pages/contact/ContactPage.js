@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { img11 } from "../../assets";
+import { img11, ptCircle } from "../../assets";
 import { Button, Content, FieldArea, FieldText } from "../../components";
 
 const preloadImage = (src) => {
@@ -21,7 +21,7 @@ const ContactPage = () => {
         <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={images[0]} alt="Image5" className="object-cover w-full h-[40vh]" loading="lazy" style={{ objectPosition: "0 -130px" }} />
+                <img src={images[0]} alt="Image5" className="object-cover w-full h-[40vh] animate-fade animate-duration-400" loading="lazy" style={{ objectPosition: "0 -130px" }} />
                 <div className="absolute top-0 bottom-0 left-0 right-0 flex justify-end items-center px-24">
                     <div className="flex flex-col gap-3 text-end">
                         <span className="text-5xl text-primary-dark font-semibold">Connect with</span>
@@ -30,6 +30,7 @@ const ContactPage = () => {
                 </div>
             </div>
             <div className="py-20 relative">
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[20rem] -right-[20rem] w-[70%] opacity-10 "/>
                 <div className="px-32">
                     <span className="text-2xl text-primary-dark font-semibold">Contact Us :</span>
                     <div className="w-12 h-1 bg-secondary-dark" />

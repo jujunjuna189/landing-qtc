@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { RouteName } from "../../../route";
-import { img7 } from "../../assets";
+import { img7, ptCircle } from "../../assets";
 import { Content } from "../../components";
 
 const preloadImage = (src) => {
@@ -25,6 +25,7 @@ const MediaPreviewPage = () => {
         <Content navbar={{ style_nav: "text-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[20rem] w-[70%] opacity-10 "/>
                 <div className="w-full pt-28 pb-16 flex justify-start items-center px-20 bg-primary-dark">
                     <div className="grow flex justify-between">
                         <div className="grow flex flex-col gap-1 text-start mt-20">
@@ -39,7 +40,7 @@ const MediaPreviewPage = () => {
                             </div>
                         </div>
                         <div className="w-[30rem]">
-                            <img src={images[0]} alt="Image5" className="aspect-[6/5] object-cover object-top" loading="lazy" />
+                            <img src={images[0]} alt="Image5" className="aspect-[6/5] object-cover object-top animate-fade animate-duration-400" loading="lazy" />
                         </div>
                     </div>
                 </div>
