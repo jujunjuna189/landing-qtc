@@ -2,7 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import {
   BusinessContextProvider as AdminBusinessContextProvider,
   NewsContextProvider as AdminNewsContextProvider,
-  ProductContextProvider as AdminProductContextProvider
+  ProductContextProvider as AdminProductContextProvider,
+  QuestionContextProvider as AdminQuestionContextProvider
 } from "./board/contexts";
 
 import {
@@ -12,6 +13,10 @@ import {
   NewsPage as AdminNewsPage,
   QuestionPage as AdminQuestionPage,
 } from "./board/pages";
+
+import {
+  ContactContextProvider as LandingContactContextProvider,
+} from "./landing/contexts";
 
 import {
   MainPage as LandingMainPage,
@@ -105,7 +110,9 @@ function App() {
         <LandingMediaMarketingPage />
       } />
       <Route path={RouteName.contact} element={
-        <LandingContactPage />
+        <LandingContactContextProvider>
+          <LandingContactPage />
+        </LandingContactContextProvider>
       } />
       <Route path={RouteName.career} element={
         <LandingCareerPage />
@@ -136,7 +143,9 @@ function App() {
         </AdminNewsContextProvider>
       } />
       <Route path={RouteName.adminQuestion} element={
-        <AdminQuestionPage />
+        <AdminQuestionContextProvider>
+          <AdminQuestionPage />
+        </AdminQuestionContextProvider>
       } />
     </Routes>
   );

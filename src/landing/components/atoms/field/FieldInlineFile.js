@@ -1,7 +1,9 @@
+import { useState } from "react";
 import Button from "../button/Button";
 
-const FieldFile = (props) => {
+const FieldInlineFile = (props) => {
     let reader = new FileReader();
+    const [name, setName] = useState("");
 
     const handleInputChange = (event) => {
         const imageFile = event.target.files[0];
@@ -9,6 +11,8 @@ const FieldFile = (props) => {
             console.log('Please select image.');
             return false;
         }
+
+        setName(imageFile?.name);
 
         const randomString = Math.random().toString(36).substring(2, 8);
         const fileName = Date.now() + '-' + randomString + '.webp';
@@ -74,14 +78,17 @@ const FieldFile = (props) => {
 
     return (
         <div className="flex flex-col">
-            <div className="flex justify-start">
+            <div className="flex justify-between items-center pl-3 grow border border-primary-dark">
+                <div>
+                    <span>{props.value ? name : ''}</span>
+                </div>
                 <Button className="border hover:bg-slate-100 relative text-white-light">
                     <input type="file" accept="image/*" className="absolute left-0 top-0 right-0 bottom-0 border opacity-0 cursor-pointer w-full" onChange={(event) => handleInputChange(event)} />
-                    {props.label ?? 'Upload Photo'}
+                    {props.label ?? 'Upload File'}
                 </Button>
             </div>
             {props.error && <small className="text-red-800 pl-1">{props.error}</small>}
         </div>
     );
 }
-export default FieldFile;
+export default FieldInlineFile;

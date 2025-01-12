@@ -1,12 +1,16 @@
 import { useEffect, useRef, useState } from "react";
-import { Button } from "../../../../components/atoms";
+import { Button, FieldText } from "../../../../components";
+import { updateQuestionApi } from "../../../../helpers";
 
-const UpdateModal = () => {
+const UpdateModal = (props) => {
     const ref = useRef();
     const [isVisible, setIsVisible] = useState(false);
+    const [controller, setController] = useState({});
+    const [errors, setErrors] = useState({});
 
     const toggleModal = () => {
         setIsVisible((prev) => !prev);
+        if (isVisible !== true) firstSettingController();
     };
 
     const handleClickOutside = (event) => {
@@ -15,8 +19,31 @@ const UpdateModal = () => {
         }
     };
 
+    const firstSettingController = () => {
+        setController({
+            ...props.item,
+            file: {
+                preview: props.item?.file,
+            }
+        });
+    }
+
+    const onSetController = ({ field, value }) => {
+        setController({ ...controller, [field]: value });
+    }
+
     const onSave = async () => {
-        console.log("Data Saved!");
+        var dataBatch = { ...controller };
+        dataBatch.image = controller.image?.file;
+        console.log(controller);
+        await updateQuestionApi({ id: props.item?.id, body: dataBatch }).then((res) => {
+            res?.errors && setErrors(res?.errors);
+            if (!res?.errors) {
+                setErrors({});
+                toggleModal();
+                props.onSave && props.onSave();
+            }
+        });
     };
 
     useEffect(() => {
@@ -58,14 +85,33 @@ const UpdateModal = () => {
                         <small>Please fill in the product data form</small>
                     </div>
                     <div className="min-h-[25vh] flex flex-col gap-1 my-2">
-                        <span>Oke</span>
+                        <div className="mt-3">
+                            <label>First Name</label>
+                            <FieldText placeholder="..." error={errors.first_name} value={controller.first_name} onChange={(value) => onSetController({ field: 'first_name', value: value })} />
+                        </div>
+                        <div className="mt-3">
+                            <label>Last Name</label>
+                            <FieldText placeholder="..." error={errors.last_name} value={controller.last_name} onChange={(value) => onSetController({ field: 'last_name', value: value })} />
+                        </div>
+                        <div className="mt-3">
+                            <label>Email Address</label>
+                            <FieldText placeholder="..." error={errors.email_address} value={controller.email_address} onChange={(value) => onSetController({ field: 'email_address', value: value })} />
+                        </div>
+                        <div className="mt-3">
+                            <label>Contact</label>
+                            <FieldText placeholder="..." error={errors.contact_number} value={controller.contact_number} onChange={(value) => onSetController({ field: 'contact_number', value: value })} />
+                        </div>
+                        <div className="mt-3">
+                            <label>Inquiry Type</label>
+                            <FieldText placeholder="..." error={errors.inqueiry_type} value={controller.inqueiry_type} onChange={(value) => onSetController({ field: 'inqueiry_type', value: value })} />
+                        </div>
                         <div className="flex-grow" />
                         <div className="flex justify-end mt-3">
                             <Button
                                 className="bg-slate-700 text-white-light rounded-md"
                                 onClick={onSave}
                             >
-                                Simpan
+                                Save
                             </Button>
                         </div>
                     </div>

@@ -77,7 +77,7 @@ const CreateModal = () => {
                                 className="bg-slate-700 text-white-light rounded-md"
                                 onClick={onSave}
                             >
-                                Simpan
+                                Save
                             </Button>
                         </div>
                     </div>

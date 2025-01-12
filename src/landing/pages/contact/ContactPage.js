@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { img11, ptCircle } from "../../assets";
-import { Button, Content, FieldArea, FieldText } from "../../components";
+import { Button, Content, FieldArea, FieldInlineFile, FieldText } from "../../components";
+import { UseContactContext } from "../../contexts/contact/ContactContext";
 
 const preloadImage = (src) => {
     const img = new Image();
@@ -8,6 +9,7 @@ const preloadImage = (src) => {
 };
 
 const ContactPage = () => {
+    const { controller, onSetController, onSave } = UseContactContext();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const images = [
         img11,
@@ -30,7 +32,7 @@ const ContactPage = () => {
                 </div>
             </div>
             <div className="py-20 relative">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[20rem] -right-[20rem] w-[70%] opacity-10 "/>
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[20rem] -right-[20rem] w-[70%] opacity-10 " />
                 <div className="px-32">
                     <span className="text-2xl text-primary-dark font-semibold">Contact Us :</span>
                     <div className="w-12 h-1 bg-secondary-dark" />
@@ -87,41 +89,41 @@ const ContactPage = () => {
                             <div className="flex gap-3">
                                 <div className="grow">
                                     <span className="uppercase text-primary-dark">First Name <span className="text-danger-dark">*</span></span>
-                                    <FieldText />
+                                    <FieldText value={controller.first_name} onChange={(value) => onSetController({ field: 'first_name', value })} />
                                 </div>
                                 <div className="grow">
                                     <span className="uppercase text-primary-dark">Last Name <span className="text-danger-dark">*</span></span>
-                                    <FieldText />
+                                    <FieldText value={controller.last_name} onChange={(value) => onSetController({ field: 'last_name', value })} />
                                 </div>
                             </div>
                             <div className="flex gap-3 mt-8">
                                 <div className="grow">
                                     <span className="uppercase text-primary-dark">Email Address <span className="text-danger-dark">*</span></span>
-                                    <FieldText />
+                                    <FieldText value={controller.email_address} onChange={(value) => onSetController({ field: 'email_address', value })} />
                                 </div>
                                 <div className="grow">
                                     <span className="uppercase text-primary-dark">Contact Number <span className="text-danger-dark">*</span></span>
-                                    <FieldText />
+                                    <FieldText value={controller.contact_number} onChange={(value) => onSetController({ field: 'contact_number', value })} />
                                 </div>
                             </div>
                             <div className="mt-8">
                                 <span className="uppercase text-primary-dark">INQUIRY TYPE <span className="text-danger-dark">*</span></span>
-                                <FieldText />
+                                <FieldText value={controller.inquiry_type} onChange={(value) => onSetController({ field: 'inquiry_type', value })} />
                             </div>
                             <div className="mt-8">
                                 <span className="uppercase text-primary-dark">FILE ATTACHMENT</span>
-                                <FieldText />
+                                <FieldInlineFile value={controller.attachment?.preview} onChange={(value) => onSetController({ field: 'attachment', value: value })} />
                             </div>
                             <div className="mt-8">
                                 <span className="uppercase text-primary-dark">Subject</span>
-                                <FieldText />
+                                <FieldText value={controller.subject} onChange={(value) => onSetController({ field: 'subject', value })} />
                             </div>
                             <div className="mt-8">
                                 <span className="uppercase text-primary-dark">Message</span>
-                                <FieldArea />
+                                <FieldArea value={controller.message} onChange={(value) => onSetController({ field: 'message', value })} />
                             </div>
                             <div className="mt-5 flex justify-end">
-                                <Button>
+                                <Button onClick={() => onSave()}>
                                     <span className="text-white-light uppercase">Submit</span>
                                 </Button>
                             </div>

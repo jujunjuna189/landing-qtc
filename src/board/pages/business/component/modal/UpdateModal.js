@@ -104,10 +104,10 @@ const UpdateModal = (props) => {
                             <div className="grow">
                                 <div className="mb-2">
                                     <span className="font-medium">Unggah Logo</span><br />
-                                    <small>Sertakan logo satuan dengan mengunggah logo...</small>
+                                    <small>Choose a logo and upload it here...</small>
                                 </div>
                                 <div className="flex">
-                                    <FieldFile label="Unggah Logo" onChange={(value) => onSetController({ field: 'logo', value: value })} />
+                                    <FieldFile label="Upload Logo" onChange={(value) => onSetController({ field: 'logo', value: value })} />
                                     <span className="text-danger-dark">{errors.logo}</span>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@ const UpdateModal = (props) => {
                                 className="bg-slate-700 text-white-light rounded-md"
                                 onClick={onSave}
                             >
-                                Simpan
+                                Save
                             </Button>
                         </div>
                     </div>

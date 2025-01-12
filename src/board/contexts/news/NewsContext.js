@@ -21,6 +21,7 @@ export const NewsContextProvider = ({ children }) => {
     useEffect(() => {
         getNews();
     }, []);
+
     return (
         <NewsContext.Provider value={{ news, getNews, deleteNews }}>
             {children}
