@@ -1,5 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import {
+  BusinessContextProvider as AdminBusinessContextProvider,
+  NewsContextProvider as AdminNewsContextProvider,
+  ProductContextProvider as AdminProductContextProvider
+} from "./board/contexts";
+
+import {
   DashboardPage as AdminDashboardPage,
   BusinessPage as AdminBusinessPage,
   ProductPage as AdminProductPage,
@@ -115,13 +121,19 @@ function App() {
         <AdminDashboardPage />
       } />
       <Route path={RouteName.adminBusiness} element={
-        <AdminBusinessPage />
+        <AdminBusinessContextProvider>
+          <AdminBusinessPage />
+        </AdminBusinessContextProvider>
       } />
       <Route path={RouteName.adminProduct} element={
-        <AdminProductPage />
+        <AdminProductContextProvider>
+          <AdminProductPage />
+        </AdminProductContextProvider>
       } />
       <Route path={RouteName.adminNews} element={
-        <AdminNewsPage />
+        <AdminNewsContextProvider>
+          <AdminNewsPage />
+        </AdminNewsContextProvider>
       } />
       <Route path={RouteName.adminQuestion} element={
         <AdminQuestionPage />

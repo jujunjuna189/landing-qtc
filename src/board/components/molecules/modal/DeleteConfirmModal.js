@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "../../atoms";
 
-const DeleteConfirmModal = ({ children }) => {
+const DeleteConfirmModal = (props) => {
     const ref = useRef();
     const [isVisible, setIsVisible] = useState(false);
 
@@ -16,7 +16,8 @@ const DeleteConfirmModal = ({ children }) => {
     };
 
     const onSave = async () => {
-        console.log("Data Saved!");
+        toggleModal();
+        props.onSave && props.onSave();
     };
 
     useEffect(() => {
@@ -30,7 +31,7 @@ const DeleteConfirmModal = ({ children }) => {
         <div className="inline-block" ref={ref}>
             {/* Button to toggle modal */}
             <div className="cursor-pointer" onClick={toggleModal}>
-                {children}
+                {props.children}
             </div>
 
             {/* Modal */}

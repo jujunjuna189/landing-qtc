@@ -22,7 +22,7 @@ const BusinessPreviewPage = () => {
         <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={images[0]} alt="Image5" className="object-cover object-bottom w-full h-[70vh] animate-fade animate-duration-400 animate-fade animate-duration-400" loading="lazy" />
+                <img src={images[0]} alt="Image5" className="object-cover object-bottom w-full h-[70vh] animate-fade animate-duration-400 animate-duration-400" loading="lazy" />
                 <div className="absolute top-0 bottom-0 left-0 right-0 flex justify-start items-center px-24">
                     <div className="flex flex-col gap-10 text-start">
                         <span className="text-8xl text-white-light font-semibold">Leading For Solar</span>
@@ -32,7 +32,7 @@ const BusinessPreviewPage = () => {
             </div>
             {/* Who we are */}
             <div className="pt-32 pb-32 relative flex flex-row px-20">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[20rem] w-[70%] opacity-10 "/>
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[20rem] w-[70%] opacity-10 " />
                 <div className="grow w-[50rem] flex justify-center">
                     <img src={images[1]} alt="Image5" className="object-contain object-bottom aspect-video h-[10rem] animate-fade animate-duration-400" loading="lazy" />
                 </div>
