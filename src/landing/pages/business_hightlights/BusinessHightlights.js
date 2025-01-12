@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { RouteName } from "../../../route";
 import { img7, img8, ptCircle } from "../../assets";
 import { Content } from "../../components";
+import { UseBusinessContext } from "../../contexts/business/BusinessContext";
 
 const preloadImage = (src) => {
     const img = new Image();
@@ -10,6 +11,7 @@ const preloadImage = (src) => {
 };
 
 const BusinessHightlightsPage = () => {
+    const { business } = UseBusinessContext();
     const navigation = useNavigate();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const images = [
@@ -35,8 +37,8 @@ const BusinessHightlightsPage = () => {
             </div>
             {/* Who we are */}
             <div className="pt-32 pb-32 relative flex flex-row">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -bottom-[15rem] -left-[30rem] w-[90%] opacity-10 "/>
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[20rem] w-[70%] opacity-10 "/>
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -bottom-[15rem] -left-[30rem] w-[90%] opacity-10 " />
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[20rem] w-[70%] opacity-10 " />
                 <div className="grow h-full">
                     <div className="px-20">
                         <span className="text-2xl text-primary-dark font-medium">Business Highlights</span>
@@ -74,54 +76,18 @@ const BusinessHightlightsPage = () => {
                 </div>
                 <div className="pr-20 w-[30rem] max-w-[30rem] min-w-[30rem]">
                     <div className="flex flex-col gap-10">
-                        <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigation(RouteName.businessPreview)}>
-                            <div className="border rounded-full w-20 min-w-20 max-w-20 h-20 border-primary-dark"></div>
-                            <div>
-                                <span className="text-primary-dark font-medium">Matra Mandiri Prima</span>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigation(RouteName.businessPreview)}>
-                            <div className="border rounded-full w-20 min-w-20 max-w-20 h-20 border-primary-dark"></div>
-                            <div>
-                                <span className="text-primary-dark font-medium">Global Karya Bangsa</span>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigation(RouteName.businessPreview)}>
-                            <div className="border rounded-full w-20 min-w-20 max-w-20 h-20 border-primary-dark"></div>
-                            <div>
-                                <span className="text-primary-dark font-medium">Daya Mandiri Terbarukan</span>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigation(RouteName.businessPreview)}>
-                            <div className="border rounded-full w-20 min-w-20 max-w-20 h-20 border-primary-dark"></div>
-                            <div>
-                                <span className="text-primary-dark font-medium">Karampuang  Multi Daya</span>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigation(RouteName.businessPreview)}>
-                            <div className="border rounded-full w-20 min-w-20 max-w-20 h-20 border-primary-dark"></div>
-                            <div>
-                                <span className="text-primary-dark font-medium">Quint Solar Indonesia</span>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigation(RouteName.businessPreview)}>
-                            <div className="border rounded-full w-20 min-w-20 max-w-20 h-20 border-primary-dark"></div>
-                            <div>
-                                <span className="text-primary-dark font-medium">NTR Corporation</span>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigation(RouteName.businessPreview)}>
-                            <div className="border rounded-full w-20 min-w-20 max-w-20 h-20 border-primary-dark"></div>
-                            <div>
-                                <span className="text-primary-dark font-medium"> Jaring Lawah Cyber</span>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigation(RouteName.businessPreview)}>
-                            <div className="border rounded-full w-20 min-w-20 max-w-20 h-20 border-primary-dark"></div>
-                            <div>
-                                <span className="text-primary-dark font-medium">Energi Trans Global</span>
-                            </div>
-                        </div>
+                        {(business?.data ?? [])?.map((item, index) => {
+                            return (
+                                <div key={index} className="flex items-center gap-3 cursor-pointer" onClick={() => navigation(RouteName.businessPreview)}>
+                                    <div className="border rounded-full w-20 min-w-20 max-w-20 h-20 border-primary-dark bg-white-light overflow-hidden">
+                                        <img src={item.logo} alt="LogoBusiness" className="w-full h-full rounded-full" />
+                                    </div>
+                                    <div>
+                                        <span className="text-primary-dark font-medium">{item.name}</span>
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

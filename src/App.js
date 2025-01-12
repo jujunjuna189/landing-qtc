@@ -16,6 +16,8 @@ import {
 
 import {
   ContactContextProvider as LandingContactContextProvider,
+  BusinessContextProvider as LandingBusinessContextProvider,
+  MediaContextProvider as LandingMediaContextProvider,
 } from "./landing/contexts";
 
 import {
@@ -83,7 +85,9 @@ function App() {
         <LandingResearchDevelopmentPage />
       } />
       <Route path={RouteName.businessHightlights} element={
-        <LandingBusinessHightlightsPage />
+        <LandingBusinessContextProvider>
+          <LandingBusinessHightlightsPage />
+        </LandingBusinessContextProvider>
       } />
       <Route path={RouteName.businessPreview} element={
         <LandingBusinessPreviewPage />
@@ -101,7 +105,9 @@ function App() {
         <LandingPartnershipsPage />
       } />
       <Route path={RouteName.media} element={
-        <LandingMediaPage />
+        <LandingMediaContextProvider>
+          <LandingMediaPage />
+        </LandingMediaContextProvider>
       } />
       <Route path={RouteName.mediaPreview} element={
         <LandingMediaPreviewPage />

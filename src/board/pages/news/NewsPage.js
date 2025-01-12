@@ -35,7 +35,7 @@ const NewsPage = () => {
                             )}
                             {(news?.data ?? [])?.map((item, index) => {
                                 return (
-                                    <tr className="hover:bg-white-muted">
+                                    <tr key={index} className="hover:bg-white-muted">
                                         <td className="border-y-[1.5px] border-white-muted px-3 py-3 text-sm text-center">{index + 1}</td>
                                         <td className="border-y-[1.5px] border-white-muted px-3 py-3 text-sm text-start">
                                             <div className="w-16 min-w-16 max-w-16 rounded-md">

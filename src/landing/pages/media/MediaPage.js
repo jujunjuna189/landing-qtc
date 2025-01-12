@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { RouteName } from "../../../route";
 import { img9, ptCircle } from "../../assets";
 import { Content } from "../../components";
+import { UseMediaContext } from "../../contexts/media/MediaContext";
+import { DateFormatter } from "../../helpers";
 
 const preloadImage = (src) => {
     const img = new Image();
@@ -10,11 +12,23 @@ const preloadImage = (src) => {
 };
 
 const MediaPage = () => {
+    const { news, setPage } = UseMediaContext();
     const navigation = useNavigate();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const images = [
         img9,
     ];
+
+    const getPagination = ({ total }) => {
+        var data = [];
+
+        for (var i = 0; i < total; i++) {
+            const iPlus = i + 1;
+            data.push(<div className={`py-1 px-3 text-primary-dark cursor-pointer ${(i - 1) === news.current_page && 'bg-primary-dark text-white-light'}`} onClick={() => setPage(iPlus)}>{iPlus}</div>);
+        }
+
+        return data;
+    }
 
     useEffect(() => {
         images.forEach(preloadImage);
@@ -33,7 +47,7 @@ const MediaPage = () => {
                 </div>
             </div>
             <div className="py-20 relative">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[20rem] w-[70%] opacity-10 "/>
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[20rem] w-[70%] opacity-10 " />
                 <div className="px-32">
                     <span className="text-2xl text-primary-dark font-semibold">Press Release</span>
                     <div className="w-12 h-1 bg-secondary-dark" />
@@ -74,52 +88,33 @@ const MediaPage = () => {
                         </div>
                     </div>
                     <div className="grid grid-cols-4 gap-4 mt-12">
-                        <div className="shadow-all cursor-pointer" onClick={() => navigation(RouteName.mediaPreview)}>
-                            <div className="aspect-[16/13] bg-primary-dark"></div>
-                            <div className="p-3">
-                                <span className="text-primary-dark font-medium">GKB Innovation: Winning Title for Best Company Project in 2025</span>
-                            </div>
-                            <div className="mt-2 p-3">
-                                <span className="text-dark-muted text-sm">Oktober 24, 2025</span>
-                            </div>
-                        </div>
-                        <div className="shadow-all cursor-pointer" onClick={() => navigation(RouteName.mediaPreview)}>
-                            <div className="aspect-[16/13] bg-primary-dark"></div>
-                            <div className="p-3">
-                                <span className="text-primary-dark font-medium">GKB Innovation: Winning Title for Best Company Project in 2025</span>
-                            </div>
-                            <div className="mt-2 p-3">
-                                <span className="text-dark-muted text-sm">Oktober 24, 2025</span>
-                            </div>
-                        </div>
-                        <div className="shadow-all cursor-pointer" onClick={() => navigation(RouteName.mediaPreview)}>
-                            <div className="aspect-[16/13] bg-primary-dark"></div>
-                            <div className="p-3">
-                                <span className="text-primary-dark font-medium">GKB Innovation: Winning Title for Best Company Project in 2025</span>
-                            </div>
-                            <div className="mt-2 p-3">
-                                <span className="text-dark-muted text-sm">Oktober 24, 2025</span>
-                            </div>
-                        </div>
-                        <div className="shadow-all cursor-pointer" onClick={() => navigation(RouteName.mediaPreview)}>
-                            <div className="aspect-[16/13] bg-primary-dark"></div>
-                            <div className="p-3">
-                                <span className="text-primary-dark font-medium">GKB Innovation: Winning Title for Best Company Project in 2025</span>
-                            </div>
-                            <div className="mt-2 p-3">
-                                <span className="text-dark-muted text-sm">Oktober 24, 2025</span>
-                            </div>
-                        </div>
+                        {(news?.data ?? [])?.map((item, index) => {
+                            return (
+                                <div key={index} className="shadow-all cursor-pointer bg-white-light" onClick={() => navigation(RouteName.mediaPreview)}>
+                                    <div className="aspect-[16/13] bg-primary-dark">
+                                        <img src={item.image} alt="NewsImage" className="w-full h-full" />
+                                    </div>
+                                    <div className="p-3">
+                                        <span className="text-primary-dark font-medium">{item.title}</span>
+                                    </div>
+                                    <div className="mt-2 p-3">
+                                        <span className="text-dark-muted text-sm">{DateFormatter.v1({ value: item.date })}</span>
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
                     {/* pagination */}
                     <div className="flex justify-end mt-12">
                         <div className="flex bg-gray-dark">
-                            <div className="py-1 px-3 bg-primary-dark text-white-light">1</div>
-                            <div className="py-1 px-3 text-primary-dark">2</div>
-                            <div className="py-1 px-3 text-primary-dark">3</div>
-                            <div className="py-1 px-3 text-primary-dark">4</div>
-                            <div className="py-1 px-3 text-primary-dark">5</div>
-                            <div className="py-1 px-3 text-primary-dark">Next {'>'}</div>
+                            {getPagination({ total: news?.last_page }).map((item, index) => {
+                                return (
+                                    <div key={index}>
+                                        {item}
+                                    </div>
+                                );
+                            })}
+                            <div className="py-1 px-3 text-primary-dark cursor-pointer" onClick={() => { }}>Next {'>'}</div>
                         </div>
                     </div>
                 </div>
