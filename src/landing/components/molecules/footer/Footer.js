@@ -1,17 +1,20 @@
+import { useNavigate } from "react-router-dom";
+import { RouteName } from "../../../../route";
 import { lgLogo } from "../../../assets";
 
 const Footer = () => {
+    const navigation = useNavigate();
     return (
         <div className="bg-dark-dark py-10 px-20">
             <div className="flex justify-between ">
                 <ul className="flex gap-7 grow items-center">
-                    <li className="text-white-light text-[15px] cursor-pointer">Who We Are</li>
-                    <li className="text-white-light text-[15px] cursor-pointer">Our Impact</li>
-                    <li className="text-white-light text-[15px] cursor-pointer">Business Highlights</li>
-                    <li className="text-white-light text-[15px] cursor-pointer">Sustainability</li>
-                    <li className="text-white-light text-[15px] cursor-pointer">Media</li>
-                    <li className="text-white-light text-[15px] cursor-pointer">Contact</li>
-                    <li className="text-white-light text-[15px] cursor-pointer">Career</li>
+                    <li className="text-white-light text-[15px] cursor-pointer" onClick={() => navigation(RouteName.about)}>Who We Are</li>
+                    <li className="text-white-light text-[15px] cursor-pointer" onClick={() => navigation(RouteName.ourImpact)}>Our Impact</li>
+                    <li className="text-white-light text-[15px] cursor-pointer" onClick={() => navigation(RouteName.businessHightlights)}>Business Highlights</li>
+                    <li className="text-white-light text-[15px] cursor-pointer" onClick={() => navigation(RouteName.sustainability)}>Sustainability</li>
+                    <li className="text-white-light text-[15px] cursor-pointer" onClick={() => navigation(RouteName.media)}>Media</li>
+                    <li className="text-white-light text-[15px] cursor-pointer" onClick={() => navigation(RouteName.contact)}>Contact</li>
+                    <li className="text-white-light text-[15px] cursor-pointer" onClick={() => navigation(RouteName.career)}>Career</li>
                 </ul>
                 <ul className="flex gap-7 justify-end items-center">
                     <li className="text-white-light text-[15px] cursor-pointer font-medium">News Update</li>

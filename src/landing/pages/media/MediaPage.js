@@ -61,26 +61,26 @@ const MediaPage = () => {
                         </div>
                         <div className="flex gap-10 items-center">
                             <div className="flex gap-7 h-full">
-                                <div className="h-full flex items-center gap-7">
+                                <div className="h-full flex items-center gap-7 cursor-pointer">
                                     <span className="font-medium text-sm">Category</span>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" className="text-dark-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 9l6 6l6 -6" /></svg>
                                     </span>
                                 </div>
-                                <div className="h-full flex items-center gap-7">
+                                <div className="h-full flex items-center gap-7 cursor-pointer">
                                     <span className="font-medium text-sm">Year</span>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" className="text-dark-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 9l6 6l6 -6" /></svg>
                                     </span>
                                 </div>
-                                <div className="h-full flex items-center gap-7">
+                                <div className="h-full flex items-center gap-7 cursor-pointer">
                                     <span className="font-medium text-sm">Month</span>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" className="text-dark-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 9l6 6l6 -6" /></svg>
                                     </span>
                                 </div>
                             </div>
-                            <div className="bg-primary-dark px-10 py-3">
+                            <div className="bg-primary-dark px-10 py-3 cursor-pointer">
                                 <span className="uppercase text-white-light">
                                     Search News
                                 </span>

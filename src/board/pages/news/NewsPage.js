@@ -39,7 +39,7 @@ const NewsPage = () => {
                                         <td className="border-y-[1.5px] border-white-muted px-3 py-3 text-sm text-center">{index + 1}</td>
                                         <td className="border-y-[1.5px] border-white-muted px-3 py-3 text-sm text-start">
                                             <div className="w-16 min-w-16 max-w-16 rounded-md">
-                                                <img src={item.image} alt="Logo" />
+                                                <img src={item.image} alt="ImageNews" />
                                             </div>
                                         </td>
                                         <td className="border-y-[1.5px] border-white-muted px-3 py-3 text-sm font-medium text-start">{item.title}</td>

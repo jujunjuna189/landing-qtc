@@ -1,4 +1,7 @@
 import { useEffect } from "react";
+import { LandingLanguage } from "../../../helper/language/LandingLanguage";
+import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
+import { RouteName } from "../../../route";
 import { img12, img13, img5, ptCircle } from "../../assets";
 import { Content } from "../../components";
 
@@ -8,6 +11,7 @@ const preloadImage = (src) => {
 };
 
 const MainPage = () => {
+    const language = LandingLanguage[getLocalLanguage().key][RouteName.main];
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const images = [
         img5,
@@ -21,29 +25,30 @@ const MainPage = () => {
 
     return (
         <Content>
+            {console.log(language)}
             {/* Jumbotron */}
             <div className="relative">
                 <img src={images[0]} alt="Image5" className="object-cover object-top w-full h-[80vh] animate-fade animate-duration-400" loading="lazy" />
                 <div className="absolute top-0 bottom-0 flex items-center px-24 pt-28">
                     <div className="flex flex-col gap-3">
-                        <span className="text-2xl text-white-light" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>Quantum Trans Capital</span>
+                        <span className="text-2xl text-white-light" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>{language[1]}</span>
                         <div className="flex flex-col">
-                            <span className="text-4xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>Sharing Investment Opportunities</span>
-                            <span className="text-4xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>All Around Indonesia</span>
+                            <span className="text-4xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>{language[2.1]}</span>
+                            <span className="text-4xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>{language[2.2]}</span>
                         </div>
                     </div>
                 </div>
             </div>
             {/* Who We Are */}
             <div className="relative py-20 overflow-hidden">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[30rem] z-20 w-[70%] opacity-10 "/>
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[30rem] z-20 w-[70%] opacity-10 " />
                 <div className="px-32">
-                    <span className="text-2xl text-primary-dark font-medium">Who We Are</span>
+                    <span className="text-2xl text-primary-dark font-medium">{language[3]}</span>
                     <div className="w-12 h-1 bg-secondary-dark" />
                 </div>
                 <div className="flex flex-col px-36 mt-16">
-                    <span className="text-4xl text-primary-dark font-semibold">Connecting Global Investors and Real Time</span>
-                    <span className="text-4xl text-primary-dark font-semibold">Sustainable Projects in Indonesia</span>
+                    <span className="text-4xl text-primary-dark font-semibold">{language[4.1]}</span>
+                    <span className="text-4xl text-primary-dark font-semibold">{language[4.2]}</span>
                 </div>
                 <div className="bg-primary-dark py-10 mt-24 relative">
                     <div className="w-[19vw] max-w-[19vw] min-w-[19vw] absolute bottom-0 top-0 bg-white-light" />
@@ -52,21 +57,18 @@ const MainPage = () => {
                             <img src={images[1]} alt="Image5" className="aspect-square object-cover object-top w-[32vw] max-w-[32vw] min-w-[32vw] animate-fade animate-duration-400" loading="lazy" />
                         </div>
                         <div className="flex flex-col gap-1 pr-20">
-                            <span className="text-4xl text-white-light font-semibold">A Resilient and Secure</span>
-                            <span className="text-4xl text-white-light font-semibold">Holding Company with</span>
-                            <span className="text-4xl text-white-light font-semibold">Diversified Energy Related</span>
-                            <span className="text-4xl text-white-light font-semibold"> Operating Assets</span>
+                            <span className="text-4xl text-white-light font-semibold">{language[5.1]}</span>
+                            <span className="text-4xl text-white-light font-semibold">{language[5.2]}</span>
+                            <span className="text-4xl text-white-light font-semibold">{language[5.3]}</span>
+                            <span className="text-4xl text-white-light font-semibold">{language[5.4]}</span>
                             <div className="mt-12">
                                 <span className="text-white-light font-light">
-                                    Quantum Trans Capital, we drive positive change in Indonesia's economy by bridging
-                                    visionary projects with strategic investors.
+                                    {language[6]}
                                 </span>
                             </div>
                             <div className="mt-12">
                                 <span className="text-white-light font-light">
-                                    Our focus on capital investment, renewable energy, real estate, and industrial needs fosters
-                                    growth, innovation, and sustainability. As a catalyst for progress, Quantum Trans Capital
-                                    connects opportunities and shapes a brighter future.
+                                    {language[7]}
                                 </span>
                             </div>
                         </div>
@@ -76,14 +78,13 @@ const MainPage = () => {
             {/* Our Impact */}
             <div className="bg-gray-dark py-20 relative">
                 <div className="px-32">
-                    <span className="text-2xl text-primary-dark font-medium">Our Impact</span>
+                    <span className="text-2xl text-primary-dark font-medium">{language[8]}</span>
                     <div className="w-12 h-1 bg-secondary-dark" />
                 </div>
                 <div className="flex flex-col px-36 mt-12">
                     <div className="w-[60%]">
                         <span className="text-primary-dark font-medium">
-                            Quantum Trans Capital is an Indonesian company specializing in facilitating
-                            and funding investment opportunities across diverse sectors.
+                            {language[9]}
                         </span>
                     </div>
                 </div>
@@ -95,15 +96,13 @@ const MainPage = () => {
                 </div>
                 <div className="py-28 relative">
                     <div className="px-32">
-                        <span className="text-2xl text-primary-dark font-medium">Business Highlights</span>
+                        <span className="text-2xl text-primary-dark font-medium">{language[10]}</span>
                         <div className="w-12 h-1 bg-secondary-dark" />
                     </div>
                     <div className="flex flex-col px-36 mt-12">
                         <div className="w-[50%]">
                             <span className="text-primary-dark font-medium">
-                                Quantum Trans Capital has brought leading projects, destinations
-                                and untapped opportunities to market through key partnerships and
-                                investments in the region and beyond.
+                                {language[11]}
                             </span>
                         </div>
                     </div>
@@ -111,52 +110,43 @@ const MainPage = () => {
                     <div className="flex items-center gap-3 px-36">
                         <span className="text-secondary-dark text-5xl font-medium" style={{ textShadow: "0px 1px 10px #4B4B4B" }}>o</span>
                         <div className="mt-1">
-                            <span className="text-white-light text-4xl font-medium" style={{ textShadow: "0px 1px 10px #4B4B4B" }}>Renewable Energy</span>
+                            <span className="text-white-light text-4xl font-medium" style={{ textShadow: "0px 1px 10px #4B4B4B" }}>{language[12]}</span>
                         </div>
                     </div>
                 </div>
             </div>
             {/* Sustainability */}
             <div className="py-20 relative flex flex-row overflow-hidden">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -bottom-[10rem] -left-[30rem] w-[70%] opacity-10 "/>
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -bottom-[10rem] -left-[30rem] w-[70%] opacity-10 " />
                 <div className="flex-1 h-full py-24">
                     <div className="px-32">
-                        <span className="text-2xl text-primary-dark font-medium">Sustainability</span>
+                        <span className="text-2xl text-primary-dark font-medium">{language[13]}</span>
                         <div className="w-12 h-1 bg-secondary-dark" />
                     </div>
                     <div className="flex flex-col gap-6 px-36 mt-12">
+                        <div className="mt-3 text-primary-dark" style={{ whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: language[14] }} />
                         <span className="text-primary-dark">
-                            <b>Quantum Trans Capital,</b> sustainability is a fundamental
-                            principle underlying our strategic direction and operational
-                            excellence.
+                            {language[15]}
                         </span>
                         <span className="text-primary-dark">
-                            We are committed to delivering sustainable value for our
-                            stakeholders, while improving the performance of each line
-                            company.
-                        </span>
-                        <span className="text-primary-dark">
-                            Our business is guided by sustainability principles that shape
-                            our strategic direction and operational excellence.
+                            {language[16]}
                         </span>
                     </div>
                 </div>
                 <div className="pr-20 flex-1">
                     <div className="bg-primary-dark w-full h-full py-24">
                         <div className="px-12">
-                            <span className="text-2xl text-white-light font-medium">Sustainability</span>
+                            <span className="text-2xl text-white-light font-medium">{language[17]}</span>
                             <div className="w-12 h-1 bg-secondary-dark" />
                         </div>
                         <div className="flex flex-col gap-6 px-12 mt-12">
                             <span className="text-white-light text-[18px]">
-                                Keep track of all the exciting news and opportunities as we
-                                grow our network by entering new markets, forging new
-                                partnerships, and our latest resources
+                                {language[18]}
                             </span>
                         </div>
                         <div className="mt-10 px-12 flex">
                             <div className="bg-white-light px-8 py-2">
-                                <span className="text-primary-dark font-semibold">Explore our media centre</span>
+                                <span className="text-primary-dark font-semibold">{language[19]}</span>
                             </div>
                         </div>
                         <div className="h-[20vh]" />
