@@ -7,3 +7,5 @@ export const API_PRODUCT = `${REACT_APP_API_URL}product`;
 export const API_NEWS = `${REACT_APP_API_URL}news`;
 // Question
 export const API_QUESTION = `${REACT_APP_API_URL}question`;
+// Analytics
+export const API_ANALYTICS = `${REACT_APP_API_URL}analytic`;

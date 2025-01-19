@@ -7,7 +7,7 @@ export const getBusinessApi = async ({ filter = '' }) => {
 
         const response = await axios.get(`${API_BUSINESS}?${filter}`, {
             headers: {
-                Authorization: `bearer 2|cypuEXtwn5OmYmeGurMME7i23HcXQQlpBJsxC98Rb2ba4814`,
+                Authorization: `bearer 41|rAkkrlKZopaBmvDEPuFyrCXPGNd11VxakP5vxW843b8666ab`,
             },
         });
         return response.data.list_data;
@@ -21,7 +21,7 @@ export const createBusinessApi = async ({ body = {} }) => {
     try {
         const response = await axios.post(API_BUSINESS, body, {
             headers: {
-                Authorization: `bearer 4|3Cv3bBXhvIpa1EAUFxozFvA3DYmdp1LU9MFbnnoO0974984f`,
+                Authorization: `bearer 41|rAkkrlKZopaBmvDEPuFyrCXPGNd11VxakP5vxW843b8666ab`,
                 "Content-Type": "multipart/form-data",
             },
         });
@@ -36,7 +36,7 @@ export const updateBusinessApi = async ({ id = null, body = {} }) => {
     try {
         const response = await axios.post(`${API_BUSINESS}/${id}`, body, {
             headers: {
-                Authorization: `bearer 4|3Cv3bBXhvIpa1EAUFxozFvA3DYmdp1LU9MFbnnoO0974984f`,
+                Authorization: `bearer 41|rAkkrlKZopaBmvDEPuFyrCXPGNd11VxakP5vxW843b8666ab`,
                 "Content-Type": "multipart/form-data",
             },
         });
@@ -52,7 +52,7 @@ export const deleteBusinessApi = async ({ id = null }) => {
     try {
         const response = await axios.delete(`${API_BUSINESS}/${id}`, {
             headers: {
-                Authorization: `bearer 4|3Cv3bBXhvIpa1EAUFxozFvA3DYmdp1LU9MFbnnoO0974984f`,
+                Authorization: `bearer 41|rAkkrlKZopaBmvDEPuFyrCXPGNd11VxakP5vxW843b8666ab`,
             },
         });
         return response.data.list_data;

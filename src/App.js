@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import {
   BusinessContextProvider as AdminBusinessContextProvider,
   NewsContextProvider as AdminNewsContextProvider,
@@ -19,6 +20,7 @@ import {
   BusinessContextProvider as LandingBusinessContextProvider,
   MediaContextProvider as LandingMediaContextProvider,
 } from "./landing/contexts";
+import { createViewApi } from "./landing/helpers";
 
 import {
   MainPage as LandingMainPage,
@@ -48,7 +50,25 @@ import {
 } from "./landing/pages";
 import { RouteName } from "./route";
 
+function useAnalytics() {
+  let location = useLocation();
+  useEffect(() => {
+    var title = location.pathname.split('/')?.[1];
+
+    if (location.pathname.split('/')?.[1] === '') title = '/';
+
+    createViewApi({
+      body: {
+        path: location.pathname,
+        title: title,
+        views: 1,
+      }
+    });
+  }, [location]);
+}
+
 function App() {
+  useAnalytics();
   return (
     <Routes>
       <Route path={RouteName.main} element={

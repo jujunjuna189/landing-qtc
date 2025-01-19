@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import { Button, FieldFile, FieldText } from "../../../../components";
-import { updateProductApi } from "../../../../helpers";
+import { Button, FieldFile, FieldSelect, FieldText } from "../../../../components";
+import { getBusinessApi, updateProductApi } from "../../../../helpers";
 
 const UpdateModal = (props) => {
     const ref = useRef();
     const [isVisible, setIsVisible] = useState(false);
     const [controller, setController] = useState({});
     const [errors, setErrors] = useState({});
+    const [business, setBusiness] = useState([]);
 
     const toggleModal = () => {
         setIsVisible((prev) => !prev);
@@ -21,7 +22,11 @@ const UpdateModal = (props) => {
 
     const firstSettingController = () => {
         setController({
-            ...props.item,
+            name: props.item?.name,
+            business: {
+                title: props.item?.business?.name,
+                value: props.item?.business?.id,
+            },
             image: {
                 preview: props.item?.image,
             }
@@ -32,10 +37,21 @@ const UpdateModal = (props) => {
         setController({ ...controller, [field]: value });
     }
 
+    const getBusiness = async () => {
+        await getBusinessApi({}).then((res) => {
+            var data = [];
+            (res?.data ?? []).forEach((item, index) => {
+                data.push({ title: item.name, value: item.id });
+            });
+            setBusiness(data);
+        });
+    }
+
     const onSave = async () => {
         var dataBatch = { ...controller };
+        dataBatch.business_id = controller.business?.value
         dataBatch.image = controller.image?.file;
-        console.log(controller);
+        delete dataBatch.business;
         await updateProductApi({ id: props.item?.id, body: dataBatch }).then((res) => {
             res?.errors && setErrors(res?.errors);
             if (!res?.errors) {
@@ -111,6 +127,10 @@ const UpdateModal = (props) => {
                                     <span className="text-danger-dark">{errors.image}</span>
                                 </div>
                             </div>
+                        </div>
+                        <div className="mt-3">
+                            <label>Business</label>
+                            <FieldSelect placeholder="..." error={errors.business?.title} value={controller.business?.title} data={business} onFocus={() => getBusiness()} onChange={(value) => onSetController({ field: 'business', value: value })} />
                         </div>
                         <div className="mt-3">
                             <label>Name</label>

@@ -20,13 +20,14 @@ const ProductPage = () => {
                                 <th className="border-y-[1.5px] border-white-muted px-3 py-2 text-sm font-semibold text-dark-muted text-center w-[2.5rem] min-w-[2.5rem] max-w-[2.5rem]">No</th>
                                 <th className="border-y-[1.5px] border-white-muted px-3 py-2 text-sm font-semibold text-dark-muted text-start w-[5rem] min-w-[5rem] max-w-[5rem]">Image</th>
                                 <th className="border-y-[1.5px] border-white-muted px-3 py-2 text-sm font-semibold text-dark-muted text-start">Name</th>
+                                <th className="border-y-[1.5px] border-white-muted px-3 py-2 text-sm font-semibold text-dark-muted text-start">Business</th>
                                 <th className="border-y-[1.5px] border-white-muted pl-3 pr-5 text-sm font-semibold text-dark-muted py-2"></th>
                             </tr>
                         </thead>
                         <tbody>
                             {(product?.data ?? [])?.length === 0 && (
                                 <tr className="hover:bg-white-muted">
-                                    <td colSpan={4} className="border-y-[1.5px] border-white-muted px-3 py-3 text-sm text-center">
+                                    <td colSpan={5} className="border-y-[1.5px] border-white-muted px-3 py-3 text-sm text-center">
                                         <span className="font-semibold">Data not found</span>
                                     </td>
                                 </tr>
@@ -41,6 +42,7 @@ const ProductPage = () => {
                                             </div>
                                         </td>
                                         <td className="border-y-[1.5px] border-white-muted px-3 py-3 text-sm font-medium text-start">{item.name}</td>
+                                        <td className="border-y-[1.5px] border-white-muted px-3 py-3 text-sm font-medium text-start">{item.business?.name ?? '-'}</td>
                                         <td className="border-y-[1.5px] border-white-muted px-3 py-3 text-sm text-start">
                                             <div className="flex gap-2 justify-end">
                                                 <UpdateModal item={item} onSave={() => getProduct()} />
