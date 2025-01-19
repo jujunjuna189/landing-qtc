@@ -4,7 +4,8 @@ import {
   BusinessContextProvider as AdminBusinessContextProvider,
   NewsContextProvider as AdminNewsContextProvider,
   ProductContextProvider as AdminProductContextProvider,
-  QuestionContextProvider as AdminQuestionContextProvider
+  QuestionContextProvider as AdminQuestionContextProvider,
+  DashboardContextProvider as AdminDashboardContextProvider
 } from "./board/contexts";
 
 import {
@@ -14,15 +15,18 @@ import {
   NewsPage as AdminNewsPage,
   QuestionPage as AdminQuestionPage,
 } from "./board/pages";
+import AuthProtected from "./helper/protection/AuthProtection";
 
 import {
   ContactContextProvider as LandingContactContextProvider,
   BusinessContextProvider as LandingBusinessContextProvider,
   MediaContextProvider as LandingMediaContextProvider,
+  LoginContextProvider as LandingLoginContextProvider,
 } from "./landing/contexts";
 import { createViewApi } from "./landing/helpers";
 
 import {
+  LoginPage as LadingLoginPage,
   MainPage as LandingMainPage,
   AboutPage as LandingAboutPage,
   OurImpactPage as LandingOurImpactPage,
@@ -150,28 +154,45 @@ function App() {
         <LandingCareerListPage />
       } />
       {/* Admin */}
+      <Route path={RouteName.login} element={
+        <LandingLoginContextProvider>
+          <LadingLoginPage />
+        </LandingLoginContextProvider>
+      } />
       <Route path={RouteName.adminDashboard} element={
-        <AdminDashboardPage />
+        <AuthProtected>
+          <AdminDashboardContextProvider>
+            <AdminDashboardPage />
+          </AdminDashboardContextProvider>
+        </AuthProtected>
       } />
       <Route path={RouteName.adminBusiness} element={
-        <AdminBusinessContextProvider>
-          <AdminBusinessPage />
-        </AdminBusinessContextProvider>
+        <AuthProtected>
+          <AdminBusinessContextProvider>
+            <AdminBusinessPage />
+          </AdminBusinessContextProvider>
+        </AuthProtected>
       } />
       <Route path={RouteName.adminProduct} element={
-        <AdminProductContextProvider>
-          <AdminProductPage />
-        </AdminProductContextProvider>
+        <AuthProtected>
+          <AdminProductContextProvider>
+            <AdminProductPage />
+          </AdminProductContextProvider>
+        </AuthProtected>
       } />
       <Route path={RouteName.adminNews} element={
-        <AdminNewsContextProvider>
-          <AdminNewsPage />
-        </AdminNewsContextProvider>
+        <AuthProtected>
+          <AdminNewsContextProvider>
+            <AdminNewsPage />
+          </AdminNewsContextProvider>
+        </AuthProtected>
       } />
       <Route path={RouteName.adminQuestion} element={
-        <AdminQuestionContextProvider>
-          <AdminQuestionPage />
-        </AdminQuestionContextProvider>
+        <AuthProtected>
+          <AdminQuestionContextProvider>
+            <AdminQuestionPage />
+          </AdminQuestionContextProvider>
+        </AuthProtected>
       } />
     </Routes>
   );

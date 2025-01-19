@@ -12,7 +12,7 @@ const Navbar = ({ navbar }) => {
                 </div>
             </div>
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => { }} onMouseOver={() => { }} onMouseLeave={() => { }}>
-                <span className="font-semibold">Anonim</span>
+                <span className="font-semibold">Admin</span>
                 {/* <div className="w-8 h-8 rounded-full bg-slate-200">
                     <img src={""} alt="Profile" />
                 </div> */}

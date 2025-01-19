@@ -1,4 +1,5 @@
 import AboutPage from "./about/AboutPage"
+import LoginPage from "./auth/LoginPage"
 import BusinessHightlightsPage from "./business_hightlights/BusinessHightlights"
 import BusinessPreviewPage from "./business_hightlights/BusinessPreviewPage"
 import CareerExplorePage from "./career/CareerExplorePage"
@@ -24,6 +25,7 @@ import StrategicPage from "./sustainability/StrategicPage"
 import SustainabilityPage from "./sustainability/SustainabilityPage"
 
 export {
+    LoginPage,
     AboutPage,
     MainPage,
     CapitalInvestmentPage,

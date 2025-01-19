@@ -1,13 +1,16 @@
 import axios from "axios";
+import { getLocalToken } from "../../../helper/storage/LocalStorage";
 import { API_BUSINESS } from "./RouteApi";
 
 export const getBusinessApi = async ({ filter = '' }) => {
-    // const user = getLocalUser();
+    const token = getLocalToken();
     try {
 
         const response = await axios.get(`${API_BUSINESS}?${filter}`, {
             headers: {
-                Authorization: `bearer 41|rAkkrlKZopaBmvDEPuFyrCXPGNd11VxakP5vxW843b8666ab`,
+                "Authorization": `Bearer ${token}`,
+                "Accept": "application/json",
+                "Content-Type": "application/json",
             },
         });
         return response.data.list_data;
@@ -17,11 +20,12 @@ export const getBusinessApi = async ({ filter = '' }) => {
 };
 
 export const createBusinessApi = async ({ body = {} }) => {
-    // const user = getLocalUser();
+    const token = getLocalToken();
     try {
         const response = await axios.post(API_BUSINESS, body, {
             headers: {
-                Authorization: `bearer 41|rAkkrlKZopaBmvDEPuFyrCXPGNd11VxakP5vxW843b8666ab`,
+                "Authorization": `Bearer ${token}`,
+                "Accept": "application/json",
                 "Content-Type": "multipart/form-data",
             },
         });
@@ -32,11 +36,12 @@ export const createBusinessApi = async ({ body = {} }) => {
 };
 
 export const updateBusinessApi = async ({ id = null, body = {} }) => {
-    // const user = getLocalUser();
+    const token = getLocalToken();
     try {
         const response = await axios.post(`${API_BUSINESS}/${id}`, body, {
             headers: {
-                Authorization: `bearer 41|rAkkrlKZopaBmvDEPuFyrCXPGNd11VxakP5vxW843b8666ab`,
+                "Authorization": `Bearer ${token}`,
+                "Accept": "application/json",
                 "Content-Type": "multipart/form-data",
             },
         });
@@ -48,11 +53,13 @@ export const updateBusinessApi = async ({ id = null, body = {} }) => {
 };
 
 export const deleteBusinessApi = async ({ id = null }) => {
-    // const user = getLocalUser();
+    const token = getLocalToken();
     try {
         const response = await axios.delete(`${API_BUSINESS}/${id}`, {
             headers: {
-                Authorization: `bearer 41|rAkkrlKZopaBmvDEPuFyrCXPGNd11VxakP5vxW843b8666ab`,
+                "Authorization": `Bearer ${token}`,
+                "Accept": "application/json",
+                "Content-Type": "application/json",
             },
         });
         return response.data.list_data;

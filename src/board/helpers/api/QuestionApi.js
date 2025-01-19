@@ -1,13 +1,16 @@
 import axios from "axios";
+import { getLocalToken } from "../../../helper/storage/LocalStorage";
 import { API_QUESTION } from "./RouteApi";
 
 export const getQuestionApi = async ({ filter = '' }) => {
-    // const user = getLocalUser();
+    const token = getLocalToken();
     try {
 
         const response = await axios.get(`${API_QUESTION}?${filter}`, {
             headers: {
-                Authorization: `bearer 2|cypuEXtwn5OmYmeGurMME7i23HcXQQlpBJsxC98Rb2ba4814`,
+                "Authorization": `Bearer ${token}`,
+                "Accept": "application/json",
+                "Content-Type": "application/json",
             },
         });
         return response.data.list_data;
@@ -17,11 +20,12 @@ export const getQuestionApi = async ({ filter = '' }) => {
 };
 
 export const createQuestionApi = async ({ body = {} }) => {
-    // const user = getLocalUser();
+    const token = getLocalToken();
     try {
         const response = await axios.post(API_QUESTION, body, {
             headers: {
-                Authorization: `bearer 2|cypuEXtwn5OmYmeGurMME7i23HcXQQlpBJsxC98Rb2ba4814`,
+                "Authorization": `Bearer ${token}`,
+                "Accept": "application/json",
                 "Content-Type": "multipart/form-data",
             },
         });
@@ -32,11 +36,12 @@ export const createQuestionApi = async ({ body = {} }) => {
 };
 
 export const updateQuestionApi = async ({ id = null, body = {} }) => {
-    // const user = getLocalUser();
+    const token = getLocalToken();
     try {
         const response = await axios.post(`${API_QUESTION}/${id}`, body, {
             headers: {
-                Authorization: `bearer 2|cypuEXtwn5OmYmeGurMME7i23HcXQQlpBJsxC98Rb2ba4814`,
+                "Authorization": `Bearer ${token}`,
+                "Accept": "application/json",
                 "Content-Type": "multipart/form-data",
             },
         });
@@ -48,11 +53,13 @@ export const updateQuestionApi = async ({ id = null, body = {} }) => {
 };
 
 export const deleteQuestionApi = async ({ id = null }) => {
-    // const user = getLocalUser();
+    const token = getLocalToken();
     try {
         const response = await axios.delete(`${API_QUESTION}/${id}`, {
             headers: {
-                Authorization: `bearer 2|cypuEXtwn5OmYmeGurMME7i23HcXQQlpBJsxC98Rb2ba4814`,
+                "Authorization": `Bearer ${token}`,
+                "Accept": "application/json",
+                "Content-Type": "application/json",
             },
         });
         return response.data.list_data;
