@@ -1,28 +1,28 @@
+import { LandingLanguage } from "../../../helper/language/LandingLanguage";
+import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
+import { RouteName } from "../../../route";
 import { ptCircle } from "../../assets";
 import { Content } from "../../components";
 
 const ResearchDevelopmentPage = () => {
+    const language = LandingLanguage[getLocalLanguage().key][RouteName.researchDevelopment];
     return (
         <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
             <div className="py-20 relative">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[30rem] w-[70%] opacity-10 "/>
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[30rem] w-[70%] opacity-10 " />
                 <div className="px-32">
-                    <span className="text-4xl text-primary-dark font-semibold">Research {'&'} Development</span>
+                    <span className="text-4xl text-primary-dark font-semibold">{language[1]}</span>
                     <div className="w-12 h-1 bg-secondary-dark" />
                 </div>
                 <div className="flex flex-col px-32 mt-12">
                     <div className="w-[80%] text-justify">
                         <span className="text-primary-dark">
-                            QTC's Research {'&'} Development arm is dedicated to driving innovation and growth across all our business lines. Our
-                            team focuses on sales strategies, market analysis, and business development initiatives that bring insight-driven
-                            solutions to the forefront.
+                            {language[2]}
                         </span>
                     </div>
                     <div className="w-[80%] mt-10">
                         <span className="text-primary-dark">
-                            By identifying market trends and optimizing operations, we help QTC stay at the cutting edge of each industry we Contact Career
-                            operate in. The R{'&'}D team continually explores new avenues to enhance customer experience, expand market reach, and
-                            bolster our competitive advantage.
+                            {language[3]}
                         </span>
                     </div>
                 </div>

@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { LandingLanguage } from "../../../helper/language/LandingLanguage";
+import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
 import { RouteName } from "../../../route";
 import { img7, img8, ptCircle } from "../../assets";
 import { Content } from "../../components";
@@ -11,6 +13,7 @@ const preloadImage = (src) => {
 };
 
 const BusinessHightlightsPage = () => {
+    const language = LandingLanguage[getLocalLanguage().key][RouteName.businessHightlights];
     const { business } = UseBusinessContext();
     const navigation = useNavigate();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -30,8 +33,8 @@ const BusinessHightlightsPage = () => {
                 <img src={images[0]} alt="Image5" className="object-cover object-center w-full h-[40vh] animate-fade animate-duration-400" loading="lazy" />
                 <div className="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center px-24">
                     <div className="flex flex-col gap-3 text-center">
-                        <span className="text-5xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>Connect evolving needs with</span>
-                        <span className="text-5xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>sustainable innovation opportunities</span>
+                        <span className="text-5xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>{language[1.1]}</span>
+                        <span className="text-5xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>{language[1.2]}</span>
                     </div>
                 </div>
             </div>
@@ -41,27 +44,21 @@ const BusinessHightlightsPage = () => {
                 <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[20rem] w-[70%] opacity-10 " />
                 <div className="grow h-full">
                     <div className="px-20">
-                        <span className="text-2xl text-primary-dark font-medium">Business Highlights</span>
+                        <span className="text-2xl text-primary-dark font-medium">{language[2]}</span>
                         <div className="w-12 h-1 bg-secondary-dark" />
                     </div>
                     <div className="flex flex-col gap-6 px-20 mt-12">
                         <span className="text-primary-dark">
-                            Quantum Trans Capital continues to support the latest renewable energy-based developments
+                            {language[3]}
                         </span>
                         <span className="text-primary-dark">
-                            Across the various sectors we operate and enable, we strive to deliver excellence and long-term
-                            sustainable value as we strengthen Quantum Trans Capital's position as a leading regional and
-                            international economic, commercial and renewable energy hub.
+                            {language[4]}
                         </span>
                         <span className="text-primary-dark">
-                            We embrace innovative projects and work closely with strategic partners to enrich the lives of people,
-                            communities as a whole for a better tomorrow.
+                            {language[5]}
                         </span>
                         <span className="text-primary-dark">
-                            Over the years, we have delivered leading projects and destinations as well as untapped opportunities
-                            through key partnerships and investments in the region and beyond. Here we believe that what we are
-                            doing is an innovation of sustainability and an excellent contribution to the sustainability of the
-                            Republic of Indonesia.
+                            {language[6]}
                         </span>
                     </div>
                     <div className="flex items-center mt-10">
@@ -69,7 +66,7 @@ const BusinessHightlightsPage = () => {
                         <div className="relative flex-1 pr-72 flex justify-center items-center">
                             <img src={images[1]} alt="Image5" className="aspect-[6/5] object-cover object-top animate-fade animate-duration-400" loading="lazy" />
                             <div className="absolute flex flex-col text-center justify-center items-center px-10">
-                                <span className="text-5xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>Delivering sustainable value across various sectors</span>
+                                <span className="text-5xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>{language[7]}</span>
                             </div>
                         </div>
                     </div>

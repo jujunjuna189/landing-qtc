@@ -70,8 +70,8 @@ const Navbar = ({ navbar }) => {
                             </span>
                         </div>
                         {((isHover && hoverKey === 'language')) && (
-                            <div className="pt-2">
-                                <div className="absolute right-0 w-40 bg-white-light shadow-all rounded-md">
+                            <div className="absolute right-0">
+                                <div className="w-40 bg-white-light shadow-all rounded-md mt-2">
                                     <ul>
                                         <li className="py-2 px-2 border-b border-white-muted cursor-pointer" onClick={() => { setLocalLanguage({ display: 'English', key: 'en' }); setIsHover(false); document.location.reload() }}>
                                             <div className="flex gap-2 items-center">

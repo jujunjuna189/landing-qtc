@@ -1,27 +1,28 @@
+import { LandingLanguage } from "../../../helper/language/LandingLanguage";
+import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
+import { RouteName } from "../../../route";
 import { ptCircle } from "../../assets";
 import { Content } from "../../components";
 
 const RenewableEnergyPage = () => {
+    const language = LandingLanguage[getLocalLanguage().key][RouteName.renewableEnergy];
     return (
         <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
             <div className="py-20 relative">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[30rem] w-[70%] opacity-10 "/>
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[30rem] w-[70%] opacity-10 " />
                 <div className="px-32">
-                    <span className="text-4xl text-primary-dark font-semibold">Renewable Energy</span>
+                    <span className="text-4xl text-primary-dark font-semibold">{language[1]}</span>
                     <div className="w-12 h-1 bg-secondary-dark" />
                 </div>
                 <div className="flex flex-col px-32 mt-12">
                     <div className="w-[80%] text-justify">
                         <span className="text-primary-dark">
-                            Committed to a sustainable future, QTC's Renewable Energy unit delivers innovative solutions that reduce
-                            environmental impact while enhancing energy efficiency. Specializing in solar panels, lithium battery storage systems,
-                            and LED lighting, our offerings cater to both commercial and residential clients aiming to adopt cleaner energy.
+                            {language[2]}
                         </span>
                     </div>
                     <div className="w-[80%] mt-10">
                         <span className="text-primary-dark">
-                            By integrating advanced technology with green practices, QTC helps clients reduce carbon emissions and transition
-                            smoothly toward sustainable energy sources that lower operational costs and contribute positively to the environment.
+                            {language[3]}
                         </span>
                     </div>
                 </div>
