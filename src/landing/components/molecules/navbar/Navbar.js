@@ -70,7 +70,7 @@ const Navbar = ({ navbar }) => {
                             </span>
                         </div>
                         {((isHover && hoverKey === 'language')) && (
-                            <div className="absolute right-0">
+                            <div className="absolute right-0 text-primary-dark">
                                 <div className="w-40 bg-white-light shadow-all rounded-md mt-2">
                                     <ul>
                                         <li className="py-2 px-2 border-b border-white-muted cursor-pointer" onClick={() => { setLocalLanguage({ display: 'English', key: 'en' }); setIsHover(false); document.location.reload() }}>

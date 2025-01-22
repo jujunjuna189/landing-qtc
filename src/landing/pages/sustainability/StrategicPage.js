@@ -3,18 +3,21 @@ import { useNavigate } from "react-router-dom";
 import { RouteName } from "../../../route";
 import { Content } from "../../components";
 import { ptCircle } from "../../assets";
+import { LandingLanguage } from "../../../helper/language/LandingLanguage";
+import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
 
 const StrategicPage = () => {
+    const language = LandingLanguage[getLocalLanguage().key][RouteName.sustainabilityStrategic];
     const navigation = useNavigate();
     return (
         <Content navbar={{ style_nav: "text-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[25rem] -right-[20rem] w-[70%] opacity-10 "/>
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[25rem] -right-[20rem] w-[70%] opacity-10 " />
                 <div className="w-full h-[40vh] flex justify-start items-center px-24 bg-primary-dark">
                     <div className="flex flex-col gap-1 text-start mt-20">
-                        <span className="text-white-light font-semibold">Quantum Trans Capital</span>
-                        <span className="text-7xl text-white-light font-semibold">Our Strategic at QTC</span>
+                        <span className="text-white-light font-semibold">{language[1]}</span>
+                        <span className="text-7xl text-white-light font-semibold">{language[2]}</span>
                         <div className="w-36 h-3 bg-secondary-dark mt-2" />
                     </div>
                 </div>
@@ -35,43 +38,31 @@ const StrategicPage = () => {
                 </div>
                 <div className="bg-gray-dark grow p-16">
                     <span className="text-2xl text-primary-dark font-semibold">
-                        Sustainable Investment: Diversification,
-                        ESG, Innovation {'&'} Positive Impact
+                        {language[3]}
                     </span>
                     <div className="mt-10">
                         <span className="text-primary-dark">
-                            We are committed to becoming a leader in sustainable investment through a diversified portfolio in
-                            English
-                            sectors like renewable energy, real estate, technology, and manufacturing to minimize risk and maximize
-                            growth.
+                            {language[4]}
                         </span>
                     </div>
                     <div className="mt-2">
                         <span className="text-primary-dark">
-                            Building strong partnerships with local, international investors and emphasizing socially and
-                            environmentally responsible investments are our top priorities. We integrate ESG criteria into every
-                            decision.
+                            {language[5]}
                         </span>
                     </div>
                     <div className="mt-10">
                         <span className="text-primary-dark">
-                            Innovation and technology are key to our strategy, as we support startups tackling significant challenges.
-                        </span>
-                        <span className="text-primary-dark">
-                            Market research informs our investment decisions.
+                            {language[6]}
                         </span>
                     </div>
                     <div className="mt-2">
                         <span className="text-primary-dark">
-                            We empower entrepreneurs through capacity-building programs and engage with local communities for
-                            positive social impact. Our robust risk management and performance monitoring protect stakeholder
-                            interests.
+                            {language[7]}
                         </span>
                     </div>
                     <div className="mt-2">
                         <span className="text-primary-dark">
-                            Through effective communication, we aim to strengthen our brand as a leader in sustainable investment,
-                            creating an innovative ecosystem that drives growth for all.
+                            {language[8]}
                         </span>
                     </div>
                 </div>

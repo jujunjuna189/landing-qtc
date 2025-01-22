@@ -3,18 +3,21 @@ import { useNavigate } from "react-router-dom";
 import { RouteName } from "../../../route";
 import { Content } from "../../components";
 import { ptCircle } from "../../assets";
+import { LandingLanguage } from "../../../helper/language/LandingLanguage";
+import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
 
 const CommitmentPage = () => {
+    const language = LandingLanguage[getLocalLanguage().key][RouteName.sustainabilityCommitment];
     const navigation = useNavigate();
     return (
         <Content navbar={{ style_nav: "text-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[25rem] -right-[20rem] w-[70%] opacity-10 "/>
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[25rem] -right-[20rem] w-[70%] opacity-10 " />
                 <div className="w-full h-[40vh] flex justify-start items-center px-24 bg-primary-dark">
                     <div className="flex flex-col gap-1 text-start mt-20">
-                        <span className="text-white-light font-semibold">Quantum Trans Capital</span>
-                        <span className="text-7xl text-white-light font-semibold">Commitment</span>
+                        <span className="text-white-light font-semibold">{language[1]}</span>
+                        <span className="text-7xl text-white-light font-semibold">{language[2]}</span>
                         <div className="w-36 h-3 bg-secondary-dark mt-2" />
                     </div>
                 </div>
@@ -35,30 +38,21 @@ const CommitmentPage = () => {
                 </div>
                 <div className="bg-gray-dark grow p-16">
                     <span className="text-2xl text-primary-dark font-semibold">
-                        As a holding investment company, we aim to
-                        connect investors, entrepreneurs, and innovative
-                        projects to foster growth and positively impact
-                        the Indonesian economy.
+                        {language[3]}
                     </span>
                     <div className="mt-10">
                         <span className="text-primary-dark">
-                            Sustainability guides our operations, ensuring our practices are efficient, environmentally responsible,
-                            and socially conscious. We focus on renewable energy and sustainable real estate to build a better future.
-                            We prioritize sustainable value for all stakeholders, enhancing performance within our group to benefit
-                            everyone involved. Diversifying the economy is key to strengthening Indonesia’s resilience and global
-                            competitiveness.
+                            {language[4]}
                         </span>
                     </div>
                     <div className="mt-2">
                         <span className="text-primary-dark">
-                            Leading with ethics and transparency, we foster trustworthy partnerships. We are also committed to
-                            empowering local communities through inclusive economic growth and impactful investments.
+                            {language[5]}
                         </span>
                     </div>
                     <div className="mt-10">
                         <span className="text-primary-dark">
-                            Through these efforts, Quantum Trans Capital strives to be a leader in creating a sustainable and
-                            innovative investment ecosystem in Indonesia.
+                            {language[6]}
                         </span>
                     </div>
                 </div>

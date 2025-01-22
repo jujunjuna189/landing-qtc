@@ -22,7 +22,7 @@ const MediaMarketingPage = () => {
         <Content navbar={{ style_nav: "text-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[25rem] w-[70%] opacity-10 "/>
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[25rem] w-[70%] opacity-10 " />
                 <div className="w-full pt-28 pb-16 flex justify-start items-center px-20 bg-primary-dark">
                     <div className="grow flex flex-col gap-1 text-start mt-10">
                         <div className="">
