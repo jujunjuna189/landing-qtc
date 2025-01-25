@@ -50,15 +50,15 @@ const Sidebar = ({ sidebar }) => {
                             </div>
                         </li>
                         <li className="text-dark-muted py-2 bg-white-muted text-sm px-2 mt-3 mb-1 font-medium rounded-md">Landing View...</li>
-                        {/* <li className="py-2 pl-3 pr-2 text-sm hover:bg-white-muted rounded-md cursor-pointer">
+                        <li className={`py-2 pl-3 pr-2 text-sm rounded-md cursor-pointer ${location.pathname.split('/')?.[1] === 'settings' ? 'bg-primary-dark text-white-light' : 'hover:bg-white-muted hover:text-dark-dark'}`} onClick={() => navigation(RouteName.adminSettings)}>
                             <div className="flex gap-2 items-center">
                                 <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M19 4a3 3 0 0 1 3 3v10a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-10a3 3 0 0 1 3 -3zm-12.99 3l-.127 .007a1 1 0 0 0 .117 1.993l.127 -.007a1 1 0 0 0 -.117 -1.993zm3 0l-.127 .007a1 1 0 0 0 .117 1.993l.127 -.007a1 1 0 0 0 -.117 -1.993z" /></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M4 12h8" /><path d="M12 15h8" /><path d="M12 9h8" /><path d="M12 4v16" /></svg>
                                 </span>
-                                <span>Welcome</span>
+                                <span>Settings</span>
                             </div>
                         </li>
-                        <li className="py-2 pl-3 pr-2 text-sm hover:bg-white-muted rounded-md cursor-pointer">
+                        {/*  <li className="py-2 pl-3 pr-2 text-sm hover:bg-white-muted rounded-md cursor-pointer">
                             <div className="flex gap-2 items-center">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M19 4a3 3 0 0 1 3 3v10a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-10a3 3 0 0 1 3 -3zm-12.99 3l-.127 .007a1 1 0 0 0 .117 1.993l.127 -.007a1 1 0 0 0 -.117 -1.993zm3 0l-.127 .007a1 1 0 0 0 .117 1.993l.127 -.007a1 1 0 0 0 -.117 -1.993z" /></svg>

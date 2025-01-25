@@ -14,6 +14,7 @@ import {
   ProductPage as AdminProductPage,
   NewsPage as AdminNewsPage,
   QuestionPage as AdminQuestionPage,
+  SettingsPage as AdminSettingsPage,
 } from "./board/pages";
 import AuthProtected from "./helper/protection/AuthProtection";
 
@@ -192,6 +193,11 @@ function App() {
           <AdminQuestionContextProvider>
             <AdminQuestionPage />
           </AdminQuestionContextProvider>
+        </AuthProtected>
+      } />
+      <Route path={RouteName.adminSettings} element={
+        <AuthProtected>
+          <AdminSettingsPage />
         </AuthProtected>
       } />
     </Routes>

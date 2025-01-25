@@ -3,6 +3,7 @@ import DashboardPage from "./dashboard/DashboardPage"
 import NewsPage from "./news/NewsPage"
 import ProductPage from "./product/ProductPage"
 import QuestionPage from "./question/QuestionPage"
+import SettingsPage from "./settings/SettingsPage"
 
 export {
     BusinessPage,
@@ -10,4 +11,5 @@ export {
     NewsPage,
     ProductPage,
     QuestionPage,
+    SettingsPage,
 }
