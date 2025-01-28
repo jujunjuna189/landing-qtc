@@ -103,7 +103,7 @@ const UpdateModal = (props) => {
                             </div>
                             <div className="grow">
                                 <div className="mb-2">
-                                    <span className="font-medium">Unggah Logo</span><br />
+                                    <span className="font-medium">Upload Logo</span><br />
                                     <small>Choose a logo and upload it here...</small>
                                 </div>
                                 <div className="flex">

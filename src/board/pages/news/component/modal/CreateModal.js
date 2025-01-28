@@ -104,7 +104,7 @@ const CreateModal = (props) => {
                             </div>
                             <div className="grow">
                                 <div className="mb-2">
-                                    <span className="font-medium">Unggah Image</span><br />
+                                    <span className="font-medium">Upload Image</span><br />
                                     <small>Choose a image and upload it here...</small>
                                 </div>
                                 <div className="flex">

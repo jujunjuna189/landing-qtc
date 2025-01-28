@@ -5,7 +5,8 @@ import {
   NewsContextProvider as AdminNewsContextProvider,
   ProductContextProvider as AdminProductContextProvider,
   QuestionContextProvider as AdminQuestionContextProvider,
-  DashboardContextProvider as AdminDashboardContextProvider
+  DashboardContextProvider as AdminDashboardContextProvider,
+  SettingsContextProvider as AdminSettingsContextProvider
 } from "./board/contexts";
 
 import {
@@ -197,7 +198,9 @@ function App() {
       } />
       <Route path={RouteName.adminSettings} element={
         <AuthProtected>
-          <AdminSettingsPage />
+          <AdminSettingsContextProvider>
+            <AdminSettingsPage />
+          </AdminSettingsContextProvider>
         </AuthProtected>
       } />
     </Routes>

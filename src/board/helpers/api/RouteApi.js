@@ -9,3 +9,5 @@ export const API_NEWS = `${REACT_APP_API_URL}news`;
 export const API_QUESTION = `${REACT_APP_API_URL}question`;
 // Analytics
 export const API_ANALYTICS = `${REACT_APP_API_URL}analytic`;
+// Assets
+export const API_ASSETS = `${REACT_APP_API_URL}asset`;
