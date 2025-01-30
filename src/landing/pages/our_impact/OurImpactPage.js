@@ -1,31 +1,15 @@
-import { useEffect } from "react";
-import { LandingLanguage } from "../../../helper/language/LandingLanguage";
-import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
-import { RouteName } from "../../../route";
-import { img2, ptCircle } from "../../assets";
+import { ptCircle } from "../../assets";
 import { Content } from "../../components";
-
-const preloadImage = (src) => {
-    const img = new Image();
-    img.src = src;
-};
+import { UseOurImpactContext } from "../../contexts/our_impact/OurImpactContext";
 
 const OurImpactPage = () => {
-    const language = LandingLanguage[getLocalLanguage().key][RouteName.ourImpact];
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const images = [
-        img2,
-    ];
-
-    useEffect(() => {
-        images.forEach(preloadImage);
-    }, [images]);
+    const { language, isLoader, images } = UseOurImpactContext();
 
     return (
-        <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
+        <Content isLoader={isLoader} navbar={{ style: "sticky top-0 bg-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={images[0]} alt="Image5" className="object-cover object-center w-full h-[40vh] animate-fade animate-duration-400" loading="lazy" />
+                <img src={images[1]} alt="Image5" className="object-cover object-center w-full h-[40vh] animate-fade animate-duration-400" loading="lazy" />
                 <div className="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center px-24">
                     <div className="flex flex-col gap-3 text-center">
                         <span className="text-5xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>{language[1.1]}</span>

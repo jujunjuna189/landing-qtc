@@ -24,6 +24,10 @@ import {
   BusinessContextProvider as LandingBusinessContextProvider,
   MediaContextProvider as LandingMediaContextProvider,
   LoginContextProvider as LandingLoginContextProvider,
+  MainContextProvider as LandingMainContextProvider,
+  AboutContextProvider as LandingAboutContextProvider,
+  OurImpactContextProvider as LandingOurImpactContextProvider,
+  SustainabilityContextProvider as LandingSustainabilityContextProvider,
 } from "./landing/contexts";
 import { createViewApi } from "./landing/helpers";
 
@@ -78,13 +82,19 @@ function App() {
   return (
     <Routes>
       <Route path={RouteName.main} element={
-        <LandingMainPage />
+        <LandingMainContextProvider>
+          <LandingMainPage />
+        </LandingMainContextProvider>
       } />
       <Route path={RouteName.about} element={
-        <LandingAboutPage />
+        <LandingAboutContextProvider>
+          <LandingAboutPage />
+        </LandingAboutContextProvider>
       } />
       <Route path={RouteName.ourImpact} element={
-        <LandingOurImpactPage />
+        <LandingOurImpactContextProvider>
+          <LandingOurImpactPage />
+        </LandingOurImpactContextProvider>
       } />
       <Route path={RouteName.capitalInvestment} element={
         <LandingCapitalInvestmentPage />
@@ -119,7 +129,9 @@ function App() {
         <LandingBusinessPreviewPage />
       } />
       <Route path={RouteName.sustainability} element={
-        <LandingSustainabilityPage />
+        <LandingSustainabilityContextProvider>
+          <LandingSustainabilityPage />
+        </LandingSustainabilityContextProvider>
       } />
       <Route path={RouteName.sustainabilityCommitment} element={
         <LandingCommitmentPage />

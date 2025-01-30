@@ -1,32 +1,15 @@
-import { useEffect } from "react";
-import { LandingLanguage } from "../../../helper/language/LandingLanguage";
-import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
-import { RouteName } from "../../../route";
-import { img3, img4, ptCircle } from "../../assets";
+import { ptCircle } from "../../assets";
 import { Content } from "../../components";
-
-const preloadImage = (src) => {
-    const img = new Image();
-    img.src = src;
-};
+import { UseAboutContext } from "../../contexts/about/AboutContext";
 
 const AboutPage = () => {
-    const language = LandingLanguage[getLocalLanguage().key][RouteName.about];
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const images = [
-        img3,
-        img4,
-    ];
-
-    useEffect(() => {
-        images.forEach(preloadImage);
-    }, [images]);
+    const { language, isLoader, images } = UseAboutContext();
 
     return (
-        <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
+        <Content isLoader={isLoader} navbar={{ style: "sticky top-0 bg-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={images[0]} alt="Image5" className="object-cover object-center w-full h-[40vh] animate-fade animate-duration-400" loading="lazy" />
+                <img src={images[1]} alt="Image5" className="object-cover object-center w-full h-[40vh] animate-fade animate-duration-400" loading="lazy" />
                 <div className="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center px-24">
                     <div className="flex flex-col gap-3 text-center">
                         <span className="text-5xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>{language[1.1]}</span>
@@ -63,7 +46,7 @@ const AboutPage = () => {
                 </div>
                 <div className="pr-20 flex-1">
                     <div className="bg-primary-dark w-full h-full">
-                        <img src={images[1]} alt="Image5" className="object-cover object-center w-full h-full animate-fade animate-duration-400" loading="lazy" />
+                        <img src={images[2]} alt="Image5" className="object-cover object-center w-full h-full animate-fade animate-duration-400" loading="lazy" />
                     </div>
                 </div>
             </div>

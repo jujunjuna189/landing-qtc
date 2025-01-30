@@ -1,34 +1,15 @@
-import { useEffect } from "react";
-import { LandingLanguage } from "../../../helper/language/LandingLanguage";
-import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
-import { RouteName } from "../../../route";
-import { img12, img13, img5, ptCircle } from "../../assets";
+import { ptCircle } from "../../assets";
 import { Content } from "../../components";
-
-const preloadImage = (src) => {
-    const img = new Image();
-    img.src = src;
-};
+import { UseMainContext } from "../../contexts/main/MainContext";
 
 const MainPage = () => {
-    const language = LandingLanguage[getLocalLanguage().key][RouteName.main];
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const images = [
-        img5,
-        img13,
-        img12,
-    ];
-
-    useEffect(() => {
-        images.forEach(preloadImage);
-    }, [images]);
+    const { language, isLoader, images } = UseMainContext();
 
     return (
-        <Content>
-            {console.log(language)}
+        <Content isLoader={isLoader}>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={images[0]} alt="Image5" className="object-cover object-top w-full h-[80vh] animate-fade animate-duration-400" loading="lazy" />
+                <img src={images[1]} alt="Image5" className="object-cover object-top w-full h-[80vh] animate-fade animate-duration-400" loading="lazy" />
                 <div className="absolute top-0 bottom-0 flex items-center px-24 pt-28">
                     <div className="flex flex-col gap-3">
                         <span className="text-2xl text-white-light" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>{language[1]}</span>
@@ -54,7 +35,7 @@ const MainPage = () => {
                     <div className="w-[19vw] max-w-[19vw] min-w-[19vw] absolute bottom-0 top-0 bg-white-light" />
                     <div className="flex gap-16 px-12 items-center relative">
                         <div>
-                            <img src={images[1]} alt="Image5" className="aspect-square object-cover object-top w-[32vw] max-w-[32vw] min-w-[32vw] animate-fade animate-duration-400" loading="lazy" />
+                            <img src={images[2]} alt="Image5" className="aspect-square object-cover object-top w-[32vw] max-w-[32vw] min-w-[32vw] animate-fade animate-duration-400" loading="lazy" />
                         </div>
                         <div className="flex flex-col gap-1 pr-20">
                             <span className="text-4xl text-white-light font-semibold">{language[5.1]}</span>
@@ -92,7 +73,7 @@ const MainPage = () => {
             {/* Bussiness Highlights */}
             <div className="relative">
                 <div className="absolute top-0 bottom-0 left-0 right-0">
-                    <img src={images[2]} alt="Image5" className="object-cover object-bottom h-full w-full animate-fade animate-duration-400" loading="lazy" />
+                    <img src={images[3]} alt="Image5" className="object-cover object-bottom h-full w-full animate-fade animate-duration-400" loading="lazy" />
                 </div>
                 <div className="py-28 relative">
                     <div className="px-32">

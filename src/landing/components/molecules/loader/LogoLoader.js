@@ -6,16 +6,18 @@ const LogoLoader = ({ isLoader }) => {
     const [isShow, setIsShow] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => {
-            setIsShow(false);
-        }, 1000);
-        setTimeout(() => {
-            setElement(SlidingShapes());
-        }, 800);
-        setTimeout(() => {
-            setElement(null);
-        }, 2200);
-    }, []);
+        if (isLoader === false) {
+            setTimeout(() => {
+                setIsShow(false);
+            }, 1000);
+            setTimeout(() => {
+                setElement(SlidingShapes());
+            }, 800);
+            setTimeout(() => {
+                setElement(null);
+            }, 2200);
+        }
+    }, [isLoader]);
 
     const SlidingShapes = () => {
         return (

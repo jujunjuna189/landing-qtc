@@ -1,39 +1,31 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { LandingLanguage } from "../../../helper/language/LandingLanguage";
 import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
 import { RouteName } from "../../../route";
-import { getAssetsApi, getBusinessApi } from "../../helpers";
+import { getAssetsApi } from "../../helpers";
 
 const preloadImage = (src) => {
     const img = new Image();
     img.src = src;
 };
 
-const BusinessContext = createContext();
+const AboutContext = createContext();
 
-export const BusinessContextProvider = ({ children }) => {
-    const navigation = useNavigate();
-    const language = LandingLanguage[getLocalLanguage().key][RouteName.businessHightlights];
-    const [business, setBusiness] = useState({});
+export const AboutContextProvider = ({ children }) => {
+
+    const language = LandingLanguage[getLocalLanguage().key][RouteName.about];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const [isLoader, setIsLoader] = useState(true);
     const [images, setImages] = useState({});
 
     const getAssets = async () => {
-        await getAssetsApi({ filter: `page=business-hightlights` }).then((res) => {
+        await getAssetsApi({ filter: `page=about` }).then((res) => {
             setIsLoader(false);
             var data = {};
             Object.keys(res.data ?? {}).forEach((item, index) => {
                 data[res.data[item].type] = res.data[item].file;
             });
             setImages(data);
-            getBusiness();
-        });
-    }
-
-    const getBusiness = async () => {
-        await getBusinessApi({}).then((res) => {
-            setBusiness(res);
         });
     }
 
@@ -45,16 +37,15 @@ export const BusinessContextProvider = ({ children }) => {
 
     useEffect(() => {
         getAssets();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
-        <BusinessContext.Provider value={{ business, language, isLoader, images, navigation, getBusiness }}>
+        <AboutContext.Provider value={{ language, isLoader, images }}>
             {children}
-        </BusinessContext.Provider>
+        </AboutContext.Provider>
     );
 }
 
-export const UseBusinessContext = () => {
-    return useContext(BusinessContext);
+export const UseAboutContext = () => {
+    return useContext(AboutContext);
 }

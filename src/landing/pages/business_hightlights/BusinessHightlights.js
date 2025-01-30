@@ -1,36 +1,16 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { LandingLanguage } from "../../../helper/language/LandingLanguage";
-import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
 import { RouteName } from "../../../route";
-import { img7, img8, ptCircle } from "../../assets";
+import { ptCircle } from "../../assets";
 import { Content } from "../../components";
 import { UseBusinessContext } from "../../contexts/business/BusinessContext";
 
-const preloadImage = (src) => {
-    const img = new Image();
-    img.src = src;
-};
-
 const BusinessHightlightsPage = () => {
-    const language = LandingLanguage[getLocalLanguage().key][RouteName.businessHightlights];
-    const { business } = UseBusinessContext();
-    const navigation = useNavigate();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const images = [
-        img8,
-        img7,
-    ];
-
-    useEffect(() => {
-        images.forEach(preloadImage);
-    }, [images]);
+    const { business, navigation, language, isLoader, images } = UseBusinessContext();
 
     return (
-        <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
+        <Content isLoader={isLoader} navbar={{ style: "sticky top-0 bg-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={images[0]} alt="Image5" className="object-cover object-center w-full h-[40vh] animate-fade animate-duration-400" loading="lazy" />
+                <img src={images[1]} alt="Image5" className="object-cover object-center w-full h-[40vh] animate-fade animate-duration-400" loading="lazy" />
                 <div className="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center px-24">
                     <div className="flex flex-col gap-3 text-center">
                         <span className="text-5xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>{language[1.1]}</span>
@@ -64,7 +44,7 @@ const BusinessHightlightsPage = () => {
                     <div className="flex items-center mt-10">
                         <div className="bg-primary-dark h-96 w-24" />
                         <div className="relative flex-1 pr-72 flex justify-center items-center">
-                            <img src={images[1]} alt="Image5" className="aspect-[6/5] object-cover object-top animate-fade animate-duration-400" loading="lazy" />
+                            <img src={images[2]} alt="Image5" className="aspect-[6/5] object-cover object-top animate-fade animate-duration-400" loading="lazy" />
                             <div className="absolute flex flex-col text-center justify-center items-center px-10">
                                 <span className="text-5xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #B8B8B8" }}>{language[7]}</span>
                             </div>

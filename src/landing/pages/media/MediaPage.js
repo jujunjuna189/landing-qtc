@@ -1,47 +1,17 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { LandingLanguage } from "../../../helper/language/LandingLanguage";
-import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
 import { RouteName } from "../../../route";
-import { img9, ptCircle } from "../../assets";
+import { ptCircle } from "../../assets";
 import { Content } from "../../components";
 import { UseMediaContext } from "../../contexts/media/MediaContext";
 import { DateFormatter } from "../../helpers";
 
-const preloadImage = (src) => {
-    const img = new Image();
-    img.src = src;
-};
-
 const MediaPage = () => {
-    const language = LandingLanguage[getLocalLanguage().key][RouteName.media];
-    const { news, setPage } = UseMediaContext();
-    const navigation = useNavigate();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const images = [
-        img9,
-    ];
-
-    const getPagination = ({ total }) => {
-        var data = [];
-
-        for (var i = 0; i < total; i++) {
-            const iPlus = i + 1;
-            data.push(<div className={`py-1 px-3 text-primary-dark cursor-pointer ${(i - 1) === news.current_page && 'bg-primary-dark text-white-light'}`} onClick={() => setPage(iPlus)}>{iPlus}</div>);
-        }
-
-        return data;
-    }
-
-    useEffect(() => {
-        images.forEach(preloadImage);
-    }, [images]);
+    const { navigation, language, images, isLoader, news, getPagination } = UseMediaContext();
 
     return (
-        <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
+        <Content isLoader={isLoader} navbar={{ style: "sticky top-0 bg-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={images[0]} alt="Image5" className="object-cover object-center w-full h-[40vh] animate-fade animate-duration-400" loading="lazy" />
+                <img src={images[1]} alt="Image5" className="object-cover object-center w-full h-[40vh] animate-fade animate-duration-400" loading="lazy" />
                 <div className="absolute top-0 bottom-0 left-0 right-0 flex justify-start items-center px-24">
                     <div className="flex flex-col gap-3 text-start">
                         <span className="text-5xl text-white-light font-semibold" style={{ textShadow: "0px 1px 10px #000" }}>{language[1.1]}</span>

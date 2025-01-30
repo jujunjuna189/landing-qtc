@@ -11,3 +11,5 @@ export const API_QUESTION = `${REACT_APP_API_URL}question`;
 export const API_ANALYTICS = `${REACT_APP_API_URL}analytic`;
 // Auth
 export const API_AUTH = `${REACT_APP_API_URL}auth`;
+// Assets
+export const API_ASSETS = `${REACT_APP_API_URL}asset`;

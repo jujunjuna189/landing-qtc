@@ -2,6 +2,26 @@ import { RouteName } from "../../route";
 
 export const LandingLanguage = {
     en: {
+        navbar: {
+            1: "Who We Are",
+            2: "Our Impact",
+            2.1: "Capital Investment",
+            2.2: "EPC",
+            2.3: "Renewable Energy",
+            2.4: "Industrial",
+            2.5: "Integrated Telecomunication",
+            2.6: "Real Estate & Propertity",
+            2.7: "Developer",
+            2.8: "Research and Development",
+            3: "Business Highlights",
+            4: "Sustainability",
+            4.1: "Commitment",
+            4.2: "Our Strategic at QTC",
+            4.3: "Partnerships",
+            5: "Media",
+            6: "Contact",
+            7: "Career",
+        },
         [RouteName.main]: {
             1: "Quantum Trans Capital",
             2.1: "Sharing Investment Opportunities",
@@ -206,6 +226,26 @@ export const LandingLanguage = {
         },
     },
     id: {
+        navbar: {
+            1: "Siapa Kami",
+            2: "Dampak Kami",
+            2.1: "Investasi Modal",
+            2.2: "EPC",
+            2.3: "Energi Terbarukan",
+            2.4: "Industri",
+            2.5: "Telekomunikasi Terpadu",
+            2.6: "Real Estate & Properti",
+            2.7: "Pengembang",
+            2.8: "Penelitian dan Pengembangan",
+            3: "Sorotan Bisnis",
+            4: "Keberlanjutan",
+            4.1: "Komitmen",
+            4.2: "Strategi Kami di QTC",
+            4.3: "Kemitraan",
+            5: "Media",
+            6: "Kontak",
+            7: "Karir"
+        },
         [RouteName.main]: {
             1: "Quantum Trans Capital",
             2.1: "Berbagi Peluang Investasi",
