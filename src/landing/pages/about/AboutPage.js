@@ -76,13 +76,13 @@ const AboutPage = () => {
                             <div className="w-12 h-1 bg-secondary-dark" />
                         </div>
                         <div className="flex flex-col gap-6 px-12 mt-12">
-                            <span className="text-primary-dark text-[18px]">
+                            <span className="text-primary-dark">
                                 {language[12]}
                             </span>
-                            <span className="text-primary-dark text-[18px]">
+                            <span className="text-primary-dark">
                                 {language[13]}
                             </span>
-                            <span className="text-primary-dark text-[18px]">
+                            <span className="text-primary-dark">
                                 {language[14]}
                             </span>
                         </div>
@@ -92,14 +92,14 @@ const AboutPage = () => {
             {/*  */}
             <div className="bg-primary-dark py-10 mt-24 px-20 relative">
                 <span className="text-4xl text-white-light font-semibold">{language[15]}</span>
-                <div className="w-12 h-1 bg-secondary-dark" />
+                <div className="w-12 h-1 bg-secondary-dark mt-2" />
                 <div className="flex flex-row justify-between">
                     <div className="flex flex-col gap-1 mt-20 flex-1">
                         <span className="text-4xl text-white-light font-semibold">{language[16]}</span>
                         <span className="text-4xl text-white-light font-semibold">{language[17]}</span>
                     </div>
                     <div className="mt-20 flex-1">
-                        <span className="text-white-light text-[18px]">
+                        <span className="text-white-light font-light">
                             {language[18]}
                         </span>
                     </div>

@@ -22,7 +22,7 @@ const BusinessHightlightsPage = () => {
             <div className="pt-32 pb-32 relative flex flex-row">
                 <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -bottom-[15rem] -left-[30rem] w-[90%] opacity-10 " />
                 <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[20rem] w-[70%] opacity-10 " />
-                <div className="grow h-full">
+                <div className="grow h-full mr-10">
                     <div className="px-20">
                         <span className="text-2xl text-primary-dark font-medium">{language[2]}</span>
                         <div className="w-12 h-1 bg-secondary-dark" />
@@ -51,7 +51,7 @@ const BusinessHightlightsPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="pr-20 w-[30rem] max-w-[30rem] min-w-[30rem]">
+                <div className="pr-20 w-[25rem] max-w-[25rem] min-w-[25rem]">
                     <div className="flex flex-col gap-10">
                         {(business?.data ?? [])?.map((item, index) => {
                             return (

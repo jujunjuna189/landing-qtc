@@ -65,7 +65,7 @@ const MediaPage = () => {
                             return (
                                 <div key={index} className="shadow-all cursor-pointer bg-white-light" onClick={() => navigation(RouteName.mediaPreview)}>
                                     <div className="aspect-[16/13] bg-primary-dark">
-                                        <img src={item.image} alt="NewsImage" className="w-full h-full" />
+                                        <img src={item.image} alt="NewsImage" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="p-3">
                                         <span className="text-primary-dark font-medium">{item.title}</span>

@@ -9,8 +9,8 @@ module.exports = {
       current: 'currentColor',
       primary: {
         dark: '#486281',
-        muted: "",
-        light: "",
+        muted: "#3C516A",
+        light: "#6F89A7",
       },
       secondary: {
         dark: '#EDA241',

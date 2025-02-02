@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { LandingLanguage } from "../../../../helper/language/LandingLanguage";
 import { getLocalLanguage, setLocalLanguage } from "../../../../helper/storage/LocalStorage";
 import { RouteName } from "../../../../route";
@@ -7,6 +7,7 @@ import { lgLogo, ptCircle } from "../../../assets";
 
 const Navbar = ({ navbar }) => {
     const navigation = useNavigate();
+    const location = useLocation();
     const language = LandingLanguage[getLocalLanguage().key].navbar;
     const [isHover, setIsHover] = useState(false);
     const [hoverKey, setHoverKey] = useState('');
@@ -19,16 +20,16 @@ const Navbar = ({ navbar }) => {
                         <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[20rem] z-20 w-[55%] opacity-10 " />
                         <div className="pl-[4.5rem] pr-[4.5rem] text-white-light flex justify-between items-center mt-28">
                             <ul>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400" onClick={() => navigation(RouteName.capitalInvestment)}>{language[2.1]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400" onClick={() => navigation(RouteName.epc)}>{language[2.2]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400" onClick={() => navigation(RouteName.renewableEnergy)}>{language[2.3]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400" onClick={() => navigation(RouteName.industrial)}>{language[2.4]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400" onClick={() => navigation(RouteName.integratedTelecomunication)}>{language[2.5]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400" onClick={() => navigation(RouteName.realEstateProperty)}>{language[2.6]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400" onClick={() => navigation(RouteName.developer)}>{language[2.7]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400" onClick={() => navigation(RouteName.researchDevelopment)}>{language[2.8]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.capitalInvestment)}>{language[2.1]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.epc)}>{language[2.2]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.renewableEnergy)}>{language[2.3]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.industrial)}>{language[2.4]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.integratedTelecomunication)}>{language[2.5]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.realEstateProperty)}>{language[2.6]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.developer)}>{language[2.7]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.researchDevelopment)}>{language[2.8]}</li>
                             </ul>
-                            <div className="pr-10">
+                            <div className="pr-20">
                                 <span className="text-6xl font-semibold animate-fade animate-duration-400">{language[2]}</span>
                             </div>
                         </div>
@@ -39,12 +40,41 @@ const Navbar = ({ navbar }) => {
                         <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[20rem] z-20 w-[55%] opacity-10 " />
                         <div className="pl-[4.5rem] pr-[4.5rem] text-white-light flex justify-between items-center mt-28">
                             <ul>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400" onClick={() => navigation(RouteName.sustainabilityCommitment)}>{language[4.1]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400" onClick={() => navigation(RouteName.sustainabilityStrategic)}>{language[4.2]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400" onClick={() => navigation(RouteName.sustainabilityPartnerships)}>{language[4.3]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.sustainabilityCommitment)}>{language[4.1]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.sustainabilityStrategic)}>{language[4.2]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.sustainabilityPartnerships)}>{language[4.3]}</li>
                             </ul>
-                            <div className="pr-10">
+                            <div className="pr-20">
                                 <span className="text-6xl font-semibold animate-fade animate-duration-400">{language[4]}</span>
+                            </div>
+                        </div>
+                    </div>
+                )}
+                {((isHover && hoverKey === 'media')) && (
+                    <div className="absolute top-0 right-0 w-[80%] h-[80vh] bg-[#052446] bg-opacity-75 z-10 overflow-hidden" onMouseLeave={() => setIsHover(false)} >
+                        <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[20rem] z-20 w-[55%] opacity-10 " />
+                        <div className="pl-[4.5rem] pr-[4.5rem] text-white-light flex justify-between items-center mt-28">
+                            <ul>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.media)}>{language[5.1]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.mediaMarketing)}>{language[5.2]}</li>
+                            </ul>
+                            <div className="pr-20">
+                                <span className="text-6xl font-semibold animate-fade animate-duration-400">{language[5]}</span>
+                            </div>
+                        </div>
+                    </div>
+                )}
+                {((isHover && hoverKey === 'career')) && (
+                    <div className="absolute top-0 right-0 w-[80%] h-[80vh] bg-[#052446] bg-opacity-75 z-10 overflow-hidden" onMouseLeave={() => setIsHover(false)} >
+                        <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[20rem] z-20 w-[55%] opacity-10 " />
+                        <div className="pl-[4.5rem] pr-[4.5rem] text-white-light flex justify-between items-center mt-28">
+                            <ul>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.career)}>{language[7.1]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.careerList)}>{language[7.2]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.careerExplore)}>{language[7.3]}</li>
+                            </ul>
+                            <div className="pr-20">
+                                <span className="text-6xl font-semibold animate-fade animate-duration-400">{language[7]}</span>
                             </div>
                         </div>
                     </div>
@@ -54,15 +84,15 @@ const Navbar = ({ navbar }) => {
                         <img src={lgLogo} alt="Logo" className="w-32" />
                     </div>
                     <ul className={`relative flex gap-7 grow items-center justify-center pt-4 ${isHover && hoverKey !== 'language' ? "text-white-light" : "text-primary-dark"} ${navbar?.style_nav}`}>
-                        <li className="text-[15px] cursor-pointer" onClick={() => navigation(RouteName.about)} onMouseEnter={() => setIsHover(false)}>{language[1]}</li>
-                        <li className="text-[15px] cursor-pointer" onClick={() => navigation(RouteName.ourImpact)} onMouseEnter={() => { setIsHover(true); setHoverKey('our_impact') }}>
+                        <li className={`text-[15px] cursor-pointer hover:font-semibold ${location.pathname.split('/')?.[1] === 'about' && 'font-semibold'}`} onClick={() => navigation(RouteName.about)} onMouseEnter={() => setIsHover(false)}>{language[1]}</li>
+                        <li className={`text-[15px] cursor-pointer hover:font-semibold ${location.pathname.split('/')?.[1] === 'our-impact' && 'font-semibold'}`} onClick={() => navigation(RouteName.ourImpact)} onMouseEnter={() => { setIsHover(true); setHoverKey('our_impact') }}>
                             {language[2]}
                         </li>
-                        <li className="text-[15px] cursor-pointer" onClick={() => navigation(RouteName.businessHightlights)} onMouseEnter={() => setIsHover(false)}>{language[3]}</li>
-                        <li className="text-[15px] cursor-pointer" onClick={() => navigation(RouteName.sustainability)} onMouseEnter={() => { setIsHover(true); setHoverKey('sustainability') }}>{language[4]}</li>
-                        <li className="text-[15px] cursor-pointer" onClick={() => navigation(RouteName.media)} onMouseEnter={() => setIsHover(false)}>{language[5]}</li>
-                        <li className="text-[15px] cursor-pointer" onClick={() => navigation(RouteName.contact)} onMouseEnter={() => setIsHover(false)}>{language[6]}</li>
-                        <li className="text-[15px] cursor-pointer" onClick={() => navigation(RouteName.career)} onMouseEnter={() => setIsHover(false)}>{language[7]}</li>
+                        <li className={`text-[15px] cursor-pointer hover:font-semibold ${location.pathname.split('/')?.[1] === 'business-hightlights' && 'font-semibold'}`} onClick={() => navigation(RouteName.businessHightlights)} onMouseEnter={() => setIsHover(false)}>{language[3]}</li>
+                        <li className={`text-[15px] cursor-pointer hover:font-semibold ${location.pathname.split('/')?.[1] === 'sustainability' && 'font-semibold'}`} onClick={() => navigation(RouteName.sustainability)} onMouseEnter={() => { setIsHover(true); setHoverKey('sustainability') }}>{language[4]}</li>
+                        <li className={`text-[15px] cursor-pointer hover:font-semibold ${location.pathname.split('/')?.[1] === 'media' && 'font-semibold'}`} onMouseEnter={() => { setIsHover(true); setHoverKey('media') }}>{language[5]}</li>
+                        <li className={`text-[15px] cursor-pointer hover:font-semibold ${location.pathname.split('/')?.[1] === 'contact' && 'font-semibold'}`} onClick={() => navigation(RouteName.contact)} onMouseEnter={() => setIsHover(false)}>{language[6]}</li>
+                        <li className={`text-[15px] cursor-pointer hover:font-semibold ${location.pathname.split('/')?.[1] === 'career' && 'font-semibold'}`} onMouseEnter={() => { setIsHover(true); setHoverKey('career') }}>{language[7]}</li>
                     </ul>
                     <div className={`${isHover && hoverKey !== 'language' ? "text-white-light" : "text-primary-dark"} relative ${navbar?.style_nav}`} onMouseEnter={() => { setIsHover(true); setHoverKey('language') }} onMouseLeave={() => setIsHover(false)}>
                         <div className="flex gap-1 items-center pt-4 text-[15px] cursor-pointer ">

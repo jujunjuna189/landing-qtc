@@ -15,12 +15,12 @@ const IndustrialPage = () => {
                     <div className="w-12 h-1 bg-secondary-dark" />
                 </div>
                 <div className="flex flex-col px-32 mt-12">
-                    <div className="w-[80%] text-justify">
+                    <div className="w-[70%] text-justify">
                         <span className="text-primary-dark">
                             {language[2]}
                         </span>
                     </div>
-                    <div className="w-[80%] mt-10">
+                    <div className="w-[70%] mt-10">
                         <span className="text-primary-dark">
                             {language[3]}
                         </span>

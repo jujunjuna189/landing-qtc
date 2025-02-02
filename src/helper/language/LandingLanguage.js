@@ -19,8 +19,13 @@ export const LandingLanguage = {
             4.2: "Our Strategic at QTC",
             4.3: "Partnerships",
             5: "Media",
+            5.1: "Press Release",
+            5.2: "Marketing Assets",
             6: "Contact",
             7: "Career",
+            7.1: "Career Oportunities",
+            7.2: "Why Join Us",
+            7.3: "Explore Our Content Job",
         },
         [RouteName.main]: {
             1: "Quantum Trans Capital",
@@ -47,6 +52,7 @@ export const LandingLanguage = {
             17: "Sustainability",
             18: "Keep track of all the exciting news and opportunities as wegrow our network by entering new markets, forging new partnerships, and our latest resources",
             19: "Explore our media centre",
+            20: "Press releases and resources",
         },
         [RouteName.about]: {
             1.1: "Connect evolving needs with",
@@ -234,7 +240,7 @@ export const LandingLanguage = {
             2.3: "Energi Terbarukan",
             2.4: "Industri",
             2.5: "Telekomunikasi Terpadu",
-            2.6: "Real Estate & Properti",
+            2.6: "Real Estat & Properti",
             2.7: "Pengembang",
             2.8: "Penelitian dan Pengembangan",
             3: "Sorotan Bisnis",
@@ -243,8 +249,13 @@ export const LandingLanguage = {
             4.2: "Strategi Kami di QTC",
             4.3: "Kemitraan",
             5: "Media",
+            5.1: "Siaran Pers",
+            5.2: "Aset Pemasaran",
             6: "Kontak",
-            7: "Karir"
+            7: "Karier",
+            7.1: "Peluang Karier",
+            7.2: "Mengapa Bergabung dengan Kami",
+            7.3: "Jelajahi Pekerjaan Kami"
         },
         [RouteName.main]: {
             1: "Quantum Trans Capital",
@@ -270,7 +281,8 @@ export const LandingLanguage = {
             16: "Bisnis kami dipandu oleh prinsip keberlanjutan yang membentuk arah strategis dan keunggulan operasional kami.",
             17: "Keberlanjutan",
             18: "Ikuti semua berita menarik dan peluang saat kami memperluas jaringan, memasuki pasar baru, menjalin kemitraan baru, dan memanfaatkan sumber daya terbaru kami.",
-            19: "Jelajahi pusat media kami"
+            19: "Jelajahi pusat media kami",
+            20: "Siaran pers dan sumber daya",
         },
         [RouteName.about]: {
             1.1: "Menghubungkan kebutuhan yang berkembang dengan",

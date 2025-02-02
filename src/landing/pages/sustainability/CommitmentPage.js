@@ -32,8 +32,8 @@ const CommitmentPage = () => {
                 <div className="w-72 min-w-72 max-w-72">
                     <ul>
                         <li className="pl-5 pr-20 py-2 bg-primary-dark border-b cursor-pointer border-primary-dark text-white-light font-semibold" onClick={() => navigation(RouteName.sustainabilityCommitment)}>Commitment</li>
-                        <li className="pl-5 pr-20 py-2  text-primary-dark border-b cursor-pointer border-primary-dark font-semibold" onClick={() => navigation(RouteName.sustainabilityStrategic)}>Our Strategic at QTC</li>
-                        <li className="pl-5 pr-20 py-2  text-primary-dark border-b cursor-pointer border-primary-dark font-semibold" onClick={() => navigation(RouteName.sustainabilityPartnerships)}>Partnerships</li>
+                        <li className="pl-5 pr-20 py-2 hover:bg-white-muted text-primary-dark border-b cursor-pointer border-primary-dark font-semibold" onClick={() => navigation(RouteName.sustainabilityStrategic)}>Our Strategic at QTC</li>
+                        <li className="pl-5 pr-20 py-2 hover:bg-white-muted text-primary-dark border-b cursor-pointer border-primary-dark font-semibold" onClick={() => navigation(RouteName.sustainabilityPartnerships)}>Partnerships</li>
                     </ul>
                 </div>
                 <div className="bg-gray-dark grow p-16">
