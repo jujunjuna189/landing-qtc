@@ -15,6 +15,15 @@ import lgLogo from "./logo/logo.png";
 import lgGkb from "./logo/logoGkb.png";
 // Pattern
 import ptCircle from "./pattern/circlePattern.png";
+//Icon
+import ic1 from "./icon/ic1.png";
+import ic2 from "./icon/ic2.png";
+import ic3 from "./icon/ic3.png";
+import ic4 from "./icon/ic4.png";
+import ic5 from "./icon/ic5.png";
+import ic6 from "./icon/ic6.png";
+import ic7 from "./icon/ic7.png";
+import ic8 from "./icon/ic8.png";
 
 export {
     img1,
@@ -33,4 +42,12 @@ export {
     lgLogo,
     lgGkb,
     ptCircle,
+    ic1,
+    ic2,
+    ic3,
+    ic4,
+    ic5,
+    ic6,
+    ic7,
+    ic8,
 }

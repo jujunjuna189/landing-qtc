@@ -11,6 +11,10 @@ const Navbar = ({ navbar }) => {
     const language = LandingLanguage[getLocalLanguage().key].navbar;
     const [isHover, setIsHover] = useState(false);
     const [hoverKey, setHoverKey] = useState('');
+    const [ourImpact, setOurImpact] = useState(language[2]);
+    const [sustainability, setSustainability] = useState(language[4]);
+    const [media, setMedia] = useState(language[5]);
+    const [career, setCareer] = useState(language[7]);
 
     return (
         <>
@@ -20,17 +24,17 @@ const Navbar = ({ navbar }) => {
                         <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[20rem] z-20 w-[55%] opacity-10 " />
                         <div className="pl-[4.5rem] pr-[4.5rem] text-white-light flex justify-between items-center mt-28">
                             <ul>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.capitalInvestment)}>{language[2.1]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.epc)}>{language[2.2]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.renewableEnergy)}>{language[2.3]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.industrial)}>{language[2.4]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.integratedTelecomunication)}>{language[2.5]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.realEstateProperty)}>{language[2.6]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.developer)}>{language[2.7]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.researchDevelopment)}>{language[2.8]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.1])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.capitalInvestment)}>{language[2.1]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.2])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.epc)}>{language[2.2]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.3])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.renewableEnergy)}>{language[2.3]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.4])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.industrial)}>{language[2.4]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.5])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.integratedTelecomunication)}>{language[2.5]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.6])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.realEstateProperty)}>{language[2.6]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.7])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.developer)}>{language[2.7]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.8])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.researchDevelopment)}>{language[2.8]}</li>
                             </ul>
-                            <div className="pr-20">
-                                <span className="text-6xl font-semibold animate-fade animate-duration-400">{language[2]}</span>
+                            <div className="pr-20 text-end">
+                                <span className="text-6xl font-semibold animate-fade animate-duration-400">{ourImpact}</span>
                             </div>
                         </div>
                     </div>
@@ -40,12 +44,12 @@ const Navbar = ({ navbar }) => {
                         <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[20rem] z-20 w-[55%] opacity-10 " />
                         <div className="pl-[4.5rem] pr-[4.5rem] text-white-light flex justify-between items-center mt-28">
                             <ul>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.sustainabilityCommitment)}>{language[4.1]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.sustainabilityStrategic)}>{language[4.2]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.sustainabilityPartnerships)}>{language[4.3]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setSustainability(language[4.1])} onMouseLeave={() => setSustainability(language[4])} onClick={() => navigation(RouteName.sustainabilityCommitment)}>{language[4.1]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setSustainability(language[4.2])} onMouseLeave={() => setSustainability(language[4])} onClick={() => navigation(RouteName.sustainabilityStrategic)}>{language[4.2]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setSustainability(language[4.3])} onMouseLeave={() => setSustainability(language[4])} onClick={() => navigation(RouteName.sustainabilityPartnerships)}>{language[4.3]}</li>
                             </ul>
-                            <div className="pr-20">
-                                <span className="text-6xl font-semibold animate-fade animate-duration-400">{language[4]}</span>
+                            <div className="pr-20 text-end">
+                                <span className="text-6xl font-semibold animate-fade animate-duration-400">{sustainability}</span>
                             </div>
                         </div>
                     </div>
@@ -55,11 +59,11 @@ const Navbar = ({ navbar }) => {
                         <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[20rem] z-20 w-[55%] opacity-10 " />
                         <div className="pl-[4.5rem] pr-[4.5rem] text-white-light flex justify-between items-center mt-28">
                             <ul>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.media)}>{language[5.1]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.mediaMarketing)}>{language[5.2]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setMedia(language[5.1])} onMouseLeave={() => setMedia(language[5])} onClick={() => navigation(RouteName.media)}>{language[5.1]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setMedia(language[5.2])} onMouseLeave={() => setMedia(language[5])} onClick={() => navigation(RouteName.mediaMarketing)}>{language[5.2]}</li>
                             </ul>
-                            <div className="pr-20">
-                                <span className="text-6xl font-semibold animate-fade animate-duration-400">{language[5]}</span>
+                            <div className="pr-20 text-end">
+                                <span className="text-6xl font-semibold animate-fade animate-duration-400">{media}</span>
                             </div>
                         </div>
                     </div>
@@ -69,12 +73,12 @@ const Navbar = ({ navbar }) => {
                         <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[20rem] z-20 w-[55%] opacity-10 " />
                         <div className="pl-[4.5rem] pr-[4.5rem] text-white-light flex justify-between items-center mt-28">
                             <ul>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.career)}>{language[7.1]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.careerList)}>{language[7.2]}</li>
-                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl" onClick={() => navigation(RouteName.careerExplore)}>{language[7.3]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setCareer(language[7.1])} onMouseLeave={() => setCareer(language[7])} onClick={() => navigation(RouteName.career)}>{language[7.1]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setCareer(language[7.2])} onMouseLeave={() => setCareer(language[7])} onClick={() => navigation(RouteName.careerList)}>{language[7.2]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setCareer(language[7.3])} onMouseLeave={() => setCareer(language[7])} onClick={() => navigation(RouteName.careerExplore)}>{language[7.3]}</li>
                             </ul>
-                            <div className="pr-20">
-                                <span className="text-6xl font-semibold animate-fade animate-duration-400">{language[7]}</span>
+                            <div className="pr-20 text-end">
+                                <span className="text-6xl font-semibold animate-fade animate-duration-400">{career}</span>
                             </div>
                         </div>
                     </div>
