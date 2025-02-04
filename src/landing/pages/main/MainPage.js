@@ -24,7 +24,7 @@ const MainPage = () => {
             </div>
             {/* Who We Are */}
             <div className="relative py-20 overflow-hidden">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[30rem] z-20 w-[70%] opacity-10 " />
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[30rem] z-0 w-[70%] opacity-10 " />
                 <div className="px-32">
                     <span className="text-2xl text-primary-dark font-medium">{language[3]}</span>
                     <div className="w-12 h-1 bg-secondary-dark" />

@@ -11,7 +11,12 @@ import img10 from "./image/img10.webp";
 import img11 from "./image/img11.webp";
 import img12 from "./image/img12.webp";
 import img13 from "./image/img13.webp";
+import imgOurImpact from "./image/OurImpact.webp";
+import imgSustainability from "./image/Sustainability.webp";
+import imgMedia from "./image/Media.webp";
+import imgCarrer from "./image/Carrer.webp";
 import lgLogo from "./logo/logo.png";
+import lgLogoGif from "./logo/logoGif.gif";
 import lgGkb from "./logo/logoGkb.png";
 // Pattern
 import ptCircle from "./pattern/circlePattern.png";
@@ -39,7 +44,12 @@ export {
     img11,
     img12,
     img13,
+    imgOurImpact,
+    imgSustainability,
+    imgMedia,
+    imgCarrer,
     lgLogo,
+    lgLogoGif,
     lgGkb,
     ptCircle,
     ic1,

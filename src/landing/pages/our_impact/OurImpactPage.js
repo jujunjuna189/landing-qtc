@@ -1,9 +1,10 @@
+import { RouteName } from "../../../route";
 import { ic1, ic2, ic3, ic4, ic5, ic6, ic7, ic8, ptCircle } from "../../assets";
 import { Content } from "../../components";
 import { UseOurImpactContext } from "../../contexts/our_impact/OurImpactContext";
 
 const OurImpactPage = () => {
-    const { language, isLoader, images } = UseOurImpactContext();
+    const { navigation, language, isLoader, images } = UseOurImpactContext();
 
     return (
         <Content isLoader={isLoader} navbar={{ style: "sticky top-0 bg-white-light" }}>
@@ -38,49 +39,49 @@ const OurImpactPage = () => {
                 <hr className="mx-32 border-white-muted my-14" />
                 <div className="px-32">
                     <div className="grid grid-cols-4 gap-y-16">
-                        <div className="text-center text-primary-dark w-[10rem]">
+                        <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.capitalInvestment)}>
                             <div className="flex justify-center mb-5">
                                 <img src={ic1} alt="Capital Investment" width={90} />
                             </div>
                             <span>Capital Investment</span>
                         </div>
-                        <div className="text-center text-primary-dark w-[10rem]">
+                        <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.epc)}>
                             <div className="flex justify-center mb-5">
                                 <img src={ic2} alt="Capital Investment" width={90} />
                             </div>
                             <span>EPC</span>
                         </div>
-                        <div className="text-center text-primary-dark w-[10rem]">
+                        <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.renewableEnergy)}>
                             <div className="flex justify-center mb-5">
                                 <img src={ic3} alt="Capital Investment" width={90} />
                             </div>
                             <span>Renewable Energy</span>
                         </div>
-                        <div className="text-center text-primary-dark w-[10rem]">
+                        <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.industrial)}>
                             <div className="flex justify-center mb-5">
                                 <img src={ic4} alt="Capital Investment" width={90} />
                             </div>
                             <span>Industrial</span>
                         </div>
-                        <div className="text-center text-primary-dark w-[10rem]">
+                        <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.integratedTelecomunication)}>
                             <div className="flex justify-center mb-5">
                                 <img src={ic5} alt="Capital Investment" width={90} />
                             </div>
                             <span>Integrated Telecomunication</span>
                         </div>
-                        <div className="text-center text-primary-dark w-[10rem]">
+                        <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.realEstateProperty)}>
                             <div className="flex justify-center mb-5">
                                 <img src={ic6} alt="Capital Investment" width={90} />
                             </div>
                             <span>Real Estate {'&'} Property</span>
                         </div>
-                        <div className="text-center text-primary-dark w-[10rem]">
+                        <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.developer)}>
                             <div className="flex justify-center mb-5">
                                 <img src={ic7} alt="Capital Investment" width={90} />
                             </div>
                             <span>Developer</span>
                         </div>
-                        <div className="text-center text-primary-dark w-[10rem]">
+                        <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.researchDevelopment)}>
                             <div className="flex justify-center mb-5">
                                 <img src={ic8} alt="Capital Investment" width={90} />
                             </div>

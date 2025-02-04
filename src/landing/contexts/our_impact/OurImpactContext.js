@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { LandingLanguage } from "../../../helper/language/LandingLanguage";
 import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
 import { RouteName } from "../../../route";
@@ -12,7 +13,7 @@ const preloadImage = (src) => {
 const OurImpactContext = createContext();
 
 export const OurImpactContextProvider = ({ children }) => {
-
+    const navigation = useNavigate();
     const language = LandingLanguage[getLocalLanguage().key][RouteName.ourImpact];
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const [isLoader, setIsLoader] = useState(true);
@@ -40,7 +41,7 @@ export const OurImpactContextProvider = ({ children }) => {
     }, []);
 
     return (
-        <OurImpactContext.Provider value={{ language, isLoader, images }}>
+        <OurImpactContext.Provider value={{ navigation, language, isLoader, images }}>
             {children}
         </OurImpactContext.Provider>
     );
