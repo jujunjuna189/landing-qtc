@@ -49,6 +49,14 @@ const Sidebar = ({ sidebar }) => {
                                 <span>Question</span>
                             </div>
                         </li>
+                        <li className={`py-2 pl-3 pr-2 text-sm rounded-md cursor-pointer ${location.pathname.split('/')?.[1] === 'assets' ? 'bg-primary-dark text-white-light' : 'hover:bg-white-muted hover:text-dark-dark'}`} onClick={() => navigation(RouteName.adminQuestion)}>
+                            <div className="flex gap-2 items-center">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12.802 2.165l5.575 2.389c.48 .206 .863 .589 1.07 1.07l2.388 5.574c.22 .512 .22 1.092 0 1.604l-2.389 5.575c-.206 .48 -.589 .863 -1.07 1.07l-5.574 2.388c-.512 .22 -1.092 .22 -1.604 0l-5.575 -2.389a2.036 2.036 0 0 1 -1.07 -1.07l-2.388 -5.574a2.036 2.036 0 0 1 0 -1.604l2.389 -5.575c.206 -.48 .589 -.863 1.07 -1.07l5.574 -2.388a2.036 2.036 0 0 1 1.604 0z" /><path d="M12 16v.01" /><path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" /></svg>
+                                </span>
+                                <span>Assets</span>
+                            </div>
+                        </li>
                         <li className="text-dark-muted py-2 bg-white-muted text-sm px-2 mt-3 mb-1 font-medium rounded-md">Landing View...</li>
                         <li className={`py-2 pl-3 pr-2 text-sm rounded-md cursor-pointer ${location.pathname.split('/')?.[1] === 'settings' ? 'bg-primary-dark text-white-light' : 'hover:bg-white-muted hover:text-dark-dark'}`} onClick={() => navigation(RouteName.adminSettings)}>
                             <div className="flex gap-2 items-center">
@@ -114,7 +122,7 @@ const Sidebar = ({ sidebar }) => {
                                 <span>Career</span>
                             </div>
                         </li> */}
-                        <li className="text-dark-muted py-2 bg-white-muted hover:text-dark-dark text-sm px-2 mt-3 mb-1 font-medium rounded-md">General...</li>
+                        {/* <li className="text-dark-muted py-2 bg-white-muted hover:text-dark-dark text-sm px-2 mt-3 mb-1 font-medium rounded-md">General...</li> */}
                         {/* <li className="py-2 pl-3 pr-2 text-sm hover:bg-white-muted hover:text-dark-dark rounded-md cursor-pointer">
                             <div className="flex gap-2 items-center">
                                 <span>
@@ -123,7 +131,7 @@ const Sidebar = ({ sidebar }) => {
                                 <span>Language</span>
                             </div>
                         </li> */}
-                        <li className="py-2 pl-3 pr-2 text-sm hover:bg-white-muted hover:text-dark-dark rounded-md cursor-pointer">
+                        {/* <li className="py-2 pl-3 pr-2 text-sm hover:bg-white-muted hover:text-dark-dark rounded-md cursor-pointer">
                             <div className="flex gap-2 items-center">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 2a5 5 0 0 1 5 5v3a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-10a3 3 0 0 1 -3 -3v-6a3 3 0 0 1 3 -3v-3a5 5 0 0 1 5 -5m0 12a2 2 0 0 0 -1.995 1.85l-.005 .15a2 2 0 1 0 2 -2m0 -10a3 3 0 0 0 -3 3v3h6v-3a3 3 0 0 0 -3 -3" /></svg>
@@ -146,7 +154,7 @@ const Sidebar = ({ sidebar }) => {
                                 </span>
                                 <span>Contact</span>
                             </div>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>

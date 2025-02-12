@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Button, FieldDate, FieldFile, FieldText } from "../../../../components";
+import { Button, FieldArea, FieldDate, FieldFile, FieldText } from "../../../../components";
 import { updateNewsApi } from "../../../../helpers";
 
 const UpdateModal = (props) => {
@@ -83,7 +83,7 @@ const UpdateModal = (props) => {
                         <br />
                         <small>Please fill in the news data form</small>
                     </div>
-                    <div className="min-h-[25vh] flex flex-col gap-1 my-2">
+                    <div className="min-h-[25vh] flex flex-col gap-1 my-2 overflow-y-auto max-h-[70vh]">
                         <div className="flex gap-5 items-center">
                             <div>
                                 <div className="w-32 h-32 bg-slate-100 flex justify-center items-center relative">
@@ -116,6 +116,10 @@ const UpdateModal = (props) => {
                             <FieldText placeholder="..." error={errors.title} value={controller.title} onChange={(value) => onSetController({ field: 'title', value: value })} />
                         </div>
                         <div className="mt-3">
+                            <label>Content</label>
+                            <FieldArea placeholder="..." rows={10} error={errors.content} value={controller.content} onChange={(value) => onSetController({ field: 'content', value: value })} />
+                        </div>
+                        <div className="mt-3">
                             <label>Date</label>
                             <FieldDate placeholder="..." error={errors.date} value={controller.date} onChange={(value) => onSetController({ field: 'date', value: value })} />
                         </div>
@@ -124,14 +128,14 @@ const UpdateModal = (props) => {
                             <FieldText placeholder="https://" error={errors.redirect} value={controller.redirect} onChange={(value) => onSetController({ field: 'redirect', value: value })} />
                         </div>
                         <div className="flex-grow" />
-                        <div className="flex justify-end mt-3">
-                            <Button
-                                className="bg-slate-700 text-white-light rounded-md"
-                                onClick={onSave}
-                            >
-                                Save
-                            </Button>
-                        </div>
+                    </div>
+                    <div className="flex justify-end mt-3">
+                        <Button
+                            className="bg-slate-700 text-white-light rounded-md"
+                            onClick={onSave}
+                        >
+                            Save
+                        </Button>
                     </div>
                 </div>
             </div>

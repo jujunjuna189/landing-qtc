@@ -24,7 +24,7 @@ const MainPage = () => {
             </div>
             {/* Who We Are */}
             <div className="relative py-20 overflow-hidden">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[30rem] z-0 w-[70%] opacity-10 " />
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[30rem] z-0 w-[60%] opacity-10 " />
                 <div className="px-32">
                     <span className="text-2xl text-primary-dark font-medium">{language[3]}</span>
                     <div className="w-12 h-1 bg-secondary-dark" />
@@ -81,7 +81,7 @@ const MainPage = () => {
             </div>
             {/* Sustainability */}
             <div className="py-20 relative flex flex-row overflow-hidden">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -bottom-[10rem] -left-[30rem] w-[70%] opacity-10 " />
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -bottom-[10rem] -left-[30rem] w-[60%] opacity-10 " />
                 <div className="flex-1 h-full py-24">
                     <div className="px-32">
                         <span className="text-2xl text-primary-dark font-medium">{language[13]}</span>

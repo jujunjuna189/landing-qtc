@@ -18,7 +18,7 @@ const ContactPage = () => {
                 </div>
             </div>
             <div className="py-20 relative">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[20rem] -right-[20rem] w-[70%] opacity-10 " />
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[20rem] -right-[20rem] w-[60%] opacity-10 " />
                 <div className="px-32">
                     <span className="text-2xl text-primary-dark font-semibold">{language[2]}</span>
                     <div className="w-12 h-1 bg-secondary-dark" />

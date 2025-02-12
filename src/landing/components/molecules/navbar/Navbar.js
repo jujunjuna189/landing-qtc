@@ -29,7 +29,7 @@ const Navbar = ({ navbar }) => {
 
     return (
         <>
-            <div className={`fixed w-full z-10 ${navbar?.style}`}>
+            <div className={`fixed w-full z-20 ${navbar?.style}`}>
                 {((isHover && hoverKey === 'our_impact')) && (
                     <div className="fixed top-0 right-0 w-[80%] h-[100vh] bg-[#052446] bg-opacity-75 z-10 overflow-hidden pt-5" onMouseLeave={() => setIsHover(false)} >
                         <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[20rem] z-20 w-[55%] opacity-10 " />

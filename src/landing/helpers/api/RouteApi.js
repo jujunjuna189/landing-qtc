@@ -13,3 +13,5 @@ export const API_ANALYTICS = `${REACT_APP_API_URL}analytic`;
 export const API_AUTH = `${REACT_APP_API_URL}auth`;
 // Assets
 export const API_ASSETS = `${REACT_APP_API_URL}asset`;
+// Assets Marketing
+export const API_ASSETS_MARKETING = `${REACT_APP_API_URL}asset-marketing`;

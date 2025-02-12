@@ -20,8 +20,8 @@ const BusinessHightlightsPage = () => {
             </div>
             {/* Who we are */}
             <div className="pt-32 pb-32 relative flex flex-row">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -bottom-[15rem] -left-[30rem] w-[90%] opacity-10 " />
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[20rem] w-[70%] opacity-10 " />
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -bottom-[15rem] -left-[30rem] w-[60%] opacity-10 " />
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[20rem] w-[60%] opacity-10 " />
                 <div className="grow h-full mr-10">
                     <div className="px-20">
                         <span className="text-2xl text-primary-dark font-medium">{language[2]}</span>
@@ -55,7 +55,7 @@ const BusinessHightlightsPage = () => {
                     <div className="flex flex-col gap-10">
                         {(business?.data ?? [])?.map((item, index) => {
                             return (
-                                <div key={index} className="flex items-center gap-3 cursor-pointer" onClick={() => navigation(RouteName.businessPreview)}>
+                                <div key={index} className="flex items-center gap-3 cursor-pointer" onClick={() => navigation(`${RouteName.businessPreview}/${item.id}`)}>
                                     <div className="border rounded-full w-20 min-w-20 max-w-20 h-20 border-primary-dark bg-white-light overflow-hidden">
                                         <img src={item.logo} alt="LogoBusiness" className="w-full h-full rounded-full" />
                                     </div>

@@ -13,7 +13,7 @@ const StrategicPage = () => {
         <Content navbar={{ style_nav: "text-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[25rem] -right-[20rem] w-[70%] opacity-10 " />
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[25rem] -right-[20rem] w-[60%] opacity-10 " />
                 <div className="w-full h-[40vh] flex justify-start items-center px-24 bg-primary-dark">
                     <div className="flex flex-col gap-1 text-start mt-20">
                         <span className="text-white-light font-semibold">{language[1]}</span>

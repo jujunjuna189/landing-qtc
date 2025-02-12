@@ -19,18 +19,18 @@ const OurImpactPage = () => {
                 </div>
             </div>
             <div className="py-20 relative overflow-hidden">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[30rem] w-[70%] opacity-10 " />
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[30rem] w-[60%] opacity-10 " />
                 <div className="px-32">
                     <span className="text-2xl text-primary-dark font-semibold">{language[2]}</span>
                     <div className="w-12 h-1 bg-secondary-dark" />
                 </div>
-                <div className="flex flex-col px-32 mt-12">
+                <div className="flex flex-col gap-6 px-32 mt-12">
                     <div className="w-[70%] text-justify">
                         <span className="text-primary-dark">
                             {language[3]}
                         </span>
                     </div>
-                    <div className="w-[70%] mt-10">
+                    <div className="w-[70%]">
                         <span className="text-primary-dark">
                             {language[4]}
                         </span>

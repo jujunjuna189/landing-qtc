@@ -22,12 +22,15 @@ import AuthProtected from "./helper/protection/AuthProtection";
 import {
   ContactContextProvider as LandingContactContextProvider,
   BusinessContextProvider as LandingBusinessContextProvider,
+  BusinessPreviewContextProvider as LandingBusinessPreviewContextProvider,
   MediaContextProvider as LandingMediaContextProvider,
+  MediaPreviewContextProvider as LandingMediaPreviewContextProvider,
   LoginContextProvider as LandingLoginContextProvider,
   MainContextProvider as LandingMainContextProvider,
   AboutContextProvider as LandingAboutContextProvider,
   OurImpactContextProvider as LandingOurImpactContextProvider,
   SustainabilityContextProvider as LandingSustainabilityContextProvider,
+  MediaMarketingContextProvider as LandingMediaMarketingContextProvider,
 } from "./landing/contexts";
 import { createViewApi } from "./landing/helpers";
 
@@ -125,8 +128,10 @@ function App() {
           <LandingBusinessHightlightsPage />
         </LandingBusinessContextProvider>
       } />
-      <Route path={RouteName.businessPreview} element={
-        <LandingBusinessPreviewPage />
+      <Route path={`${RouteName.businessPreview}/:id`} element={
+        <LandingBusinessPreviewContextProvider>
+          <LandingBusinessPreviewPage />
+        </LandingBusinessPreviewContextProvider>
       } />
       <Route path={RouteName.sustainability} element={
         <LandingSustainabilityContextProvider>
@@ -147,11 +152,15 @@ function App() {
           <LandingMediaPage />
         </LandingMediaContextProvider>
       } />
-      <Route path={RouteName.mediaPreview} element={
-        <LandingMediaPreviewPage />
+      <Route path={`${RouteName.mediaPreview}/:id`} element={
+        <LandingMediaPreviewContextProvider>
+          <LandingMediaPreviewPage />
+        </LandingMediaPreviewContextProvider>
       } />
       <Route path={RouteName.mediaMarketing} element={
-        <LandingMediaMarketingPage />
+        <LandingMediaMarketingContextProvider>
+          <LandingMediaMarketingPage />
+        </LandingMediaMarketingContextProvider>
       } />
       <Route path={RouteName.contact} element={
         <LandingContactContextProvider>

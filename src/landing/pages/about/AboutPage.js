@@ -19,7 +19,7 @@ const AboutPage = () => {
             </div>
             {/* Who we are */}
             <div className="pt-56 pb-32 relative flex flex-row overflow-hidden">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[10rem] -right-[30rem] w-[70%] opacity-10 " />
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[10rem] -right-[30rem] w-[60%] opacity-10 " />
                 <div className="flex-1 h-full">
                     <div className="px-20">
                         <span className="text-2xl text-primary-dark font-medium">{language[2]}</span>
@@ -52,7 +52,7 @@ const AboutPage = () => {
             </div>
             {/* Visi Misi */}
             <div className="mb-20 relative flex gap-5 flex-row">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -bottom-[15rem] -left-[30rem] w-[100%] opacity-10 " />
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -bottom-[15rem] -left-[30rem] w-[60%] opacity-10 " />
                 <div className="flex-1 pl-20">
                     <div className="bg-gray-dark h-full py-24">
                         <div className="px-12">

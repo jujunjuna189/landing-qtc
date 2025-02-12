@@ -53,7 +53,7 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 90s linear infinite', // Durasi 2 detik, tanpa henti
         "slide-1": "slideLeft1 2s ease-in-out",
-        "slide-2": "slideLeft2 1.7s ease-in-out 0.1s",
+        "slide-2": "slideLeft2 1.7s ease-in-out",
       },
     },
   },

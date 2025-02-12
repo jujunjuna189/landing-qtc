@@ -1,28 +1,17 @@
 
-import { useEffect } from "react";
-import { img7, ptCircle } from "../../assets";
+import DownloadLink from "react-download-link";
+import { ptCircle } from "../../assets";
 import { Content } from "../../components";
-
-const preloadImage = (src) => {
-    const img = new Image();
-    img.src = src;
-};
+import { UseMediaMarketingContext } from "../../contexts/media/MediaMarketingContext";
 
 const MediaMarketingPage = () => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const images = [
-        img7,
-    ];
-
-    useEffect(() => {
-        images.forEach(preloadImage);
-    }, [images]);
-
+    // eslint-disable-next-line no-empty-pattern
+    const { assets } = UseMediaMarketingContext();
     return (
-        <Content navbar={{ style_nav: "text-white-light" }}>
+        <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[25rem] w-[70%] opacity-10 " />
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[10rem] -right-[25rem] w-[60%] opacity-10 " />
                 <div className="w-full pt-28 pb-16 flex justify-start items-center px-20 bg-primary-dark">
                     <div className="grow flex flex-col gap-1 text-start mt-10">
                         <div className="">
@@ -51,55 +40,27 @@ const MediaMarketingPage = () => {
                     <ul className="mt-8">
                         <li className="pl-5 pr-20 py-2 bg-primary-dark cursor-pointer text-white-light font-semibold" onClick={() => { }}>Logo</li>
                         <li className="pl-5 pr-20 py-2  text-primary-dark cursor-pointer font-semibold" onClick={() => { }}>Company Profile</li>
-                        <li className="pl-5 pr-20 py-2  text-primary-dark cursor-pointer font-semibold" onClick={() => { }}>Gallery Photo</li>
                     </ul>
                 </div>
                 <div className="border-l border-primary-dark grow px-16 pt-5 pb-28">
-                    <div className="flex justify-between border-b border-primary-dark py-3 px-5">
-                        <span className="font-medium text-primary-dark">Logo Quantum Trans Capital</span>
-                        <div className="flex items-center gap-1 text-sm cursor-pointer" onClick={() => { }}>
-                            <span className="text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="text-primary-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 11l5 5l5 -5" /><path d="M12 4l0 12" /></svg>
-                            </span>
-                            <span className="text-primary-dark font-medium">Download</span>
-                        </div>
-                    </div>
-                    <div className="flex justify-between border-b border-primary-dark py-3 px-5">
-                        <span className="font-medium text-primary-dark">Logo Global Karya Bangsa</span>
-                        <div className="flex items-center gap-1 text-sm cursor-pointer" onClick={() => { }}>
-                            <span className="text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="text-primary-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 11l5 5l5 -5" /><path d="M12 4l0 12" /></svg>
-                            </span>
-                            <span className="text-primary-dark font-medium">Download</span>
-                        </div>
-                    </div>
-                    <div className="flex justify-between border-b border-primary-dark py-3 px-5">
-                        <span className="font-medium text-primary-dark">Logo Matra Mandiri Prima</span>
-                        <div className="flex items-center gap-1 text-sm cursor-pointer" onClick={() => { }}>
-                            <span className="text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="text-primary-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 11l5 5l5 -5" /><path d="M12 4l0 12" /></svg>
-                            </span>
-                            <span className="text-primary-dark font-medium">Download</span>
-                        </div>
-                    </div>
-                    <div className="flex justify-between border-b border-primary-dark py-3 px-5">
-                        <span className="font-medium text-primary-dark">Logo Daya Mandiri Terbarukan</span>
-                        <div className="flex items-center gap-1 text-sm cursor-pointer" onClick={() => { }}>
-                            <span className="text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="text-primary-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 11l5 5l5 -5" /><path d="M12 4l0 12" /></svg>
-                            </span>
-                            <span className="text-primary-dark font-medium">Download</span>
-                        </div>
-                    </div>
-                    <div className="flex justify-between border-b border-primary-dark py-3 px-5">
-                        <span className="font-medium text-primary-dark">Logo Quantum Trans Capital</span>
-                        <div className="flex items-center gap-1 text-sm cursor-pointer" onClick={() => { }}>
-                            <span className="text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="text-primary-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 11l5 5l5 -5" /><path d="M12 4l0 12" /></svg>
-                            </span>
-                            <span className="text-primary-dark font-medium">Download</span>
-                        </div>
-                    </div>
+                    {assets.data?.map((item, index) => {
+                        return (
+                            <div key={index} className="flex justify-between items-center border-b border-primary-dark py-3 px-5">
+                                <span className="font-medium text-primary-dark">{item.title}</span>
+                                <DownloadLink
+                                    label={<div className="flex items-center gap-1 text-sm cursor-pointer">
+                                        <span className="text-sm">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="text-primary-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 11l5 5l5 -5" /><path d="M12 4l0 12" /></svg>
+                                        </span>
+                                        <span className="text-primary-dark font-medium">Download</span>
+                                    </div>}
+                                    filename={item.file}
+                                    style={{ textDecoration: 'none' }}
+                                    exportFile={() => "My cached data"}
+                                />
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
             <div className="my-40" />

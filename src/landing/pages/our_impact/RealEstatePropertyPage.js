@@ -9,7 +9,7 @@ const RealEstatePropertyPage = () => {
     return (
         <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
             <div className="py-20 relative">
-                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[30rem] w-[70%] opacity-10 " />
+                <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[30rem] w-[60%] opacity-10 " />
                 <div className="px-32">
                     <span className="text-4xl text-primary-dark font-semibold">{language[1]}</span>
                     <div className="w-12 h-1 bg-secondary-dark" />
