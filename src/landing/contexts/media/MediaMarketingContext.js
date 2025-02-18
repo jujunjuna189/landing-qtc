@@ -6,11 +6,16 @@ const MediaMarketingContext = createContext();
 
 export const MediaMarketingContextProvider = ({ children }) => {
     const navigation = useNavigate();
+    const [filter, setFilter] = useState({type: 'logo'});
     const [assets, setAssets] = useState({});
     const [isLoader, setIsLoader] = useState(true);
 
+    const onFilter = ({field, value}) => {
+        setFilter({...filter, [field]: value});
+    }
+
     const getAssets = async () => {
-        await getAssetsMarketingApi({}).then((res) => {
+        await getAssetsMarketingApi({filter: `type=${filter.type}`}).then((res) => {
             setIsLoader(false);
             setAssets(res);
         }).catch((res) => {
@@ -31,10 +36,10 @@ export const MediaMarketingContextProvider = ({ children }) => {
     useEffect(() => {
         getAssets();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [filter]);
 
     return (
-        <MediaMarketingContext.Provider value={{ navigation, assets, isLoader, handleDownload }}>
+        <MediaMarketingContext.Provider value={{ navigation, filter, assets, isLoader, onFilter, handleDownload }}>
             {children}
         </MediaMarketingContext.Provider>
     );
