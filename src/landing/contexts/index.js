@@ -2,6 +2,7 @@ import { AboutContextProvider } from "./about/AboutContext";
 import { LoginContextProvider } from "./auth/LoginContext";
 import { BusinessContextProvider } from "./business/BusinessContext";
 import { BusinessPreviewContextProvider } from "./business/BusinessPreviewContext";
+import { CareerExploreContextProvider } from "./career/CareerExploreContext";
 import { ContactContextProvider } from "./contact/ContactContext";
 import { MainContextProvider } from "./main/MainContext";
 import { MediaContextProvider } from "./media/MediaContext";
@@ -14,6 +15,7 @@ export {
     LoginContextProvider,
     BusinessContextProvider,
     BusinessPreviewContextProvider,
+    CareerExploreContextProvider,
     ContactContextProvider,
     MainContextProvider,
     MediaContextProvider,

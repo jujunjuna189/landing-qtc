@@ -25,10 +25,12 @@ export const RouteName = {
     careerList: '/career/list',
     login: '/login',
     // Admin
-    adminDashboard: '/dashboard',
-    adminBusiness: '/business',
-    adminProduct: '/product',
-    adminNews: '/news',
-    adminQuestion: '/question',
-    adminSettings: '/settings',
+    adminDashboard: '/admin/dashboard',
+    adminBusiness: '/admin/business',
+    adminProduct: '/admin/product',
+    adminNews: '/admin/news',
+    adminQuestion: '/admin/question',
+    adminAssets: '/admin/assets',
+    adminCareer: '/admin/career',
+    adminSettings: '/admin/settings',
 };

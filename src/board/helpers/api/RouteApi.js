@@ -11,3 +11,7 @@ export const API_QUESTION = `${REACT_APP_API_URL}question`;
 export const API_ANALYTICS = `${REACT_APP_API_URL}analytic`;
 // Assets
 export const API_ASSETS = `${REACT_APP_API_URL}asset`;
+// Assets Marketing
+export const API_ASSETS_MARKETING = `${REACT_APP_API_URL}asset-marketing`;
+// Career
+export const API_CAREER = `${REACT_APP_API_URL}career`;

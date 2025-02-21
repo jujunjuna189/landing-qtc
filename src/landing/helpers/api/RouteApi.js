@@ -5,6 +5,8 @@ export const API_BUSINESS = `${REACT_APP_API_URL}business`;
 export const API_PRODUCT = `${REACT_APP_API_URL}product`;
 // News
 export const API_NEWS = `${REACT_APP_API_URL}news`;
+// Career
+export const API_CAREER = `${REACT_APP_API_URL}career`;
 // Question
 export const API_QUESTION = `${REACT_APP_API_URL}question`;
 // Analytics

@@ -1,31 +1,14 @@
 
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { LandingLanguage } from "../../../helper/language/LandingLanguage";
-import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
 import { RouteName } from "../../../route";
-import { img7, ptCircle } from "../../assets";
+import { ptCircle } from "../../assets";
 import { Content } from "../../components";
-
-const preloadImage = (src) => {
-    const img = new Image();
-    img.src = src;
-};
+import { UseCareerExploreContext } from "../../contexts/career/CareerExploreContext";
 
 const CareerExplorePage = () => {
-    const language = LandingLanguage[getLocalLanguage().key][RouteName.careerExplore];
-    const navigation = useNavigate();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const images = [
-        img7,
-    ];
-
-    useEffect(() => {
-        images.forEach(preloadImage);
-    }, [images]);
+    const { language, career, navigation } = UseCareerExploreContext();
 
     return (
-        <Content navbar={{ style_nav: "text-white-light" }}>
+        <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
                 <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[20rem] -right-[20rem] w-[60%] opacity-10 " />
@@ -63,9 +46,34 @@ const CareerExplorePage = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center mt-10">
+            <div className="flex justify-center">
+                <div className="mt-10 mb-5 w-[60rem]">
+                    {career.data?.map((item, index) => {
+                        return (
+                            <div key={index} className="hover:bg-gray-dark transition-all duration-300 ease-in-out p-4 cursor-pointer">
+                                <div className="flex justify-between items-center">
+                                    <div>
+                                        <span className="text-[20px] font-medium">{item.title}</span>
+                                        <div className="flex items-center gap-2 text-[13px]">
+                                            <span>{item.location}</span>
+                                            <div className="rounded-full bg-primary-light w-2 h-2" />
+                                            <span className="font-medium">POSTING DATES <span className="font-normal">{item.posting_date}</span></span>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-3 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" /></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+            <div className=""></div>
+            <div className="flex justify-center mt-7">
                 <div className="cursor-pointer" onClick={() => navigation(RouteName.careerList)}>
-                    <span className="font-bold text-primary-dark">{language[7]} (13)</span>
+                    <span className="font-bold text-primary-dark">{language[7]} ({career.total})</span>
                 </div>
             </div>
             <div className="my-32" />
