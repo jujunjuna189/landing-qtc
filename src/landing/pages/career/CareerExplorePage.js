@@ -3,6 +3,7 @@ import { RouteName } from "../../../route";
 import { ptCircle } from "../../assets";
 import { Content } from "../../components";
 import { UseCareerExploreContext } from "../../contexts/career/CareerExploreContext";
+import { JobDetailModal } from "./components";
 
 const CareerExplorePage = () => {
     const { language, career, navigation } = UseCareerExploreContext();
@@ -50,21 +51,31 @@ const CareerExplorePage = () => {
                 <div className="mt-10 mb-5 w-[60rem]">
                     {career.data?.map((item, index) => {
                         return (
-                            <div key={index} className="hover:bg-gray-dark transition-all duration-300 ease-in-out p-4 cursor-pointer">
-                                <div className="flex justify-between items-center">
-                                    <div>
-                                        <span className="text-[20px] font-medium">{item.title}</span>
-                                        <div className="flex items-center gap-2 text-[13px]">
-                                            <span>{item.location}</span>
-                                            <div className="rounded-full bg-primary-light w-2 h-2" />
-                                            <span className="font-medium">POSTING DATES <span className="font-normal">{item.posting_date}</span></span>
+                            <div key={index}>
+                                <JobDetailModal item={item}>
+                                    <div className="hover:bg-gray-dark transition-all duration-300 ease-in-out p-4 cursor-pointer">
+                                        <div className="flex justify-between items-center">
+                                            <div>
+                                                <span className="text-[20px] font-medium">{item.title}</span>
+                                                <div className="flex items-center gap-2 text-[13px]">
+                                                    <span>{item.location}</span>
+                                                    <div className="rounded-full bg-primary-light w-2 h-2" />
+                                                    <span className="font-medium">POSTING DATES <span className="font-normal">{item.posting_date}</span></span>
+                                                    {item.status && (
+                                                        <>
+                                                            <div className="rounded-full bg-primary-light w-2 h-2" />
+                                                            <span>{item.status}</span>
+                                                        </>
+                                                    )}
+                                                </div>
+                                            </div>
+                                            <div className="flex gap-3 items-center">
+                                                {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg> */}
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" /></svg>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="flex gap-3 items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" /></svg>
-                                    </div>
-                                </div>
+                                </JobDetailModal>
                             </div>
                         );
                     })}

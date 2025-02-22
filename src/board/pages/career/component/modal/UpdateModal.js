@@ -114,7 +114,7 @@ const UpdateModal = (props) => {
                             <FieldText placeholder="..." error={errors.status} value={controller.status} onChange={(value) => onSetController({ field: 'status', value: value })} />
                         </div>
                         <div className="mt-3">
-                            <label>Description</label>
+                            <label>Job Description</label>
                             <FieldArea placeholder="..." error={errors.description} value={controller.description} onChange={(value) => onSetController({ field: 'description', value: value })} />
                         </div>
                         <div className="flex-grow" />
