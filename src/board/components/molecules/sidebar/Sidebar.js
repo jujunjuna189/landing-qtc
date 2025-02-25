@@ -65,6 +65,14 @@ const Sidebar = ({ sidebar }) => {
                                 <span>Career</span>
                             </div>
                         </li>
+                        <li className={`py-2 pl-3 pr-2 text-sm rounded-md cursor-pointer ${location.pathname.split('/')?.[2] === 'career-apply' ? 'bg-primary-dark text-white-light' : 'hover:bg-white-muted hover:text-dark-dark'}`} onClick={() => navigation(RouteName.adminCareerApply)}>
+                            <div className="flex gap-2 items-center">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M12 12l0 .01" /><path d="M3 13a20 20 0 0 0 18 0" /></svg>
+                                </span>
+                                <span>Career Apply</span>
+                            </div>
+                        </li>
                         <li className="text-dark-muted py-2 bg-white-muted text-sm px-2 mt-3 mb-1 font-medium rounded-md">Landing View...</li>
                         <li className={`py-2 pl-3 pr-2 text-sm rounded-md cursor-pointer ${location.pathname.split('/')?.[2] === 'settings' ? 'bg-primary-dark text-white-light' : 'hover:bg-white-muted hover:text-dark-dark'}`} onClick={() => navigation(RouteName.adminSettings)}>
                             <div className="flex gap-2 items-center">

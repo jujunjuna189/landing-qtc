@@ -44,11 +44,11 @@ const Navbar = ({ navbar }) => {
                                 <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.7])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.developer)}>{language[2.7]}</li>
                                 <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.8])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.researchDevelopment)}>{language[2.8]}</li>
                             </ul>
-                            <div className="grow px-20 flex justify-center pl-20">
+                            <div className="w-[80%] px-20 flex justify-center pl-20">
                                 <div className="">
                                     <span className="text-6xl font-semibold animate-fade animate-duration-400">{ourImpact}</span>
                                     <div className="mt-10">
-                                        <img src={imgOurImpact} alt="OurImpactImage" className="w-[90%] animate-fade animate-duration-400" />
+                                        <img src={imgOurImpact} alt="OurImpactImage" className="w-[90%] max-w-[90%] min-w-[90%] animate-fade animate-duration-400" />
                                     </div>
                                 </div>
                             </div>
@@ -64,11 +64,11 @@ const Navbar = ({ navbar }) => {
                                 <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setSustainability(language[4.2])} onMouseLeave={() => setSustainability(language[4])} onClick={() => navigation(RouteName.sustainabilityStrategic)}>{language[4.2]}</li>
                                 <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setSustainability(language[4.3])} onMouseLeave={() => setSustainability(language[4])} onClick={() => navigation(RouteName.sustainabilityPartnerships)}>{language[4.3]}</li>
                             </ul>
-                            <div className="grow px-20 flex justify-center pl-20">
+                            <div className="w-[80%] px-20 flex justify-center pl-20">
                                 <div className="">
                                     <span className="text-6xl font-semibold animate-fade animate-duration-400">{sustainability}</span>
                                     <div className="mt-10">
-                                        <img src={imgSustainability} alt="SustainabilityImage" className="w-[90%] animate-fade animate-duration-400" />
+                                        <img src={imgSustainability} alt="SustainabilityImage" className="w-[90%] max-w-[90%] min-w-[90%] animate-fade animate-duration-400" />
                                     </div>
                                 </div>
                             </div>
@@ -83,11 +83,11 @@ const Navbar = ({ navbar }) => {
                                 <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setMedia(language[5.1])} onMouseLeave={() => setMedia(language[5])} onClick={() => navigation(RouteName.media)}>{language[5.1]}</li>
                                 <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setMedia(language[5.2])} onMouseLeave={() => setMedia(language[5])} onClick={() => navigation(RouteName.mediaMarketing)}>{language[5.2]}</li>
                             </ul>
-                            <div className="grow px-20 flex justify-center pl-20">
+                            <div className="w-[80%] px-20 flex justify-center pl-20">
                                 <div className="">
                                     <span className="text-6xl font-semibold animate-fade animate-duration-400">{media}</span>
                                     <div className="mt-10">
-                                        <img src={imgMedia} alt="MediaImage" className="w-[90%] animate-fade animate-duration-400" />
+                                        <img src={imgMedia} alt="MediaImage" className="w-[90%] max-w-[90%] min-w-[90%] animate-fade animate-duration-400" />
                                     </div>
                                 </div>
                             </div>
@@ -103,11 +103,11 @@ const Navbar = ({ navbar }) => {
                                 <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setCareer(language[7.2])} onMouseLeave={() => setCareer(language[7])} onClick={() => navigation(RouteName.careerList)}>{language[7.2]}</li>
                                 <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setCareer(language[7.3])} onMouseLeave={() => setCareer(language[7])} onClick={() => navigation(RouteName.careerExplore)}>{language[7.3]}</li>
                             </ul>
-                            <div className="grow px-20 flex justify-center pl-20">
+                            <div className="w-[80%] px-20 flex justify-center pl-20">
                                 <div className="">
                                     <span className="text-6xl font-semibold animate-fade animate-duration-400">{career}</span>
                                     <div className="mt-10">
-                                        <img src={imgCarrer} alt="CarrerImage" className="w-[90%] animate-fade animate-duration-400" />
+                                        <img src={imgCarrer} alt="CarrerImage" className="w-[90%] max-w-[90%] min-w-[90%] animate-fade animate-duration-400" />
                                     </div>
                                 </div>
                             </div>
@@ -145,6 +145,12 @@ const Navbar = ({ navbar }) => {
                                             <div className="flex gap-2 items-center">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" /></svg>
                                                 English
+                                            </div>
+                                        </li>
+                                        <li className="py-2 px-2 border-b border-white-muted cursor-pointer" onClick={() => { setLocalLanguage({ display: 'English', key: 'zh' }); setIsHover(false); document.location.reload() }}>
+                                            <div className="flex gap-2 items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" /></svg>
+                                                Mandarin
                                             </div>
                                         </li>
                                         <li className="py-2 px-2 border-b border-white-muted cursor-pointer" onClick={() => { setLocalLanguage({ display: 'Indonesia', key: 'id' }); setIsHover(false); document.location.reload() }}>

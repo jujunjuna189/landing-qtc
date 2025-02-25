@@ -1,6 +1,7 @@
 import { AssetsContextProvider } from "./assets/AssetsContext"
 import { BusinessContextProvider } from "./business/BusinessContext"
 import { CareerContextProvider } from "./career/CareerContext"
+import { CareerApplyContextProvider } from "./career_apply/CareerApplyContext"
 import { DashboardContextProvider } from "./dashboard/DashboardContext"
 import { NewsContextProvider } from "./news/NewsContext"
 import { ProductContextProvider } from "./product/ProductContext"
@@ -16,4 +17,5 @@ export {
     DashboardContextProvider,
     SettingsContextProvider,
     CareerContextProvider,
+    CareerApplyContextProvider,
 }

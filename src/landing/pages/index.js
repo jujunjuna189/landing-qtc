@@ -3,6 +3,7 @@ import LoginPage from "./auth/LoginPage"
 import BusinessHightlightsPage from "./business_hightlights/BusinessHightlights"
 import BusinessPreviewPage from "./business_hightlights/BusinessPreviewPage"
 import CareerExplorePage from "./career/CareerExplorePage"
+import CareerFormPage from "./career/CareerFormPage"
 import CareerListPage from "./career/CareerListPage"
 import CareerPage from "./career/CareerPage"
 import ContactPage from "./contact/ContactPage"
@@ -50,4 +51,5 @@ export {
     CareerPage,
     CareerExplorePage,
     CareerListPage,
+    CareerFormPage,
 }

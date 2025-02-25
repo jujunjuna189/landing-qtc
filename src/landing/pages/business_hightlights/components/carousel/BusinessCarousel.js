@@ -28,14 +28,13 @@ const BusinessCarousel = (props) => {
 
     const goToNext = () => {
         (counter + 1) > business?.data?.length ? setCounter(1) : setCounter(counter + 1);
-        console.log(business?.data?.[(counter + 1) > business?.data?.length ? 1 : (counter + 1) > business?.data?.length - 1 ? 0 : counter + 1]);
+        props.onGet && props.onGet(business?.data?.[(counter + 1) > business?.data?.length ? 1 : (counter + 1) > business?.data?.length - 1 ? 0 : counter + 1]);
         carouselRef.current.next();  // Navigasi ke item berikutnya
     };
 
     const goToPrevious = () => {
         (counter - 1) < 1 ? setCounter(business?.data?.length) : setCounter(counter - 1);
-        console.log((counter - 1));
-        console.log(business?.data?.[(counter - 1) < 1 ? business?.data?.length : counter - 1 === 0 ? 0 : counter - 1]);
+        props.onGet && props.onGet(business?.data?.[counter - 1]);
         carouselRef.current.previous();  // Navigasi ke item sebelumnya
     };
 
@@ -58,7 +57,9 @@ const BusinessCarousel = (props) => {
                     return (
                         <div key={index} className={`text-center text-primary-dark transition-all duration-300 ${counter === (index === 0 ? business?.data?.length : index) ? '' : 'pt-3'}`}>
                             <div className="flex justify-center">
-                                <img src={item.logo} alt="Capital Investment" className="transition-width duration-300" width={counter === (index === 0 ? business?.data?.length : index) ? 130 : 100} />
+                                <div className={`border border-primary-dark rounded-full overflow-hidden transition-all duration-300 ${counter === (index === 0 ? business?.data?.length : index) ? "w-[7rem] h-[7rem]" : "w-[5rem] h-[5rem]"}`}>
+                                    <img src={item.logo} alt="Capital Investment" className="transition-width duration-300" width={counter === (index === 0 ? business?.data?.length : index) ? 130 : 100} />
+                                </div>
                             </div>
                         </div>
                     );

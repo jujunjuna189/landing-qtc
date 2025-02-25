@@ -6,7 +6,7 @@ import { UseCareerExploreContext } from "../../contexts/career/CareerExploreCont
 import { JobDetailModal } from "./components";
 
 const CareerExplorePage = () => {
-    const { language, career, navigation } = UseCareerExploreContext();
+    const { language, career, filter, navigation, onSetFilter } = UseCareerExploreContext();
 
     return (
         <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
@@ -30,14 +30,14 @@ const CareerExplorePage = () => {
                     <div className="grow flex flex-col justify-center pl-10 pr-60">
                         <span className="font-medium text-primary-dark">{language[3]}</span>
                         <div className="mt-5">
-                            <span className="text-primary-dark">{language[4]}</span>
+                            <input type="text" placeholder={language[4]} className="border-none focus:outline-none placeholder:text-primary-dark text-primary-dark" value={filter.filter1} onChange={(event) => onSetFilter({ field: 'filter1', value: event.target.value })} />
                         </div>
                     </div>
                     <div className="border-l border-primary-dark my-5" />
                     <div className="flex flex-col justify-center pl-10 pr-20">
                         <span className="font-medium text-primary-dark">{language[5]}</span>
                         <div className="mt-5">
-                            <span className="text-primary-dark">{language[6]}</span>
+                            <input type="text" placeholder={language[6]} className="border-none focus:outline-none placeholder:text-primary-dark text-primary-dark" value={filter.filter2} onChange={(event) => onSetFilter({ field: 'filter2', value: event.target.value })} />
                         </div>
                     </div>
                     <div className="bg-gray-dark flex items-center px-9 py-9">

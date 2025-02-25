@@ -3,6 +3,7 @@ import { LoginContextProvider } from "./auth/LoginContext";
 import { BusinessContextProvider } from "./business/BusinessContext";
 import { BusinessPreviewContextProvider } from "./business/BusinessPreviewContext";
 import { CareerExploreContextProvider } from "./career/CareerExploreContext";
+import { CareerFormContextProvider } from "./career/CareerFormContext";
 import { ContactContextProvider } from "./contact/ContactContext";
 import { MainContextProvider } from "./main/MainContext";
 import { MediaContextProvider } from "./media/MediaContext";
@@ -24,4 +25,5 @@ export {
     AboutContextProvider,
     OurImpactContextProvider,
     SustainabilityContextProvider,
+    CareerFormContextProvider,
 }

@@ -1,10 +1,11 @@
+import { RouteName } from "../../../route";
 import { ptCircle } from "../../assets";
 import { Content } from "../../components";
 import { UseBusinessPreviewContext } from "../../contexts/business/BusinessPreviewContext";
 import { BusinessCarousel, ProductCarousel } from "./components";
 
 const BusinessPreviewPage = () => {
-    const { business, businessDetail, isLoader, images, product } = UseBusinessPreviewContext();
+    const { business, businessDetail, navigation, isLoader, images, product } = UseBusinessPreviewContext();
     return (
         <Content isLoader={isLoader} navbar={{ style: "sticky top-0 bg-white-light" }}>
             {/* Jumbotron */}
@@ -49,7 +50,7 @@ const BusinessPreviewPage = () => {
             </div>
             <div className="gap-10 mt-20 mb-10 flex justify-center">
                 {business.data?.length > 0 && (
-                    <BusinessCarousel data={businessDetail} onGet={(value) => console.log(value)} />
+                    <BusinessCarousel data={businessDetail} onGet={(value) => navigation(`${RouteName.businessPreview}/${value.id}`)} />
                 )}
             </div>
         </Content>

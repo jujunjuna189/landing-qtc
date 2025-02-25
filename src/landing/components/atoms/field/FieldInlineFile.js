@@ -87,7 +87,7 @@ const FieldInlineFile = (props) => {
                     <span>{props.value ? name : ''}</span>
                 </div>
             </div>
-            {props.error && <small className="text-red-800 pl-1">{props.error}</small>}
+            {props.error && <small className="text-danger-dark pl-1">{props.error}</small>}
         </div>
     );
 }

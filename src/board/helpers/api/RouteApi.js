@@ -15,3 +15,5 @@ export const API_ASSETS = `${REACT_APP_API_URL}asset`;
 export const API_ASSETS_MARKETING = `${REACT_APP_API_URL}asset-marketing`;
 // Career
 export const API_CAREER = `${REACT_APP_API_URL}career`;
+// Career Apply
+export const API_CAREER_APPLY = `${REACT_APP_API_URL}career-apply`;

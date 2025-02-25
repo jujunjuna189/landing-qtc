@@ -23,6 +23,7 @@ export const RouteName = {
     career: '/career',
     careerExplore: '/career/explore',
     careerList: '/career/list',
+    careerForm: '/career/form',
     login: '/login',
     // Admin
     adminDashboard: '/admin/dashboard',
@@ -32,5 +33,6 @@ export const RouteName = {
     adminQuestion: '/admin/question',
     adminAssets: '/admin/assets',
     adminCareer: '/admin/career',
+    adminCareerApply: '/admin/career-apply',
     adminSettings: '/admin/settings',
 };

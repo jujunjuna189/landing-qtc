@@ -63,7 +63,7 @@ export const BusinessPreviewContextProvider = ({ children }) => {
     useEffect(() => {
         initialPage();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [params.id]);
 
     return (
         <BusinessPreviewContext.Provider value={{ business, businessDetail, language, isLoader, images, product, navigation, getBusiness, location }}>

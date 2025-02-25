@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { RouteName } from "../../../../../route";
 
 const JobDetailModal = (props) => {
     const ref = useRef();
+    const navigation = useNavigate();
     const [isVisible, setIsVisible] = useState(false);
 
     const toggleModal = () => {
@@ -69,6 +72,48 @@ const JobDetailModal = (props) => {
                     </div>
                     <div className="min-h-[50vh] flex flex-col gap-1 my-2">
                         <div className="mt-3 text-sm" dangerouslySetInnerHTML={{ __html: props.item?.description }} />
+                    </div>
+                    <div className="flex justify-center my-10">
+                        <div className="px-20 py-5 border border-primary-dark text-primary-dark cursor-pointer" onClick={() => navigation(RouteName.careerForm, { state: { career_id: props.item?.id } })}>
+                            <span>APPLY NOW</span>
+                        </div>
+                    </div>
+                    <div className="text-center">
+                        <span className="text-primary-dark">Job Info</span>
+                        <div className="mt-2 bg-white-muted bg-opacity-50 py-5 px-3">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td className="text-start pr-10 text-sm py-1">Job Identification</td>
+                                        <td className="text-start text-primary-dark py-1 text-sm">{props.item?.identification}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-start pr-10 text-sm py-1">Job Category</td>
+                                        <td className="text-start text-primary-dark py-1 text-sm">{props.item?.category}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-start pr-10 text-sm py-1">Posting Date</td>
+                                        <td className="text-start text-primary-dark py-1 text-sm">{props.item?.posting_date}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-start pr-10 text-sm py-1">Apply Before</td>
+                                        <td className="text-start text-primary-dark py-1 text-sm">{props.item?.apply_before}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-start pr-10 text-sm py-1">Degree Level</td>
+                                        <td className="text-start text-primary-dark py-1 text-sm">{props.item?.degree_level}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-start pr-10 text-sm py-1">Job Schedule</td>
+                                        <td className="text-start text-primary-dark py-1 text-sm">{props.item?.schedule}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-start pr-10 text-sm py-1">Locations</td>
+                                        <td className="text-start text-primary-dark py-1 text-sm">{props.item?.location}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -18,14 +18,19 @@ export const CareerExploreContextProvider = ({ children }) => {
     const language = LandingLanguage[getLocalLanguage().key][RouteName.careerExplore];
     const [page, setPage] = useState(1);
     const [career, setCareer] = useState({});
+    const [filter, setFilter] = useState({});
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const images = [
         img7,
     ];
 
+    const onSetFilter = ({ field, value }) => {
+        setFilter({ ...filter, [field]: value });
+    }
+
     const getNews = async () => {
-        await getCareerApi({ filter: `page=${page}&per_page=4` }).then((res) => {
+        await getCareerApi({ filter: `search=${filter.filter1 ?? ''} ${filter.filter2 ?? ''}&page=${page}&per_page=4` }).then((res) => {
             setCareer(res);
         });
     }
@@ -39,10 +44,10 @@ export const CareerExploreContextProvider = ({ children }) => {
     useEffect(() => {
         getNews();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [filter]);
 
     return (
-        <CareerExploreContext.Provider value={{ language, career, navigation, setPage }}>
+        <CareerExploreContext.Provider value={{ language, career, filter, navigation, setPage, onSetFilter }}>
             {children}
         </CareerExploreContext.Provider>
     );

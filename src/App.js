@@ -8,6 +8,7 @@ import {
   DashboardContextProvider as AdminDashboardContextProvider,
   AssetsContextProvider as AdminAssetsContextProvider,
   CareerContextProvider as AdminCareerContextProvider,
+  CareerApplyContextProvider as AdminCareerApplyContextProvider,
   SettingsContextProvider as AdminSettingsContextProvider
 } from "./board/contexts";
 
@@ -19,6 +20,7 @@ import {
   QuestionPage as AdminQuestionPage,
   AssetsPage as AdminAssetsPage,
   CareerPage as AdminCareerPage,
+  CareerApplyPage as AdminCareerApplyPage,
   SettingsPage as AdminSettingsPage,
 } from "./board/pages";
 import AuthProtected from "./helper/protection/AuthProtection";
@@ -36,6 +38,7 @@ import {
   SustainabilityContextProvider as LandingSustainabilityContextProvider,
   MediaMarketingContextProvider as LandingMediaMarketingContextProvider,
   CareerExploreContextProvider as LandingCareerExploreContextProvider,
+  CareerFormContextProvider as LandingCareerFormContextProvider,
 } from "./landing/contexts";
 import { createViewApi } from "./landing/helpers";
 
@@ -65,6 +68,7 @@ import {
   CareerPage as LandingCareerPage,
   CareerExplorePage as LandingCareerExplorePage,
   CareerListPage as LandingCareerListPage,
+  CareerFormPage as LandingCareerFormPage,
 } from "./landing/pages";
 import { RouteName } from "./route";
 
@@ -183,6 +187,11 @@ function App() {
       <Route path={RouteName.careerList} element={
         <LandingCareerListPage />
       } />
+      <Route path={RouteName.careerForm} element={
+        <LandingCareerFormContextProvider>
+          <LandingCareerFormPage />
+        </LandingCareerFormContextProvider>
+      } />
       {/* Admin */}
       <Route path={RouteName.login} element={
         <LandingLoginContextProvider>
@@ -236,6 +245,13 @@ function App() {
           <AdminCareerContextProvider>
             <AdminCareerPage />
           </AdminCareerContextProvider>
+        </AuthProtected>
+      } />
+      <Route path={RouteName.adminCareerApply} element={
+        <AuthProtected>
+          <AdminCareerApplyContextProvider>
+            <AdminCareerApplyPage />
+          </AdminCareerApplyContextProvider>
         </AuthProtected>
       } />
       <Route path={RouteName.adminSettings} element={
