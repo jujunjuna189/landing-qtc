@@ -58,11 +58,11 @@ const CareerExplorePage = () => {
                                                 <span className="text-[20px] font-medium">{item.title}</span>
                                                 <div className="flex items-center gap-2 text-[13px]">
                                                     <span>{item.location}</span>
-                                                    <div className="rounded-full bg-primary-light w-2 h-2" />
+                                                    <div className="rounded-full bg-primary-light w-1 h-1" />
                                                     <span className="font-medium">POSTING DATES <span className="font-normal">{item.posting_date}</span></span>
                                                     {item.status && (
                                                         <>
-                                                            <div className="rounded-full bg-primary-light w-2 h-2" />
+                                                            <div className="rounded-full bg-primary-light w-1 h-1" />
                                                             <span>{item.status}</span>
                                                         </>
                                                     )}

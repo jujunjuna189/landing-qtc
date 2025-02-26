@@ -38,7 +38,7 @@ const SustainabilityPage = () => {
                 </div>
                 {/* Image */}
                 <div className="flex gap-3 mt-20 px-32">
-                    <div className="border border-primary-dark bg-primary-dark flex flex-col justify-center items-center py-5 px-10 cursor-pointer group" onClick={() => navigation(RouteName.sustainabilityCommitment)}>
+                    <div className="border border-primary-dark bg-primary-dark flex flex-col justify-center items-center py-5 px-[8%] cursor-pointer group" onClick={() => navigation(RouteName.sustainabilityCommitment)}>
                         <span className="text-4xl text-white-light font-semibold">
                             Commitment
                         </span>
@@ -50,7 +50,7 @@ const SustainabilityPage = () => {
                         </span>
                         <div className="w-full h-1 group-hover:bg-secondary-dark mt-2" />
                     </div>
-                    <div className="border border-primary-dark bg-primary-dark flex flex-col justify-center items-center py-5 px-10 cursor-pointer group" onClick={() => navigation(RouteName.sustainabilityPartnerships)}>
+                    <div className="border border-primary-dark bg-primary-dark flex flex-col justify-center items-center py-5 px-[8%] cursor-pointer group" onClick={() => navigation(RouteName.sustainabilityPartnerships)}>
                         <span className="text-4xl text-white-light font-semibold">
                             Partnerships
                         </span>

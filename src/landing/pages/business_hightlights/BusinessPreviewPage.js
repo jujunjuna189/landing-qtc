@@ -22,7 +22,7 @@ const BusinessPreviewPage = () => {
             <div className="pt-32 pb-32 relative flex flex-row px-20">
                 <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -z-10 -top-[25rem] -right-[20rem] w-[60%] opacity-10 " />
                 <div className="grow w-[50rem] flex justify-center">
-                    <div className="w-[20rem] h-[20rem] border rounded-full border-primary-dark flex justify-center items-center overflow-hidden">
+                    <div className="w-[20rem] h-[20rem] rounded-full flex justify-center items-center overflow-hidden">
                         <img src={businessDetail.logo} alt="Image5" className="object-contain object-bottom h-[20rem] aspect-video animate-fade animate-duration-400" loading="lazy" />
                     </div>
                 </div>
