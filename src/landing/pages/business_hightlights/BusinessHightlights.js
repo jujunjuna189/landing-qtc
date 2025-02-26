@@ -28,20 +28,20 @@ const BusinessHightlightsPage = () => {
                         <div className="w-12 h-1 bg-secondary-dark" />
                     </div>
                     <div className="flex flex-col gap-6 px-20 mt-12">
-                        <span className="text-primary-dark">
+                        <span className="text-primary-dark w-[80%]">
                             {language[3]}
                         </span>
-                        <span className="text-primary-dark">
+                        <span className="text-primary-dark w-[80%]">
                             {language[4]}
                         </span>
-                        <span className="text-primary-dark">
+                        <span className="text-primary-dark w-[80%]">
                             {language[5]}
                         </span>
-                        <span className="text-primary-dark">
+                        <span className="text-primary-dark w-[80%]">
                             {language[6]}
                         </span>
                     </div>
-                    <div className="flex items-center mt-10">
+                    <div className="flex items-center mt-28">
                         <div className="bg-primary-dark h-96 w-24" />
                         <div className="relative flex-1 pr-72 flex justify-center items-center">
                             <img src={images[2]} alt="Image5" className="aspect-[6/5] object-cover object-top animate-fade animate-duration-400" loading="lazy" />

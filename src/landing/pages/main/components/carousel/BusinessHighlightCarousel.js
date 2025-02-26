@@ -1,10 +1,13 @@
 import { useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useNavigate } from "react-router-dom";
+import { RouteName } from "../../../../../route";
 import { UseMainContext } from "../../../../contexts/main/MainContext";
 
 const BusinessHighlightCarousel = () => {
     const carouselRef = useRef(null);
+    const navigation = useNavigate();
     const { language, images } = UseMainContext();
     const responsive = {
         superLargeDesktop: {
@@ -52,7 +55,7 @@ const BusinessHighlightCarousel = () => {
                     </div>
                     <div className="py-28 relative">
                         <div className="px-32">
-                            <span className="text-2xl text-primary-dark font-medium">{language[10]}</span>
+                            <span className="text-2xl text-primary-dark font-medium cursor-pointer" onClick={() => navigation(RouteName.businessHightlights)}>{language[10]}</span>
                             <div className="w-12 h-1 bg-secondary-dark" />
                         </div>
                         <div className="flex flex-col px-36 mt-12">
@@ -63,12 +66,12 @@ const BusinessHighlightCarousel = () => {
                             </div>
                         </div>
                         <div className="h-[40vh]" />
-                        <div className="flex items-center gap-3 px-36">
+                        {/* <div className="flex items-center gap-3 px-36">
                             <span className="text-secondary-dark text-5xl font-medium" style={{ textShadow: "0px 1px 10px #4B4B4B" }}>o</span>
                             <div className="mt-1">
                                 <span className="text-white-light text-4xl font-medium" style={{ textShadow: "0px 1px 10px #4B4B4B" }}>{language[12]}</span>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div>
@@ -88,12 +91,12 @@ const BusinessHighlightCarousel = () => {
                             </div>
                         </div>
                         <div className="h-[40vh]" />
-                        <div className="flex items-center gap-3 px-36">
+                        {/* <div className="flex items-center gap-3 px-36">
                             <span className="text-secondary-dark text-5xl font-medium" style={{ textShadow: "0px 1px 10px #4B4B4B" }}>o</span>
                             <div className="mt-1">
                                 <span className="text-white-light text-4xl font-medium" style={{ textShadow: "0px 1px 10px #4B4B4B" }}>{language[12]}</span>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </Carousel>

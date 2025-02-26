@@ -24,12 +24,12 @@ const CareerPage = () => {
             </div>
             <div className="py-20 relative">
                 <div className="flex flex-col px-32 mt-12">
-                    <div className="w-[60%] text-justify">
+                    <div className="w-[50%] text-justify">
                         <span className="text-primary-dark">
                             {language[3]}
                         </span>
                     </div>
-                    <div className="w-[60%] mt-10">
+                    <div className="w-[50%] mt-10">
                         <span className="text-primary-dark">
                             {language[4]}
                         </span>

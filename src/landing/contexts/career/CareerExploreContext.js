@@ -16,6 +16,7 @@ const CareerExploreContext = createContext();
 export const CareerExploreContextProvider = ({ children }) => {
     const navigation = useNavigate();
     const language = LandingLanguage[getLocalLanguage().key][RouteName.careerExplore];
+    const [isVisibility, setIsVisibility] = useState(false);
     const [page, setPage] = useState(1);
     const [career, setCareer] = useState({});
     const [filter, setFilter] = useState({});
@@ -32,6 +33,7 @@ export const CareerExploreContextProvider = ({ children }) => {
     const getNews = async () => {
         await getCareerApi({ filter: `search=${filter.filter1 ?? ''} ${filter.filter2 ?? ''}&page=${page}&per_page=4` }).then((res) => {
             setCareer(res);
+            if (Object.keys(filter).length > 0 && res.data?.length > 0) setIsVisibility(true);
         });
     }
 
@@ -47,7 +49,7 @@ export const CareerExploreContextProvider = ({ children }) => {
     }, [filter]);
 
     return (
-        <CareerExploreContext.Provider value={{ language, career, filter, navigation, setPage, onSetFilter }}>
+        <CareerExploreContext.Provider value={{ language, career, filter, isVisibility, navigation, setPage, onSetFilter, setIsVisibility }}>
             {children}
         </CareerExploreContext.Provider>
     );

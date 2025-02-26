@@ -32,14 +32,14 @@ const CareerListPage = () => {
                 <div className="w-full py-20 flex justify-start items-center px-20 bg-primary-dark">
                     <div className="grow flex flex-col gap-1 text-start">
                         <div className="">
-                            <span className="text-white-light font-semibold">{language[1]}</span>
+                            <span className="text-white-light font-semibold text-lg">{language[1]}</span>
                         </div>
                         <span className="text-7xl text-white-light font-semibold">{language[2]}</span>
                         <div className="w-36 h-3 bg-secondary-dark mt-2" />
                     </div>
                 </div>
             </div>
-            <div className="relative gap-20 mt-20 pr-72">
+            <div className="relative gap-20 mt-20 pr-72 text-lg">
                 <div className="px-32 pt-5">
                     <div className="flex flex-col border-b border-primary-dark py-3">
                         <span className="font-medium text-primary-dark">{language[3.1]}</span>
@@ -67,14 +67,14 @@ const CareerListPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt-16 px-32">
+            <div className="mt-16 px-32 text-lg">
                 <div className="pr-72">
                     <span className="font-medium text-primary-dark">
                         {language[7]}
                     </span>
                 </div>
             </div>
-            <div className="flex gap-3 mt-16 px-32">
+            <div className="flex gap-3 mt-16 px-32 text-lg">
                 <div className="border border-primary-dark bg-primary-dark flex flex-col justify-center items-center py-2 px-5 cursor-pointer" onClick={() => navigation(RouteName.careerExplore)}>
                     <i className="text-white-light font-semibold">
                         {language[8]}

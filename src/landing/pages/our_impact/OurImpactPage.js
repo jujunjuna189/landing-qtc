@@ -25,19 +25,19 @@ const OurImpactPage = () => {
                     <div className="w-12 h-1 bg-secondary-dark" />
                 </div>
                 <div className="flex flex-col gap-6 px-32 mt-12">
-                    <div className="w-[70%] text-justify">
+                    <div className="w-[50%] text-justify">
                         <span className="text-primary-dark">
                             {language[3]}
                         </span>
                     </div>
-                    <div className="w-[70%]">
+                    <div className="w-[50%]">
                         <span className="text-primary-dark">
                             {language[4]}
                         </span>
                     </div>
                 </div>
-                <hr className="mx-32 border-white-muted my-14" />
-                <div className="px-32">
+                <hr className="mx-32 border-white-muted my-20" />
+                <div className="px-32 pt-14">
                     <div className="grid grid-cols-4 gap-y-16">
                         <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.capitalInvestment)}>
                             <div className="flex justify-center mb-5">

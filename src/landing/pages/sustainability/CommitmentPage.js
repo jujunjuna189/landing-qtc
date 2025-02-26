@@ -10,7 +10,7 @@ const CommitmentPage = () => {
     const language = LandingLanguage[getLocalLanguage().key][RouteName.sustainabilityCommitment];
     const navigation = useNavigate();
     return (
-        <Content navbar={{ style_nav: "text-white-light" }}>
+        <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
             {/* Jumbotron */}
             <div className="relative">
                 <img src={ptCircle} alt="PattrenQTCDesign" className="animate-spin-slow absolute -top-[25rem] -right-[20rem] w-[60%] opacity-10 " />
@@ -23,7 +23,7 @@ const CommitmentPage = () => {
                 </div>
             </div>
             <div className="py-10 relative px-20">
-                <div className="flex gap-2 items-center">
+                <div className="flex gap-2 items-center cursor-pointer" onClick={() => navigation(RouteName.sustainability)}>
                     <span className="text-xl text-primary-dark font-semibold">Sustainability in</span>
                     <div className="py-1 px-2 text-xl font-medium bg-secondary-dark text-white-light">Action</div>
                 </div>

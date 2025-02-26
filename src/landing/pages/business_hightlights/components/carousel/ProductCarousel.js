@@ -40,6 +40,9 @@ const ProductCarousel = () => {
     return (
         <div>
             <div className="flex items-center gap-5">
+                <div className="border-2 border-primary-dark w-8 h-8 flex justify-center items-center rounded-full cursor-pointer absolute left-0 z-10 mx-5 opacity-50" onClick={() => goToPrevious()}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="text-primary-dark font-semibold" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg>
+                </div>
                 <Carousel ref={carouselRef} className="grow" draggable={false} arrows={false} responsive={responsive} infinite={true}>
                     {product?.data?.length === 1 && (
                         <div className="h-72 flex justify-center items-center">
@@ -53,19 +56,7 @@ const ProductCarousel = () => {
                         );
                     })}
                 </Carousel>
-            </div>
-            <div className="flex justify-center items-end gap-3 mt-10">
-                <div className="border-2 border-primary-dark w-8 h-8 flex justify-center items-center rounded-full cursor-pointer" onClick={() => goToPrevious()}>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="text-primary-dark font-semibold" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg>
-                </div>
-                <div className="flex gap-1">
-                    {product.data?.map((item, index) => {
-                        return (
-                            <div key={index} className={`w-2 h-2 border border-primary-dark rounded-full ${(index + 1) === counter && 'bg-primary-dark'}`}></div>
-                        );
-                    })}
-                </div>
-                <div className="border-2 border-primary-dark w-8 h-8 flex justify-center items-center rounded-full cursor-pointer" onClick={() => goToNext()}>
+                <div className="border-2 border-primary-dark w-8 h-8 flex justify-center items-center rounded-full cursor-pointer absolute right-0 z-10 mx-5 opacity-50" onClick={() => goToNext()}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="text-primary-dark font-semibold" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" /></svg>
                 </div>
             </div>

@@ -40,16 +40,16 @@ const MainPage = () => {
                             <img src={images[2]} alt="Image5" className="aspect-square object-cover object-top w-[32vw] max-w-[32vw] min-w-[32vw] animate-fade animate-duration-400" loading="lazy" />
                         </div>
                         <div className="flex flex-col gap-1 pr-20">
-                            <span className="text-4xl text-white-light font-semibold">{language[5.1]}</span>
-                            <span className="text-4xl text-white-light font-semibold">{language[5.2]}</span>
-                            <span className="text-4xl text-white-light font-semibold">{language[5.3]}</span>
-                            <span className="text-4xl text-white-light font-semibold">{language[5.4]}</span>
-                            <div className="mt-12">
+                            <span className="text-5xl text-white-light font-semibold">{language[5.1]}</span>
+                            <span className="text-5xl text-white-light font-semibold">{language[5.2]}</span>
+                            <span className="text-5xl text-white-light font-semibold">{language[5.3]}</span>
+                            <span className="text-5xl text-white-light font-semibold">{language[5.4]}</span>
+                            <div className="mt-12 w-[70%]">
                                 <span className="text-white-light font-light">
                                     {language[6]}
                                 </span>
                             </div>
-                            <div className="mt-12">
+                            <div className="mt-12 w-[70%]">
                                 <span className="text-white-light font-light">
                                     {language[7]}
                                 </span>

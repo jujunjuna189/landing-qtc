@@ -28,25 +28,25 @@ const MediaPage = () => {
                 <div className="px-32 mt-16">
                     <div className="flex justify-between items-center bg-gray-dark">
                         <div className="px-9">
-                            <span className="text-dark-muted font-medium">
+                            <span className="text-dark-muted text-opacity-50 font-medium">
                                 {language[3]}
                             </span>
                         </div>
                         <div className="flex gap-10 items-center">
-                            <div className="flex gap-7 h-full">
-                                <div className="h-full flex items-center gap-7 cursor-pointer">
+                            <div className="flex gap-10 h-full">
+                                <div className="h-full flex items-center gap-2 cursor-pointer">
                                     <span className="font-medium text-sm">{language[4]}</span>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" className="text-dark-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 9l6 6l6 -6" /></svg>
                                     </span>
                                 </div>
-                                <div className="h-full flex items-center gap-7 cursor-pointer">
+                                <div className="h-full flex items-center gap-2 cursor-pointer">
                                     <span className="font-medium text-sm">{language[5]}</span>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" className="text-dark-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 9l6 6l6 -6" /></svg>
                                     </span>
                                 </div>
-                                <div className="h-full flex items-center gap-7 cursor-pointer">
+                                <div className="h-full flex items-center gap-2 cursor-pointer">
                                     <span className="font-medium text-sm">{language[6]}</span>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" className="text-dark-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 9l6 6l6 -6" /></svg>

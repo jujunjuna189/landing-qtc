@@ -1,12 +1,11 @@
 
-import { RouteName } from "../../../route";
 import { ptCircle } from "../../assets";
 import { Content } from "../../components";
 import { UseCareerExploreContext } from "../../contexts/career/CareerExploreContext";
 import { JobDetailModal } from "./components";
 
 const CareerExplorePage = () => {
-    const { language, career, filter, navigation, onSetFilter } = UseCareerExploreContext();
+    const { language, career, filter, isVisibility, onSetFilter, setIsVisibility } = UseCareerExploreContext();
 
     return (
         <Content navbar={{ style: "sticky top-0 bg-white-light" }}>
@@ -48,7 +47,7 @@ const CareerExplorePage = () => {
                 </div>
             </div>
             <div className="flex justify-center">
-                <div className="mt-10 mb-5 w-[60rem]">
+                <div className={`mt-10 mb-5 w-[60rem] transition-all duration-300 ${isVisibility ? '' : 'hidden'}`}>
                     {career.data?.map((item, index) => {
                         return (
                             <div key={index}>
@@ -83,7 +82,7 @@ const CareerExplorePage = () => {
             </div>
             <div className=""></div>
             <div className="flex justify-center mt-7">
-                <div className="cursor-pointer" onClick={() => navigation(RouteName.careerList)}>
+                <div className="cursor-pointer" onClick={() => setIsVisibility(true)}>
                     <span className="font-bold text-primary-dark">{language[7]} ({career.total})</span>
                 </div>
             </div>
