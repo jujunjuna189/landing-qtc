@@ -32,7 +32,7 @@ const BusinessPreviewPage = () => {
                         <div className="w-12 h-1 bg-secondary-dark" />
                     </div>
                     <div className="flex flex-col gap-6 px-20 mt-12">
-                        <div className="mt-3 text-primary-dark w-[80%]" style={{ display: 'flex', whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: businessDetail.description }} />
+                        <div className="mt-3 text-primary-dark w-[80%]" dangerouslySetInnerHTML={{ __html: businessDetail.description }} />
                     </div>
                     <div className="mt-20 flex gap-3 text-primary-dark px-20 font-semibold" onClick={() => window.open(businessDetail.redirect)}>
                         <span>

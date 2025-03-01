@@ -18,6 +18,49 @@ import imgCarrer from "./image/Carrer.webp";
 import lgLogo from "./logo/logo.png";
 import lgLogoGif from "./logo/logoGif.gif";
 import lgGkb from "./logo/logoGkb.png";
+// For assets feature
+import imgCPI1 from "./image/capital_invesment/1.webp";
+import imgCPI2 from "./image/capital_invesment/2.webp";
+import imgCPI3 from "./image/capital_invesment/3.webp";
+import imgCPI4 from "./image/capital_invesment/4.webp";
+import imgCPI5 from "./image/capital_invesment/5.webp";
+// developer
+import imgDVLP1 from "./image/developer/1.webp";
+import imgDVLP2 from "./image/developer/2.webp";
+import imgDVLP3 from "./image/developer/3.webp";
+import imgDVLP4 from "./image/developer/4.webp";
+import imgDVLP5 from "./image/developer/5.webp";
+// industrial
+import imgIDR1 from "./image/industrial/1.webp";
+import imgIDR2 from "./image/industrial/2.webp";
+import imgIDR3 from "./image/industrial/3.webp";
+import imgIDR4 from "./image/industrial/4.webp";
+import imgIDR5 from "./image/industrial/5.webp";
+// EPC
+import imgEPC1 from "./image/epc/1.webp";
+import imgEPC2 from "./image/epc/2.webp";
+import imgEPC3 from "./image/epc/3.webp";
+import imgEPC4 from "./image/epc/4.webp";
+import imgEPC5 from "./image/epc/5.webp";
+import imgEPC6 from "./image/epc/6.webp";
+// EPC
+import imgINT1 from "./image/integrated/1.webp";
+import imgINT2 from "./image/integrated/2.webp";
+import imgINT3 from "./image/integrated/3.webp";
+import imgINT4 from "./image/integrated/4.webp";
+import imgINT5 from "./image/integrated/5.webp";
+// RENEW
+import imgRNW1 from "./image/renewable_energy/1.webp";
+import imgRNW2 from "./image/renewable_energy/2.webp";
+import imgRNW3 from "./image/renewable_energy/3.webp";
+import imgRNW4 from "./image/renewable_energy/4.webp";
+import imgRNW5 from "./image/renewable_energy/5.webp";
+// RESEARCH
+import imgRST1 from "./image/research_and_development/1.webp";
+import imgRST2 from "./image/research_and_development/2.webp";
+import imgRST3 from "./image/research_and_development/3.webp";
+import imgRST4 from "./image/research_and_development/4.webp";
+import imgRST5 from "./image/research_and_development/5.webp";
 // Pattern
 import ptCircle from "./pattern/circlePattern.png";
 //Icon
@@ -48,6 +91,42 @@ export {
     imgSustainability,
     imgMedia,
     imgCarrer,
+    imgCPI1,
+    imgCPI2,
+    imgCPI3,
+    imgCPI4,
+    imgCPI5,
+    imgDVLP1,
+    imgDVLP2,
+    imgDVLP3,
+    imgDVLP4,
+    imgDVLP5,
+    imgIDR1,
+    imgIDR2,
+    imgIDR3,
+    imgIDR4,
+    imgIDR5,
+    imgEPC1,
+    imgEPC2,
+    imgEPC3,
+    imgEPC4,
+    imgEPC5,
+    imgEPC6,
+    imgINT1,
+    imgINT2,
+    imgINT3,
+    imgINT4,
+    imgINT5,
+    imgRNW1,
+    imgRNW2,
+    imgRNW3,
+    imgRNW4,
+    imgRNW5,
+    imgRST1,
+    imgRST2,
+    imgRST3,
+    imgRST4,
+    imgRST5,
     lgLogo,
     lgLogoGif,
     lgGkb,

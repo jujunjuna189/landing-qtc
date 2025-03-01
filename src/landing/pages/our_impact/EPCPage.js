@@ -1,7 +1,7 @@
 import { LandingLanguage } from "../../../helper/language/LandingLanguage";
 import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
 import { RouteName } from "../../../route";
-import { ptCircle } from "../../assets";
+import { imgEPC1, imgEPC2, imgEPC3, ptCircle } from "../../assets";
 import { Content } from "../../components";
 
 const EPCPage = () => {
@@ -29,20 +29,14 @@ const EPCPage = () => {
             </div>
             {/* Image */}
             <div className="grid grid-cols-3">
-                <div className="border border-primary-dark flex justify-center items-center py-24">
-                    <span className="text-4xl text-primary-dark font-semibold">
-                        Image
-                    </span>
+                <div className="flex justify-center items-center h-[25rem]">
+                    <img src={imgEPC1} alt="assets" className="w-full h-full object-cover" />
                 </div>
-                <div className="border border-primary-dark flex justify-center items-center py-24">
-                    <span className="text-4xl text-primary-dark font-semibold">
-                        Image
-                    </span>
+                <div className="flex justify-center items-center h-[25rem]">
+                    <img src={imgEPC2} alt="assets" className="w-full h-full object-cover" />
                 </div>
-                <div className="border border-primary-dark flex justify-center items-center py-24">
-                    <span className="text-4xl text-primary-dark font-semibold">
-                        Image
-                    </span>
+                <div className="flex justify-center items-center h-[25rem]">
+                    <img src={imgEPC3} alt="assets" className="w-full h-full object-cover" />
                 </div>
             </div>
         </Content>

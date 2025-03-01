@@ -1,7 +1,7 @@
 import { LandingLanguage } from "../../../helper/language/LandingLanguage";
 import { getLocalLanguage } from "../../../helper/storage/LocalStorage";
 import { RouteName } from "../../../route";
-import { ptCircle } from "../../assets";
+import { imgIDR1, imgIDR2, imgIDR3, ptCircle } from "../../assets";
 import { Content } from "../../components";
 
 const IndustrialPage = () => {
@@ -29,20 +29,14 @@ const IndustrialPage = () => {
             </div>
             {/* Image */}
             <div className="grid grid-cols-3">
-                <div className="border border-primary-dark flex justify-center items-center py-24">
-                    <span className="text-4xl text-primary-dark font-semibold">
-                        Image
-                    </span>
+                <div className="flex justify-center items-center h-[25rem]">
+                    <img src={imgIDR1} alt="assets" className="w-full h-full object-cover" />
                 </div>
-                <div className="border border-primary-dark flex justify-center items-center py-24">
-                    <span className="text-4xl text-primary-dark font-semibold">
-                        Image
-                    </span>
+                <div className="flex justify-center items-center h-[25rem]">
+                    <img src={imgIDR2} alt="assets" className="w-full h-full object-cover" />
                 </div>
-                <div className="border border-primary-dark flex justify-center items-center py-24">
-                    <span className="text-4xl text-primary-dark font-semibold">
-                        Image
-                    </span>
+                <div className="flex justify-center items-center h-[25rem]">
+                    <img src={imgIDR3} alt="assets" className="w-full h-full object-cover" />
                 </div>
             </div>
         </Content>
