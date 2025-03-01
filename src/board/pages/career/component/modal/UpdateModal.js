@@ -106,6 +106,10 @@ const UpdateModal = (props) => {
                             <FieldText placeholder="..." error={errors.category} value={controller.category} onChange={(value) => onSetController({ field: 'category', value: value })} />
                         </div>
                         <div className="mt-3">
+                            <label>Degree Level</label>
+                            <FieldText placeholder="..." error={errors.degree_level} value={controller.degree_level} onChange={(value) => onSetController({ field: 'degree_level', value: value })} />
+                        </div>
+                        <div className="mt-3">
                             <label>Job Schedule</label>
                             <FieldText placeholder="..." error={errors.schedule} value={controller.schedule} onChange={(value) => onSetController({ field: 'schedule', value: value })} />
                         </div>

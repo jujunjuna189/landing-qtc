@@ -114,6 +114,10 @@ const CreateModal = (props) => {
                             <FieldText placeholder="..." error={errors.schedule} value={controller.schedule} onChange={(value) => onSetController({ field: 'schedule', value: value })} />
                         </div>
                         <div className="mt-3">
+                            <label>Degree Level</label>
+                            <FieldText placeholder="..." error={errors.degree_level} value={controller.degree_level} onChange={(value) => onSetController({ field: 'degree_level', value: value })} />
+                        </div>
+                        <div className="mt-3">
                             <label>Status</label>
                             <FieldText placeholder="..." error={errors.status} value={controller.status} onChange={(value) => onSetController({ field: 'status', value: value })} />
                         </div>
