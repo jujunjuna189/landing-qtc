@@ -61,6 +61,18 @@ import imgRST2 from "./image/research_and_development/2.webp";
 import imgRST3 from "./image/research_and_development/3.webp";
 import imgRST4 from "./image/research_and_development/4.webp";
 import imgRST5 from "./image/research_and_development/5.webp";
+// LEGAL
+import imgLGL1 from "./image/legal/1.webp";
+import imgLGL2 from "./image/legal/2.webp";
+import imgLGL3 from "./image/legal/3.webp";
+// ASSET MANAGEMENT
+import imgASM1 from "./image/asset_management/1.webp";
+import imgASM2 from "./image/asset_management/2.webp";
+import imgASM3 from "./image/asset_management/3.webp";
+// SUPPLY CHAIN
+import imgSPC1 from "./image/supply_chain/1.webp";
+import imgSPC2 from "./image/supply_chain/2.webp";
+import imgSPC3 from "./image/supply_chain/3.webp";
 // Pattern
 import ptCircle from "./pattern/circlePattern.png";
 //Icon
@@ -127,6 +139,15 @@ export {
     imgRST3,
     imgRST4,
     imgRST5,
+    imgLGL1,
+    imgLGL2,
+    imgLGL3,
+    imgASM1,
+    imgASM2,
+    imgASM3,
+    imgSPC1,
+    imgSPC2,
+    imgSPC3,
     lgLogo,
     lgLogoGif,
     lgGkb,

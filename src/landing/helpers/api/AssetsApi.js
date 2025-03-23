@@ -3,7 +3,9 @@ import { API_ASSETS } from "./RouteApi";
 
 export const getAssetsApi = async ({ filter = '' }) => {
     try {
-        const response = await axios.get(`${API_ASSETS}?${filter}`);
+        const response = await axios.get(`${API_ASSETS}?${filter}`, {
+            mode: 'no-cors'
+        });
         return response.data.list_data;
     } catch (error) {
         console.error("Error fetching items:", error);

@@ -43,6 +43,10 @@ const Navbar = ({ navbar }) => {
                                 <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.6])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.realEstateProperty)}>{language[2.6]}</li>
                                 <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.7])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.developer)}>{language[2.7]}</li>
                                 <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.8])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.researchDevelopment)}>{language[2.8]}</li>
+                                {/*  */}
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language[2.9])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.legal)}>{language[2.9]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language["2.2.1"])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.assetManagement)}>{language["2.2.1"]}</li>
+                                <li className="py-3 cursor-pointer animate-fade animate-duration-400 hover:font-semibold text-xl whitespace-pre" onMouseEnter={() => setOurImpact(language["2.2.2"])} onMouseLeave={() => setOurImpact(language[2])} onClick={() => navigation(RouteName.supplyChain)}>{language["2.2.2"]}</li>
                             </ul>
                             <div className="w-[80%] px-20 flex justify-center pl-20">
                                 <div className="">

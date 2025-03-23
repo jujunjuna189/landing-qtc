@@ -55,6 +55,9 @@ import {
   RealEstatePropertyPage as LandingRealEstatePropertyPage,
   DevelopmentPage as LandingDevelopmentPage,
   ResearchDevelopmentPage as LandingResearchDevelopmentPage,
+  LegalPage as LandingLegalPage,
+  AssetManagementPage as LandingAssetManagementPage,
+  SupplyChainPage as LandingSupplyChainPage,
   BusinessHightlightsPage as LandingBusinessHightlightsPage,
   BusinessPreviewPage as LandingBusinessPreviewPage,
   SustainabilityPage as LandingSustainabilityPage,
@@ -131,6 +134,15 @@ function App() {
       } />
       <Route path={RouteName.researchDevelopment} element={
         <LandingResearchDevelopmentPage />
+      } />
+      <Route path={RouteName.legal} element={
+        <LandingLegalPage />
+      } />
+      <Route path={RouteName.assetManagement} element={
+        <LandingAssetManagementPage />
+      } />
+      <Route path={RouteName.supplyChain} element={
+        <LandingSupplyChainPage />
       } />
       <Route path={RouteName.businessHightlights} element={
         <LandingBusinessContextProvider>

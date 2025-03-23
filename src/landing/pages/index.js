@@ -11,15 +11,18 @@ import MainPage from "./main/MainPage"
 import MediaMarketingPage from "./media/MediaMarketingPage"
 import MediaPage from "./media/MediaPage"
 import MediaPreviewPage from "./media/MediaPreviewPage"
+import AssetManagementPage from "./our_impact/AssetManagementPage"
 import CapitalInvestmentPage from "./our_impact/CapitalInvestmentPage"
 import DevelopmentPage from "./our_impact/DeveloperPage"
 import EPCPage from "./our_impact/EPCPage"
 import IndustrialPage from "./our_impact/IndustrialPage"
 import IntegratedTelecomunicationPage from "./our_impact/IntegratedTelecomunicationPage"
+import LegalPage from "./our_impact/LegalPage"
 import OurImpactPage from "./our_impact/OurImpactPage"
 import RealEstatePropertyPage from "./our_impact/RealEstatePropertyPage"
 import RenewableEnergyPage from "./our_impact/RenewableEnergyPage"
 import ResearchDevelopmentPage from "./our_impact/ResearchDevelopmentPage"
+import SupplyChainPage from "./our_impact/SupplyChainPage"
 import CommitmentPage from "./sustainability/CommitmentPage"
 import PartnershipsPage from "./sustainability/PartnershipsPage"
 import StrategicPage from "./sustainability/StrategicPage"
@@ -38,6 +41,9 @@ export {
     RealEstatePropertyPage,
     RenewableEnergyPage,
     ResearchDevelopmentPage,
+    LegalPage,
+    AssetManagementPage,
+    SupplyChainPage,
     BusinessHightlightsPage,
     BusinessPreviewPage,
     SustainabilityPage,

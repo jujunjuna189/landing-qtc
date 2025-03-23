@@ -6,7 +6,8 @@ export const createViewApi = async ({ body = {} }) => {
     try {
         const response = await axios.post(API_ANALYTICS, body, {
             headers: {
-                Authorization: `bearer 2|cypuEXtwn5OmYmeGurMME7i23HcXQQlpBJsxC98Rb2ba4814`,
+                "Accept": "application/json",
+                "Content-Type": "application/json",
             },
         });
         return response.data.list_data;
