@@ -1,5 +1,5 @@
 import { RouteName } from "../../../route";
-import { ic1, ic2, ic3, ic4, ic5, ic6, ic7, ic8, ptCircle } from "../../assets";
+import { ic1, ic10, ic11, ic2, ic3, ic4, ic5, ic6, ic7, ic8, ic9, ptCircle } from "../../assets";
 import { Content } from "../../components";
 import { UseOurImpactContext } from "../../contexts/our_impact/OurImpactContext";
 
@@ -86,6 +86,24 @@ const OurImpactPage = () => {
                                 <img src={ic8} alt="Capital Investment" width={90} />
                             </div>
                             <span>Research and Development</span>
+                        </div>
+                        <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.legal)}>
+                            <div className="flex justify-center mb-5">
+                                <img src={ic9} alt="Capital Investment" width={90} />
+                            </div>
+                            <span>Business Compliance and<br /> Legal Advisory</span>
+                        </div>
+                        <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.assetManagement)}>
+                            <div className="flex justify-center mb-5">
+                                <img src={ic10} alt="Capital Investment" width={90} />
+                            </div>
+                            <span>Asset Management</span>
+                        </div>
+                        <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.supplyChain)}>
+                            <div className="flex justify-center mb-5">
+                                <img src={ic11} alt="Capital Investment" width={90} />
+                            </div>
+                            <span>Supply Chain</span>
                         </div>
                     </div>
                 </div>

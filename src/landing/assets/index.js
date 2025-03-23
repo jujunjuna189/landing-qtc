@@ -84,6 +84,9 @@ import ic5 from "./icon/ic5.png";
 import ic6 from "./icon/ic6.png";
 import ic7 from "./icon/ic7.png";
 import ic8 from "./icon/ic8.png";
+import ic9 from "./icon/ic9.png";
+import ic10 from "./icon/ic10.png";
+import ic11 from "./icon/ic11.png";
 
 export {
     img1,
@@ -160,4 +163,7 @@ export {
     ic6,
     ic7,
     ic8,
+    ic9,
+    ic10,
+    ic11,
 }

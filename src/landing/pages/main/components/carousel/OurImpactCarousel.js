@@ -3,7 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useNavigate } from "react-router-dom";
 import { RouteName } from "../../../../../route";
-import { ic1, ic2, ic3, ic4, ic5, ic6, ic7, ic8 } from "../../../../assets";
+import { ic1, ic10, ic11, ic2, ic3, ic4, ic5, ic6, ic7, ic8, ic9 } from "../../../../assets";
 
 const OurImpactCarousel = () => {
     const carouselRef = useRef(null);
@@ -88,6 +88,24 @@ const OurImpactCarousel = () => {
                         <img src={ic8} alt="Capital Investment" width={90} />
                     </div>
                     <span>Research and Development</span>
+                </div>
+                <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.legal)}>
+                    <div className="flex justify-center mb-5">
+                        <img src={ic9} alt="Capital Investment" width={90} />
+                    </div>
+                    <span>Business Compliance and<br /> Legal Advisory</span>
+                </div>
+                <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.assetManagement)}>
+                    <div className="flex justify-center mb-5">
+                        <img src={ic10} alt="Capital Investment" width={90} />
+                    </div>
+                    <span>Asset Management</span>
+                </div>
+                <div className="text-center text-primary-dark w-[10rem] cursor-pointer" onClick={() => navigation(RouteName.supplyChain)}>
+                    <div className="flex justify-center mb-5">
+                        <img src={ic11} alt="Capital Investment" width={90} />
+                    </div>
+                    <span>Supply Chain</span>
                 </div>
             </Carousel>
             <div className="bg-gray-dark text-primary-light flex justify-end items-center" onClick={() => goToNext()}>
