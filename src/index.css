@@ -8,6 +8,15 @@
   html {
     font-family: 'Poppins', sans-serif;
   }
+  .custom-content ul {
+    list-style-type:disc;
+    padding-left: 25px;
+  }
+  
+  .custom-content li {
+    color: black;
+    margin-bottom: 5px;
+  }
 }
 
 @layer utilities {

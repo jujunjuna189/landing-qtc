@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Button, FieldArea, FieldDate, FieldText } from "../../../../components";
+import { Button, FieldDate, FieldEditor, FieldText } from "../../../../components";
 import { createCareerApi } from "../../../../helpers";
 
 const CreateModal = (props) => {
@@ -123,7 +123,7 @@ const CreateModal = (props) => {
                         </div>
                         <div className="mt-3">
                             <label>Job Description</label>
-                            <FieldArea placeholder="..." error={errors.description} value={controller.description} onChange={(value) => onSetController({ field: 'description', value: value })} />
+                            <FieldEditor placeholder="..." error={errors.description} value={controller.description} onChange={(value) => onSetController({ field: 'description', value: value })} />
                         </div>
                         <div className="flex-grow" />
                     </div>

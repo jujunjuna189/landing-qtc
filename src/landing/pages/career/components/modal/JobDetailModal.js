@@ -71,7 +71,7 @@ const JobDetailModal = (props) => {
                         <span className="text-primary-dark">Job Description</span>
                     </div>
                     <div className="min-h-[50vh] flex flex-col gap-1 my-2">
-                        <div className="mt-3 text-sm" dangerouslySetInnerHTML={{ __html: props.item?.description }} />
+                        <div className="mt-3 text-sm custom-content" dangerouslySetInnerHTML={{ __html: props.item?.description }} />
                     </div>
                     <div className="flex justify-center my-10">
                         <div className="px-20 py-5 border border-primary-dark text-primary-dark cursor-pointer" onClick={() => navigation(RouteName.careerForm, { state: { career_id: props.item?.id } })}>

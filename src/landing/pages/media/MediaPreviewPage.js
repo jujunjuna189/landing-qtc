@@ -48,7 +48,7 @@ const MediaPreviewPage = () => {
                     </div>
                 </div>
                 <div className="mt-10">
-                    <div className="mt-3 font-medium" style={{ display: 'flex', whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: news.content }} />
+                    <div className="mt-3 font-medium custom-content" style={{ display: 'flex', whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: news.content }} />
                 </div>
                 <div className="mt-10 flex gap-2 items-center text-primary-dark font-semibold cursor-pointer" onClick={() => navigation(-1)}>
                     <span>

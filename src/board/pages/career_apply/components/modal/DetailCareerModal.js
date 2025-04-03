@@ -101,7 +101,7 @@ const DetailCareerModal = (props) => {
                             <span>{props.item?.subject}</span>
                         </div>
                         <div className="pt-1 border-white-muted flex flex-col">
-                            <div className="mt-3" dangerouslySetInnerHTML={{ __html: props.item?.description }} />
+                            <div className="mt-3 custom-content" dangerouslySetInnerHTML={{ __html: props.item?.description }} />
                         </div>
                         <div className="flex-grow" />
                         <div className="flex justify-end mt-10">

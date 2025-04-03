@@ -88,7 +88,7 @@ const MainPage = () => {
                         <div className="w-12 h-1 bg-secondary-dark" />
                     </div>
                     <div className="flex flex-col gap-6 px-36 mt-12">
-                        <div className="mt-3 text-primary-dark" style={{ whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: language[14] }} />
+                        <div className="mt-3 text-primary-dark custom-content" style={{ whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: language[14] }} />
                         <span className="text-primary-dark">
                             {language[15]}
                         </span>
