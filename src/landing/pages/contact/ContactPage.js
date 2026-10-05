@@ -42,15 +42,7 @@ const ContactPage = () => {
                                 <div className="flex gap-5 mt-5">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="text-white-light w-20" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7" /><path d="M9 4v13" /><path d="M15 7v5" /><path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" /><path d="M19 18v.01" /></svg>
                                     <span className="text-white-light">
-                                        Jl. Wijaya I No.71, RT.10/RW.1,
-                                        Petogogan, Kec. Kby. Baru,  Kota Jakarta Selatan,
-                                        Daerah Khusus Ibukota Jakarta, 12170
-                                    </span>
-                                </div>
-                                <div className="flex gap-5 mt-5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="text-white-light" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>
-                                    <span className="text-white-light">
-                                        +62 813 0323 5001
+                                        Jl. Ruko Raffles Hills Blok LT No 20, Sukatani, Kec. Tapos, Kota Depok, Jawa Barat 16454
                                     </span>
                                 </div>
                             </div>
@@ -118,7 +110,7 @@ const ContactPage = () => {
             <div>
                 <div style={{ width: "100%", height: "500px" }}>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d126906.97520362909!2d106.89097593334279!3d-6.284362415605013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1734288428822!5m2!1sen!2sid"
+                        src="https://www.google.com/maps?q=Jl.%20Ruko%20Raffles%20Hills%20Blok%20LT%20No%2020,%20Sukatani,%20Kec.%20Tapos,%20Kota%20Depok,%20Jawa%20Barat%2016454&output=embed"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
